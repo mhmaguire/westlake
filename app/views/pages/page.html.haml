@@ -1,0 +1,30 @@
+%ul.featured
+  =render @stack
+=link_to 'Add Slides', edit_stack_path(@stack)
+=debug @stack
+
+%a#button(href='#')
+  %h1 mouse wheel
+  %h2
+
+=content_for :scripts do
+  :javascript
+    $(function() {
+      $('.featured').orbit({
+        timer: false,
+        fluid: '16x6',
+        bulletThumbs: false,
+        animation: "vertical-slide"
+
+
+      });
+
+      $(document).on('mousewheel', function(e){
+        var temp = (0 < e.originalEvent.wheelDelta ? 'orbit.next' : 'orbit.prev');
+        $('.featured').trigger(temp);
+        return false;
+
+
+      });
+
+    });
