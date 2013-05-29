@@ -11,5 +11,9 @@ class PagesController < ApplicationController
 
   def home
   end
+
+  def email_contact
+
+  end
   define_top_action :line_card, :about, :what_we_do, :contact, :careers
 end
