@@ -13,6 +13,7 @@ WestlakePro::Application.routes.draw do
   get '/contact' => 'pages#contact'
   get '/careers ' => 'pages#careers', as: 'careers'
   get '/home' => 'pages#home'
+  post '/email_contact' => 'pages#email_contact'
 
   resources :stacks, only: [:edit, :index, :update]
   # The priority is based upon order of creation:
