@@ -1,0 +1,17 @@
+#homeSlider
+	=image_tag "panorama.jpg"
+	%img{:src => "http://placehold.it/1200x400"}
+	%img{:src => "http://placehold.it/1200x400"}
+
+#homeFeatured
+	#feat1
+	#feat2
+	#feat3
+
+=content_for :scripts do
+	:javascript
+		$(function() {
+			$('#homeSlider').orbit({
+				//orbit options go here
+			});
+		});

@@ -1,0 +1,117 @@
+$textColor1: white;
+$textColor2: rgb(100,100,100);
+
+$bgColor1: rgb(200,200,200);
+$bgColor2: rgb(250,250,250);
+
+//gradients
+.gradientBack {
+   background-color: $bgColor2; 
+   /* fallback image */
+   //background-image: url(images/fallback-gradient.png); 
+   background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from($bgColor2), to($bgColor1));
+   background-image: -webkit-linear-gradient(top, $bgColor2, $bgColor1); 
+   background-image: -moz-linear-gradient(top, $bgColor2, $bgColor1);
+   background-image: -ms-linear-gradient(top, $bgColor2, $bgColor1);
+   background-image: -o-linear-gradient(top, $bgColor2, $bgColor1);
+}
+//end gradients
+
+body, html {
+	width:100%;
+	height:100%;
+}
+
+h1, h2, h3, h4, h5, h6, p, a, li, span{
+	color:$textColor2;
+	font-family: 'myriad pro';
+}
+
+p {
+	margin-bottom:0px;
+}
+
+#mainHead {
+	width:100%;
+	min-width:768px;
+	height:50px;
+}
+#logo{
+	margin:0px;
+	height:inherit;
+	h2{
+		width:100%;
+		text-align:right;
+		font-size:2.2em;
+		margin-top:.4em;
+	}
+}
+#mainNav{
+	height:100%;
+	padding-top:1.5em;
+	a {
+		font-size:1.3em;
+		margin-left:5%;
+		&:first-child{
+			margin-left:10%;
+		}
+	}
+}
+#logIn {
+	padding-top:12px;
+}
+#mainContent{
+}
+#homeSlider{
+	margin-bottom:0px;
+	width:100%;
+	img{
+		width:100%;
+		height:100%;
+	}
+}
+#homeFeatured{
+	width:100%;
+	padding:0 5%;
+	height:200px;
+	background-color:rgb(180,80,80);
+	>div{
+		width:30%;
+		height:100%;
+		display: inline-block;
+	}
+}
+
+#mainFoot{
+	width:100%;
+	height:35px;
+	position:absolute;
+	z-index:10;
+	bottom:0;
+	background-color:rgb(220,220,220);
+	overflow-y:hidden;
+	>div{
+		display:inline-block;
+	}
+}
+#footCopy{
+	span{
+		&:first-child::after{
+			content:'-';
+			padding:0 4px;
+		}
+		line-height:2em;
+		font-size:1.5em;
+		color:$textColor2;
+	}
+}
+#footCredit{
+	span{
+		height:100%;
+		padding-top:.7em;
+		font-size:1.1em;
+		text-align:right;
+		float:right;
+		&:nth-child(2){margin-right:30px;}
+	}
+}

@@ -9,5 +9,7 @@ class PagesController < ApplicationController
     end
   end
 
+  def home
+  end
   define_top_action :line_card, :about, :what_we_do, :contact, :careers
 end
