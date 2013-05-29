@@ -16,7 +16,8 @@ group :assets do
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   # gem 'therubyracer', :platforms => :ruby
-
+  gem 'compass-rails'
+  gem 'zurb-foundation', '3.2.5'
   gem 'uglifier', '>= 1.0.3'
 end
 
@@ -53,6 +54,8 @@ group :development do
   gem 'meta_request'
   gem 'binding_of_caller'
 end
+
+gem 'thin'
 
 gem 'spree', '2.0.0'
 gem 'spree_gateway', :git => 'https://github.com/spree/spree_gateway.git', branch: '2-0-stable'

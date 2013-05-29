@@ -1,28 +1,13 @@
 class PagesController < ApplicationController
-  before_filter :get_stack
-  def line_card
 
-  end
-
-  def about
-
-
-  end
-
-  def what_we_do
-
-  end
-
-  def contact
-
-  end
-
-  def careers
-
-  end
-
-  private
-    def get_stack
-      @stack = Stack.find_by_title(action_name)
+  def self.define_top_action(*names)
+    names.each do |name|
+      define_method name do
+        @stack = Stack.find_by_title(name)
+        render 'page'
+      end
     end
+  end
+
+  define_top_action :line_card, :about, :what_we_do, :contact, :careers
 end
