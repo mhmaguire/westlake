@@ -1,12 +1,15 @@
 
 $(window).ready(function (){
-        var theFooter = document.getElementById("mainFoot");
-        var space = window.innerHeight - theFooter.offsetTop;
-        theFooter.style.height = space + 'px';
+        var theContent = document.getElementById("mainContent");
+        var lessHeight = 85;
+        var space = window.innerHeight - lessHeight;
+        console.log(theContent.style.height = space + 'px');
     });
     window.onresize = function (){
-        var theFooter = document.getElementById("mainFoot");
-        var space = window.innerHeight - theFooter.offsetTop;
-        theFooter.style.height = space + 'px';
-        console.log('hello there');
+        var theContent = document.getElementById("mainContent");
+        var lessHeight = 85;
+        var space = window.innerHeight - lessHeight;
+        theContent.style.height = space + 'px';
     };
+
+

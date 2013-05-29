@@ -13,25 +13,25 @@
     %p You could also use this area for featured products, a westlake pro twitter feed, really anything. The possibilities are endless.
   #col3.four.columns
     %h3 Send Us a Message
-    =semantic_form_for 'email', url: '/email_contact', method: :post do |f|
-      =f.inputs do
-        =f.input :name, as: :string, wrapper_html: {class: 'input1'}, input_html: {class: 'input1'}
-        =f.input :email, as: :email, wrapper_html: {class: 'input1'}, input_html: {class: 'input1'}
-        =f.input :message, as: :text, input_html: {}
-      =f.actions do
-        =f.action :submit
-    /%form
-    /  %input.input1{placeholder:'Your Name'}
-    /  %input.input1{placeholder:'Your Email'}
-    /  %textarea{placeholder:'Your Message'}
-    /  %input{type:'submit', value:'Submit'}
+    /=semantic_form_for 'email', url: '/email_contact', method: :post do |f|
+    /  =f.inputs do
+    /    =f.input :name, as: :string, wrapper_html: {class: 'input1'}, input_html: {class: 'input1', placeholder:'Your Name'}
+    /    =f.input :email, as: :email, wrapper_html: {class: 'input1', placeholder:'Your Email'}, input_html: {class: 'input1'}
+    /    =f.input :message, as: :text, input_html: {}
+    /  =f.actions do
+    /    =f.action :submit
+    %form
+      %input.input1{placeholder:'Your Name'}
+      %input.input1{placeholder:'Your Email'}
+      %textarea{placeholder:'Your Message'}
+      %input{type:'submit', value:'Submit'}
 
 =content_for :scripts do
-	:javascript
-		$(function() {
-			$('#homeSlider').orbit({
-					animationSpeed: 1200,
-					advanceSpeed: 6000,
-				});
-		});
+  :javascript
+    $(function() {
+      $('#homeSlider').orbit({
+        animationSpeed: 1200,
+        advanceSpeed: 6000,
+      });
+    });
 

@@ -1,5 +1,5 @@
 /replace '#header[data-hook]'
-%header#mainHead.gradientBack
+%header#mainHead.gradientBack.spreeHeader
   .container
     #logo.three.columns
       %h2
