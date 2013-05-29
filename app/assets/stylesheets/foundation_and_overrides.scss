@@ -244,3 +244,10 @@
 // http://www.modularscale.com by Tim Brown
 // https://github.com/scottkellum/modular-scale by scottkellum
 @import 'foundation';
+
+//FOUNDATION OVERRIDES
+html input[type="submit"],html input[type="button"],
+html input[type="reset"],html button,html a.button {
+	background-color:rgb(170,170,170);
+	border: 1px solid rgb(120,120,120);
+}
