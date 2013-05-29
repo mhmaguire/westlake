@@ -1,5 +1,5 @@
 /replace '#footer[data-hook]'
-%footer#mainFoot.gradientBack
+%footer#mainFoot.gradientBack2.spreeFooter
   .container
     #footCopy.nine.columns
       %span

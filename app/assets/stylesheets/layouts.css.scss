@@ -16,6 +16,16 @@ $contentPadding:0 3%;
    background-image: -ms-linear-gradient(top, $bgColor2, $bgColor1);
    background-image: -o-linear-gradient(top, $bgColor2, $bgColor1);
 }
+.gradientBack2 {
+   background-color: $bgColor2; 
+   /* fallback image */
+   //background-image: url(images/fallback-gradient.png); 
+   background-image: -webkit-gradient(linear, 0% 100%, 0% 0%, from($bgColor1), to($bgColor2));
+   background-image: -webkit-linear-gradient(top, $bgColor1, $bgColor2); 
+   background-image: -moz-linear-gradient(top, $bgColor1, $bgColor2);
+   background-image: -ms-linear-gradient(top, $bgColor1, $bgColor2);
+   background-image: -o-linear-gradient(top, $bgColor1, $bgColor2);
+}
 //end gradients
 ////Link Styling
 a:link{
@@ -81,15 +91,21 @@ p {
 #mainContent{
 }
 #mainFoot{
+	.container{
+		display:block;
+	}
 	width:100%;
 	height:35px;
-	position:absolute;
+	//position:absolute;
 	z-index:10;
 	bottom:0;
 	background-color:rgb(220,220,220);
 	overflow-y:hidden;
 	>div{
 		display:inline-block;
+	}
+	&.spreeFooter{
+		position:static !important;
 	}
 }
 #footCopy{
@@ -126,7 +142,7 @@ p {
 #homeFeatured{
 	width:100%;
 	height:200px;
-	background-color:$bgColor2;
+	background-color:$bgColor1;
 	>div{
 		height:100%;
 		padding-top:1.2em;
