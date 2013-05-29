@@ -7,11 +7,11 @@ WestlakePro::Application.routes.draw do
   # We ask that you don't use the :as option here, as Spree relies on it being the default of "spree"
   mount Spree::Core::Engine, :at => '/store'
         
-  match '/line_card' => 'pages#line_card'
-  match '/about' => 'pages#about'
-  match '/what_we_do' => 'pages#what_we_do'
-  match '/contact' => 'pages#contact'
-  match '/careers ' => 'pages#careers'
+  get '/line_card' => 'pages#line_card'
+  get '/about' => 'pages#about'
+  get '/what_we_do' => 'pages#what_we_do'
+  get '/contact' => 'pages#contact'
+  get '/careers ' => 'pages#careers', as: 'careers'
 
   resources :stacks, only: [:edit, :index, :update]
   # The priority is based upon order of creation:

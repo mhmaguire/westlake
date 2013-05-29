@@ -2,21 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2a582e00-7465-4880-a4e0-222190a4bb9d" name="Default" comment="">
-      <change type="DELETED" beforePath="C:\Users\Douche\RubymineProjects\WestlakePro\app\views\layouts\application.html.erb" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Douche\RubymineProjects\WestlakePro\app\views\pages\careers.html.haml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Douche\RubymineProjects\WestlakePro\app\views\pages\contact.html.haml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Douche\RubymineProjects\WestlakePro\app\views\pages\line_card.html.haml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Douche\RubymineProjects\WestlakePro\app\views\pages\what_we_do.html.haml" afterPath="" />
-      <change type="MOVED" beforePath="C:\Users\Douche\RubymineProjects\WestlakePro\app\views\pages\about.html.haml" afterPath="$PROJECT_DIR$/app/views/pages/page.html.haml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/.generators" afterPath="$PROJECT_DIR$/.idea/.generators" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile.lock" afterPath="$PROJECT_DIR$/Gemfile.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile" afterPath="$PROJECT_DIR$/Gemfile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/WestlakePro.iml" afterPath="$PROJECT_DIR$/.idea/WestlakePro.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/stacks/_slide.html.haml" afterPath="$PROJECT_DIR$/app/views/stacks/_slide.html.haml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/stacks/_stack.html.haml" afterPath="$PROJECT_DIR$/app/views/stacks/_stack.html.haml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/application.css" afterPath="$PROJECT_DIR$/app/assets/stylesheets/application.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/application.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/application.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/pages_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/pages_controller.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/layouts/_nav.html.haml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/application.html.haml" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.haml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/routes.rb" afterPath="$PROJECT_DIR$/config/routes.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="WestlakePro.iws" />
@@ -30,7 +18,7 @@
     <file path="/Gemfile" changelist="2a582e00-7465-4880-a4e0-222190a4bb9d" time="1369812382038" ignored="false" />
     <file path="/pages_controller.rb" changelist="2a582e00-7465-4880-a4e0-222190a4bb9d" time="1369807742507" ignored="false" />
     <file path="/seeds.rb" changelist="2a582e00-7465-4880-a4e0-222190a4bb9d" time="1369791099145" ignored="false" />
-    <file path="/routes.rb" changelist="2a582e00-7465-4880-a4e0-222190a4bb9d" time="1369810698022" ignored="false" />
+    <file path="/routes.rb" changelist="2a582e00-7465-4880-a4e0-222190a4bb9d" time="1369830239964" ignored="false" />
     <file path="/Ruby Console" changelist="2a582e00-7465-4880-a4e0-222190a4bb9d" time="1369792358752" ignored="false" />
     <file path="/home.html.haml" changelist="2a582e00-7465-4880-a4e0-222190a4bb9d" time="1369810740989" ignored="false" />
     <file path="/stacks_controller.rb" changelist="2a582e00-7465-4880-a4e0-222190a4bb9d" time="1369654402132" ignored="false" />
@@ -43,13 +31,14 @@
     <file path="/pages.css.scss" changelist="2a582e00-7465-4880-a4e0-222190a4bb9d" time="1369807031911" ignored="false" />
     <file path="/application.css" changelist="2a582e00-7465-4880-a4e0-222190a4bb9d" time="1369828827230" ignored="false" />
     <file path="/page.html.haml" changelist="2a582e00-7465-4880-a4e0-222190a4bb9d" time="1369828616047" ignored="false" />
-    <file path="/application.html.haml" changelist="2a582e00-7465-4880-a4e0-222190a4bb9d" time="1369813061125" ignored="false" />
+    <file path="/application.html.haml" changelist="2a582e00-7465-4880-a4e0-222190a4bb9d" time="1369829837352" ignored="false" />
     <file path="/application.js" changelist="2a582e00-7465-4880-a4e0-222190a4bb9d" time="1369809389254" ignored="false" />
     <file path="$PROJECT_DIR$/../FoundationTest/config/database.yml" changelist="2a582e00-7465-4880-a4e0-222190a4bb9d" time="1369810572942" ignored="false" />
     <file path="$PROJECT_DIR$/../FoundationTest/config/routes.rb" changelist="2a582e00-7465-4880-a4e0-222190a4bb9d" time="1369810698022" ignored="false" />
     <file path="$PROJECT_DIR$/../FoundationTest/Gemfile" changelist="2a582e00-7465-4880-a4e0-222190a4bb9d" time="1369810675430" ignored="false" />
     <file path="$PROJECT_DIR$/../FoundationTest/app/views/pages/home.html.haml" changelist="2a582e00-7465-4880-a4e0-222190a4bb9d" time="1369810835421" ignored="false" />
     <file path="$PROJECT_DIR$/../FoundationTest/log/development.log" changelist="2a582e00-7465-4880-a4e0-222190a4bb9d" time="1369810980981" ignored="false" />
+    <file path="/_nav.html.haml" changelist="2a582e00-7465-4880-a4e0-222190a4bb9d" time="1369830046581" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,16 +88,16 @@
       <file leaf-file-name="application.html.haml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.haml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="55" selection-start="815" selection-end="815" vertical-scroll-proportion="-14.192307">
+            <state line="27" column="31" selection-start="821" selection-end="821" vertical-scroll-proportion="-14.846154">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_stack.html.haml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/stacks/_stack.html.haml">
+      <file leaf-file-name="_nav.html.haml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/layouts/_nav.html.haml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="0" selection-start="78" selection-end="78" vertical-scroll-proportion="-2.6153846">
+            <state line="5" column="23" selection-start="189" selection-end="189" vertical-scroll-proportion="-3.2692308">
               <folding />
             </state>
           </provider>
@@ -132,10 +121,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="page.html.haml" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="page.html.haml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/pages/page.html.haml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="23" selection-start="418" selection-end="418" vertical-scroll-proportion="0.71647507">
+            <state line="13" column="32" selection-start="245" selection-end="245" vertical-scroll-proportion="-8.5">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="routes.rb" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/config/routes.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="13" column="8" selection-start="637" selection-end="637" vertical-scroll-proportion="0.40328467">
               <folding />
             </state>
           </provider>
@@ -173,11 +171,9 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/views/stacks/_slide_fields.html.haml" />
         <option value="$PROJECT_DIR$/app/controllers/stacks_controller.rb" />
         <option value="$PROJECT_DIR$/db/seeds.rb" />
         <option value="$PROJECT_DIR$/app/models/stack.rb" />
-        <option value="$PROJECT_DIR$/config/routes.rb" />
         <option value="$PROJECT_DIR$/app/views/pages/contact.html.haml" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/pages.css.scss" />
         <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
@@ -185,10 +181,12 @@
         <option value="$PROJECT_DIR$/app/views/stacks/_stack.html.haml" />
         <option value="$PROJECT_DIR$/Gemfile" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/application.js" />
-        <option value="$PROJECT_DIR$/app/views/layouts/application.html.haml" />
         <option value="$PROJECT_DIR$/app/views/stacks/_slide.html.haml" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/application.css" />
         <option value="$PROJECT_DIR$/app/views/pages/page.html.haml" />
+        <option value="$PROJECT_DIR$/app/views/layouts/application.html.haml" />
+        <option value="$PROJECT_DIR$/app/views/layouts/_nav.html.haml" />
+        <option value="$PROJECT_DIR$/config/routes.rb" />
       </list>
     </option>
   </component>
@@ -513,7 +511,7 @@
     <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
   </component>
-  <component name="RunManager" selected="Rake.spree_sample:load">
+  <component name="RunManager" selected="Rake.routes">
     <configuration default="false" name="db:migrate" type="RakeRunConfigurationType" factoryName="Rake" temporary="true">
       <module name="WestlakePro" />
       <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
@@ -863,11 +861,11 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Rake.spree_sample:load" />
-        <item index="1" class="java.lang.String" itemvalue="IRB console.Rails console: WestlakePro" />
-        <item index="2" class="java.lang.String" itemvalue="Rake.db:reset" />
-        <item index="3" class="java.lang.String" itemvalue="IRB console.Rails console: WestlakePro" />
-        <item index="4" class="java.lang.String" itemvalue="Rake.db:migrate" />
+        <item index="0" class="java.lang.String" itemvalue="Rake.routes" />
+        <item index="1" class="java.lang.String" itemvalue="Rake.spree_sample:load" />
+        <item index="2" class="java.lang.String" itemvalue="IRB console.Rails console: WestlakePro" />
+        <item index="3" class="java.lang.String" itemvalue="Rake.db:reset" />
+        <item index="4" class="java.lang.String" itemvalue="IRB console.Rails console: WestlakePro" />
       </list>
     </recent_temporary>
   </component>
@@ -1005,13 +1003,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/routes.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="65" column="26" selection-start="2182" selection-end="2182" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/pages.css.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state line="3" column="0" selection-start="176" selection-end="176" vertical-scroll-proportion="0.0">
@@ -1044,13 +1035,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/pages_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="7" selection-start="219" selection-end="219" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/stacks_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="19" column="0" selection-start="352" selection-end="352" vertical-scroll-proportion="0.0">
@@ -1065,16 +1049,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.haml">
+    <entry file="file://$PROJECT_DIR$/app/views/pages/page.html.haml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="55" selection-start="815" selection-end="815" vertical-scroll-proportion="-14.192307">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/stacks/_slide.html.haml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="17" selection-start="64" selection-end="64" vertical-scroll-proportion="-1.9615384">
+        <state line="13" column="32" selection-start="245" selection-end="245" vertical-scroll-proportion="-8.5">
           <folding />
         </state>
       </provider>
@@ -1086,9 +1063,37 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/pages/page.html.haml">
+    <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.haml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="23" selection-start="418" selection-end="418" vertical-scroll-proportion="0.71647507">
+        <state line="27" column="31" selection-start="821" selection-end="821" vertical-scroll-proportion="-14.846154">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/layouts/_nav.html.haml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="23" selection-start="189" selection-end="189" vertical-scroll-proportion="-3.2692308">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/stacks/_slide.html.haml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="17" selection-start="64" selection-end="64" vertical-scroll-proportion="-1.9615384">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/pages_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="7" selection-start="219" selection-end="219" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/routes.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="8" selection-start="637" selection-end="637" vertical-scroll-proportion="0.40328467">
           <folding />
         </state>
       </provider>

@@ -21,7 +21,16 @@
 
 %body
 
+  %header#header
+    #logo
+      %h1 a logo and header go here
+    %nav#top-nav
+      =render partial: 'layouts/nav'
   = yield
+  %footer#footer
+    %h2 Footer links etc here
+
+
 
   = javascript_include_tag "application"
   = if content_for?(:scripts) then yield :scripts end
