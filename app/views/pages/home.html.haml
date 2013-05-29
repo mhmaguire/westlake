@@ -1,28 +1,35 @@
 #homeSlider
-	=image_tag "panorama.jpg"
-	=image_tag "panorama2.jpg"
-	=image_tag "panorama3.jpg"
+  =image_tag "panorama.jpg"
+  =image_tag "panorama2.jpg"
+  =image_tag "panorama3.jpg"
 
 #homeFeatured
-	#col1.three.columns
-		%a{href:'#', id: 'avidLink'}
-		=image_tag "avid-logo.png", :id => "avidLogo"
-	#col2.five.columns
-		%h3 This Spot is Reserved for Copy Text
-		%p Then again, on second thought, it might be beneficial to have a list of upcoming events? Or maybe information about a single event, complete with a link to ticket purchase.
-		%p You could also use this area for featured products, a westlake pro twitter feed, really anything. The possibilities are endless.
-	#col3.four.columns
-		%h3 Send Us a Message
-		%form
-			%input.input1{placeholder:'Your Name'}
-			%input.input1{placeholder:'Your Email'}
-			%textarea{placeholder:'Your Message'}
-			%input{type:'submit', value:'Submit'}
+  #col1.three.columns
+    %a{href:'#', id: 'avidLink'}
+    =image_tag "avid-logo.png", :id => "avidLogo"
+  #col2.five.columns
+    %h3 This Spot is Reserved for Copy Text
+    %p Then again, on second thought, it might be beneficial to have a list of upcoming events? Or maybe information about a single event, complete with a link to ticket purchase.
+    %p You could also use this area for featured products, a westlake pro twitter feed, really anything. The possibilities are endless.
+  #col3.four.columns
+    %h3 Send Us a Message
+    =semantic_form_for 'email', url: '/email_contact', method: :post do |f|
+      =f.inputs do
+        =f.input :name, as: :string, wrapper_html: {class: 'input1'}, input_html: {class: 'input1'}
+        =f.input :email, as: :email, wrapper_html: {class: 'input1'}, input_html: {class: 'input1'}
+        =f.input :message, as: :text, input_html: {}
+      =f.actions do
+        =f.action :submit
+    /%form
+    /  %input.input1{placeholder:'Your Name'}
+    /  %input.input1{placeholder:'Your Email'}
+    /  %textarea{placeholder:'Your Message'}
+    /  %input{type:'submit', value:'Submit'}
 
 =content_for :scripts do
-	:javascript
-		$(function() {
-			$('#homeSlider').orbit({
-				//orbit options go here
-			});
-		});
+  :javascript
+    $(function() {
+      $('#homeSlider').orbit({
+          //orbit options go here
+      });
+    });
