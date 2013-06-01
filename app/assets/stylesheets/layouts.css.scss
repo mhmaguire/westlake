@@ -135,17 +135,17 @@ p {
 	}
 }
 ///////////Pages
-//Home Page
+/////Home Page
 #homeSlider{
 	margin-bottom:0px;
 	width:100%;
 	img{
 		width:100%;
-		height:100%;
 	}
 }
 #homeFeatured{
 	width:100%;
+	padding:0 5%;
 	height:200px;
 	background-color:$bgColor1;
 	>div{
@@ -166,12 +166,21 @@ p {
 }
 #avidLogo{
 	position:relative;
-	top:20px;
 	z-index:5;
+	//top:-13px;
+	width:80%;
+	margin:0 10%;
+}
+.avidCopy{
+	position:relative;
+	z-index:5;
+	width:80%;
+	margin:0 10%;
 }
 #col2{
+	padding:0 3%;
 	p{
-		font-size:1.3em;
+		font-size:1.15em;
 		padding:0;
 	}
 }
@@ -184,4 +193,63 @@ p {
 		margin:.5em 0;
 	}
 }
-////////
+//Home Slides
+.slideCopy{
+	padding:20px;
+	position:absolute;
+	z-index:5;
+	background-color:rgba(140,140,140,0.6);
+	h2, p{color:white;}
+	p{font-size:1.2em;}
+}
+#slide1{
+	.slideCopy{
+		max-width:350px;
+		top:75px;
+		left:100px;	
+	}
+}
+#slide2{
+	.slideCopy{
+		max-width:470px;
+		top:100px;
+		right:100px;
+	}
+}
+#slide3{
+	.slideCopy{
+		background-color:rgba(100,100,100,0.6);
+		max-width:475px;
+		top:85px;
+		right:100px;
+	}
+}
+//////
+////// Stacks Page
+ul.featured.orbit{
+	margin-bottom:0px;
+}
+.stackNav{
+	position:absolute;
+	top:35%;
+	left:20px;
+	z-index:8;
+	padding:0 10px;
+	background-color:rgba(180,180,180,0.4);
+	li {
+		padding:0 5px;
+		//&:hover{background-color:rgba(180,180,180,0.7);}
+		a{
+			color: white;
+			&:hover{text-decoration:underline;}
+		}
+	}
+}
+
+#addLink{
+	position:absolute;
+	top:65px;
+	right:75px;
+	z-index:9;
+}
+

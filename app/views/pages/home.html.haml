@@ -1,16 +1,30 @@
 #homeSlider
-  =image_tag "panorama.jpg"
-  =image_tag "panorama2.jpg"
-  =image_tag "panorama3.jpg"
+  #slide1
+    =image_tag "panorama.jpg"
+    .slideCopy
+      %h2 Pro Audio Enthusiasts
+      %p Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+  #slide2
+    =image_tag "panorama2.jpg"
+    .slideCopy
+      %h2 Better Sound Through Superior Technology. 
+      %p Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium. voluptatem accusantium doloremque laudantium, totam rem aperiam.
+  #slide3  
+    =image_tag "panorama3.jpg"
+    .slideCopy
+      %h2 Westlake Pro Proudly Outfits the Bat Cave
+      %p Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
 
 #homeFeatured
   #col1.three.columns
     %a{href:'#', id: 'avidLink'}
     =image_tag "avid-logo.png", :id => "avidLogo"
+    %p.avidCopy
+      We partner with Avid to bring you all kinds of cool stuff. 
   #col2.five.columns
     %h3 This Spot is Reserved for Copy Text
     %p Then again, on second thought, it might be beneficial to have a list of upcoming events? Or maybe information about a single event, complete with a link to ticket purchase.
-    %p You could also use this area for featured products, a westlake pro twitter feed, really anything. The possibilities are endless.
+    %p You could also use this area for featured products, a westlake pro twitter feed, really anything. All kinds of different things could be put here. The possibilities are endless.
   #col3.four.columns
     %h3 Send Us a Message
     /=semantic_form_for 'email', url: '/email_contact', method: :post do |f|
@@ -32,6 +46,7 @@
       $('#homeSlider').orbit({
         animationSpeed: 1200,
         advanceSpeed: 6000,
+        directionalNav: false,
       });
     });
 

@@ -1,11 +1,12 @@
 %ul.featured
   =render @stack
-=link_to 'Add Slides', edit_stack_path(@stack)
-=debug @stack
+=link_to 'Add Slides', edit_stack_path(@stack), :id => "addLink", :class => "button"
+%nav.stackNav
+  %ul.side-nav.stackNavList
+    - @stack.slides.each do |slide|
+      %li= link_to "#{slide.title}", "##{slide.title}"
 
-%a#button(href='#')
-  %h1 mouse wheel
-  %h2
+//=debug @stack
 
 =content_for :scripts do
   :javascript
@@ -14,9 +15,8 @@
         timer: false,
         fluid: '16x6',
         bulletThumbs: false,
-        animation: "vertical-slide"
-
-
+        animation: "vertical-slide",
+        directionalNav: false,
       });
 
       $(document).on('mousewheel', function(e){
@@ -24,7 +24,10 @@
         $('.featured').trigger(temp);
         return false;
 
-
       });
+
+      var $children = $('.stackNavList').children().length();
+
+      $children.css()
 
     });
