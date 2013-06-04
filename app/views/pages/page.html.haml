@@ -28,9 +28,10 @@
       });
 
       $(document).on('keydown', function(e){
-        var temp = e.originalEvent.keyIdentifier; 
-        if(temp == 'Up' || temp == 'Down') {
-          if(temp == 'Up') {
+        console.log(e.originalEvent); 
+        var temp = e.originalEvent.keyCode; 
+        if(temp == 38 || temp == 40) {
+          if(temp == 40) {
             temp = 'orbit.next';
           } else {
             temp = 'orbit.prev'
@@ -38,10 +39,5 @@
           $('.featured').trigger(temp);  
         }
       });
-
-
-      var $children = $('.stackNavList').children().length();
-
-      $children.css()
 
     });
