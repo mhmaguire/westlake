@@ -1,11 +1,11 @@
-%ul.featured
-  =render @stack
-=link_to 'Add Slides', edit_stack_path(@stack), :id => "addLink", :class => "button"
-%nav.stackNav
-  %ul.side-nav.stackNavList
-    %li=# link_to "#{@stack.title}", "##{@stack.title.to_url}" 
-    - @stack.slides.reverse.each do |slide|
-      %li= link_to "#{slide.title}", "##{slide.title.to_url}"
+#stackPage  
+  %ul.featured
+    =render @stack
+  =link_to 'Add Slides', edit_stack_path(@stack), :id => "addLink", :class => "button"
+  %nav.stackNav
+    %ul.side-nav.stackNavList
+      - @stack.slides.reverse.each do |slide|
+        %li= link_to "#{slide.title}", "##{slide.title.to_url}"
 
 //=debug @stack
 
@@ -17,7 +17,7 @@
         fluid: '16x6',
         bulletThumbs: false,
         animation: "vertical-slide",
-        directionalNav: false,
+        directionalNav: true,
       });
 
       $(document).on('mousewheel DOMMouseScroll', function(e){
@@ -25,11 +25,9 @@
         var temp = (0 < e.originalEvent.wheelDelta ? 'orbit.next' : 'orbit.prev');
         $('.featured').trigger(temp);
         return false;
-
       });
 
       $(document).on('keydown', function(e){
-        console.log(e.originalEvent); 
         var temp = e.originalEvent.keyCode; 
         if(temp == 38 || temp == 40) {
           if(temp == 40) {
@@ -41,26 +39,12 @@
         }
       });
 
-      function navToSlide(){
 
-      };
-
-      var length = $('ul.stackNavList li').length - 1;
-      console.log('length' + length);  
-
+      var length = $('ul.stackNavList li').length - 1;  
       $('ul.stackNavList li a').on('click', function(e){
         var index = $(this).parent().index();
-        
-
         index = (length - index) +1 ; 
         $(this).parent().addClass('current');
-        console.log('index ' + index); 
-        
- 
         $('.featured').trigger('orbit.stop').trigger('orbit.goto', [index]); 
-        
       });
-
-
-
     });
