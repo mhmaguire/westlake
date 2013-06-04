@@ -19,12 +19,26 @@
         directionalNav: false,
       });
 
-      $(document).on('mousewheel', function(e){
+      $(document).on('mousewheel DOMMouseScroll', function(e){
+        console.log(e); 
         var temp = (0 < e.originalEvent.wheelDelta ? 'orbit.next' : 'orbit.prev');
         $('.featured').trigger(temp);
         return false;
 
       });
+
+      $(document).on('keydown', function(e){
+        var temp = e.originalEvent.keyIdentifier; 
+        if(temp == 'Up' || temp == 'Down') {
+          if(temp == 'Up') {
+            temp = 'orbit.next';
+          } else {
+            temp = 'orbit.prev'
+          }
+          $('.featured').trigger(temp);  
+        }
+      });
+
 
       var $children = $('.stackNavList').children().length();
 
