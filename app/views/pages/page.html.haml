@@ -20,15 +20,25 @@
         directionalNav: true,
       });
 
-      $(document).on('mousewheel', function(e){
+      $(document).on('mousewheel DOMMouseScroll', function(e){
+        console.log(e); 
         var temp = (0 < e.originalEvent.wheelDelta ? 'orbit.next' : 'orbit.prev');
         $('.featured').trigger(temp);
         return false;
 
       });
 
-      var $children = $('.stackNavList').children().length();
-
-      $children.css()
+      $(document).on('keydown', function(e){
+        console.log(e.originalEvent); 
+        var temp = e.originalEvent.keyCode; 
+        if(temp == 38 || temp == 40) {
+          if(temp == 40) {
+            temp = 'orbit.next';
+          } else {
+            temp = 'orbit.prev'
+          }
+          $('.featured').trigger(temp);  
+        }
+      });
 
     });
