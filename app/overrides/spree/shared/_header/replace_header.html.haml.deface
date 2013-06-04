@@ -1,10 +1,9 @@
 /replace '#header[data-hook]'
 %header#mainHead.gradientBack.spreeHeader
-  .container
-    #logo.three.columns
-      %h2
-        <%= link_to 'Westlake Pro', '/' %>
-    %nav#mainNav.eleven.columns
-      <%=render partial: 'layouts/nav' %>
-    #logIn.two.columns
-      %a.button{:"data-reveal-id" => "logInModal", :href => "#"} Sign In
+  #logo
+    %h2
+      <%= link_to 'Westlake Pro', '/' %>
+  %nav#mainNav
+    <%=render partial: 'layouts/nav' %>
+  #logIn
+    %a.button{:"data-reveal-id" => "logInModal", :href => "#"} Sign In

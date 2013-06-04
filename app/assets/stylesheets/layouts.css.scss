@@ -6,6 +6,10 @@ $bgColor2: rgb(250,250,250);
 $contentPadding:0 3%;
 $footHeight: 35px;
 
+$headFont: 'Noto Sans', 'Myriad Pro', sans-serif;
+$bodyFont: 'Quicksand', 'Myriad Pro', sans-serif;
+
+
 //gradients
 .gradientBack {
    background-color: $bgColor2; 
@@ -45,13 +49,16 @@ body, html {
 	height:100%;
 }
 
-h1, h2, h3, h4, h5, h6, p, a, li, span{
+h1, h2, h3, h4, h5, h6 {
 	color:$textColor2;
-	font-family: 'myriad pro';
+	font-family:$headFont;
+	font-weight:300;
 }
 
-p {
+p, a, li, span {
 	margin-bottom:0px;
+	color:$textColor2;
+	font-family:$bodyFont;
 }
 
 #mainHead {
@@ -59,11 +66,12 @@ p {
 	width:100%;
 	&.spreeHeader{width:auto;}
 	min-width:768px;
-	height:50px;
+	min-height:50px;
 	border-bottom:2px solid rgb(140,140,140);
 	box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, .5);
 	position:relative;
 	z-index: 8;
+	overflow:auto;
 }
 #logo{
 	margin:0px;
@@ -72,18 +80,21 @@ p {
 		width:100%;
 		//text-align:right;
 		font-size:2.2em;
-		margin-top:.4em;
+		margin-top:.2em;
 	}
 }
 #mainNav{
 	height:100%;
-	padding-top:.5em;
+	padding-top:.45em;
 	a {
 		font-size:1.3em;
-		margin-left:5%;
-		padding-top:1.5em;
+		margin-left:3%;
+		padding:1.5em .5em .9em;
 		&:first-child{
 			margin-left:5%;
+		}
+		&:hover{
+			background-color:rgba(180,180,180,0.2);
 		}
 	}
 }
@@ -94,6 +105,7 @@ p {
 }
 #logIn {
 	padding-top:13px;
+	a.button{width:75px;}
 }
 #logInModal{
 	form input:nth-child(3){
@@ -103,8 +115,8 @@ p {
 #mainContent{
 	min-width:768px;
 	border-top:1px solid white;
-	border-bottom:1px solid rgb(140,140,140);
 	background-color:$bgColor1;
+	border-bottom:1px solid rgb(140,140,140);
 }
 #mainFoot{
 	.container{
@@ -128,7 +140,7 @@ p {
 #footCopy{
 	span{
 		height:100%;
-		padding-top:.7em;
+		padding-top:.5em;
 		font-size:1.1em;
 		float:left;
 		&:first-child::after{
@@ -140,7 +152,7 @@ p {
 #footCredit{
 	span{
 		height:100%;
-		padding-top:.7em;
+		padding-top:.5em;
 		font-size:1.1em;
 		text-align:right;
 		float:right;
@@ -160,6 +172,11 @@ p {
 		width:100%;
 	}
 }
+.orbit-wrapper .slider-nav span{
+		&.right, &.left{
+			margin-top:-75px;
+		}
+	}
 #homeFeatured{
 	position:absolute;
 	bottom:0;
@@ -202,8 +219,14 @@ p {
 	z-index:5;
 	background-color:rgba(140,140,140,0.6);
 	h2, p{color:white;}
-	h2 {font-size:2.5em;}
-	p{font-size:1.4em;}
+	h2 {
+		font-size:2.5em;
+		line-height:1.2em;
+	}
+	p{
+		font-size:1.4em;
+		line-height:1.4em;
+	}
 }
 #slide1{
 	background:url(asset-path('panorama.jpg', image)) no-repeat;

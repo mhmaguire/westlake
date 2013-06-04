@@ -10,8 +10,13 @@ $(window).ready(function (){
         var sMin = 540;
         var sMax = 660;
 
-        if(space < sMin) {space = sMin;}
-        else if(space > sMax) {space = sMax;}
+        if(space < sMin) {
+            space = sMin;
+        }
+        else if(space > sMax) {
+            space = sMax;
+            $("#mainFoot").css("position","relative");
+        }
 
         $("#homePage").css("height", space + 'px');
     });
@@ -28,7 +33,11 @@ $(window).resize(function (){
         var sMax = 660;
 
         if(space < sMin) {space = sMin;}
-        else if(space > sMax) {space = sMax;}
+        else if(space < sMax) {$("#mainFoot").css("position", "fixed")}
+        else if(space > sMax) {
+            space = sMax;
+            $("#mainFoot").css("position","relative");
+        }
 
         $("#homePage").css("height", space + 'px');
     });
