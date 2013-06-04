@@ -11,7 +11,7 @@ WestlakePro::Application.routes.draw do
   get '/about' => 'pages#about'
   get '/what_we_do' => 'pages#what_we_do'
   get '/contact' => 'pages#contact'
-  get '/careers ' => 'pages#careers', as: 'careers'
+  get '/careers' => 'pages#careers'
   get '/home' => 'pages#home'
   post '/email_contact' => 'pages#email_contact'
 

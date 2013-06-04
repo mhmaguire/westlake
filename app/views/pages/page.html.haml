@@ -3,8 +3,9 @@
 =link_to 'Add Slides', edit_stack_path(@stack), :id => "addLink", :class => "button"
 %nav.stackNav
   %ul.side-nav.stackNavList
-    - @stack.slides.each do |slide|
-      %li= link_to "#{slide.title}", "##{slide.title}"
+    %li=# link_to "#{@stack.title}", "##{@stack.title.to_url}" 
+    - @stack.slides.reverse.each do |slide|
+      %li= link_to "#{slide.title}", "##{slide.title.to_url}"
 
 //=debug @stack
 
@@ -39,5 +40,27 @@
           $('.featured').trigger(temp);  
         }
       });
+
+      function navToSlide(){
+
+      };
+
+      var length = $('ul.stackNavList li').length - 1;
+      console.log('length' + length);  
+
+      $('ul.stackNavList li a').on('click', function(e){
+        var index = $(this).parent().index();
+        
+
+        index = (length - index) +1 ; 
+        $(this).parent().addClass('current');
+        console.log('index ' + index); 
+        
+ 
+        $('.featured').trigger('orbit.stop').trigger('orbit.goto', [index]); 
+        
+      });
+
+
 
     });
