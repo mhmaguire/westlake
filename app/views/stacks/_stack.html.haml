@@ -1,4 +1,5 @@
 %li.stackSlide
   %h2=stack.title
 
-=render partial: 'stacks/slide', collection: stack.slides
+-stack.slides.each do |slide|
+  =render partial: 'stacks/slide', object: slide 

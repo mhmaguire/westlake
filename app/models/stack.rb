@@ -7,4 +7,8 @@ class Stack < ActiveRecord::Base
   def title
     read_attribute(:title).gsub('_', ' ').capitalize
   end
+
+  def to_url 
+  	title.gsub(' ', '_') 
+  end
 end
