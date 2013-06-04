@@ -1,10 +1,11 @@
-%ul.featured
-  =render @stack
-=link_to 'Add Slides', edit_stack_path(@stack), :id => "addLink", :class => "button"
-%nav.stackNav
-  %ul.side-nav.stackNavList
-    - @stack.slides.each do |slide|
-      %li= link_to "#{slide.title}", "##{slide.title}"
+#stackPage  
+  %ul.featured
+    =render @stack
+  =link_to 'Add Slides', edit_stack_path(@stack), :id => "addLink", :class => "button"
+  %nav.stackNav
+    %ul.side-nav.stackNavList
+      - @stack.slides.each do |slide|
+        %li= link_to "#{slide.title}", "##{slide.title}"
 
 //=debug @stack
 
@@ -16,7 +17,7 @@
         fluid: '16x6',
         bulletThumbs: false,
         animation: "vertical-slide",
-        directionalNav: false,
+        directionalNav: true,
       });
 
       $(document).on('mousewheel', function(e){

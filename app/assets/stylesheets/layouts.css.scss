@@ -1,9 +1,10 @@
 $textColor1: white;
 $textColor2: rgb(100,100,100);
-$bgColor1: rgb(200,200,200);
+$bgColor1: rgb(225,225,225);
 $bgColor2: rgb(250,250,250);
 
 $contentPadding:0 3%;
+$footHeight: 35px;
 
 //gradients
 .gradientBack {
@@ -13,7 +14,7 @@ $contentPadding:0 3%;
    background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from($bgColor2), to($bgColor1));
    background-image: -webkit-linear-gradient(top, $bgColor2, $bgColor1); 
    background-image: -moz-linear-gradient(top, $bgColor2, $bgColor1);
-   background-image: -ms-linear-gradient(top, $bgColor2, $bgColor1);
+   background-image: -ms-linearz-gradient(top, $bgColor2, $bgColor1);
    background-image: -o-linear-gradient(top, $bgColor2, $bgColor1);
 }
 .gradientBack2 {
@@ -60,6 +61,9 @@ p {
 	min-width:768px;
 	height:50px;
 	border-bottom:2px solid rgb(140,140,140);
+	box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, .5);
+	position:relative;
+	z-index: 8;
 }
 #logo{
 	margin:0px;
@@ -73,15 +77,20 @@ p {
 }
 #mainNav{
 	height:100%;
-	padding-top:1.5em;
+	padding-top:.5em;
 	a {
 		font-size:1.3em;
 		margin-left:5%;
 		padding-top:1.5em;
 		&:first-child{
-			margin-left:10%;
+			margin-left:5%;
 		}
 	}
+}
+#avidLogo{
+	max-height:25px;
+	position: relative;
+	top:7px;
 }
 #logIn {
 	padding-top:13px;
@@ -92,17 +101,20 @@ p {
 	}
 }
 #mainContent{
+	min-width:768px;
 	border-top:1px solid white;
 	border-bottom:1px solid rgb(140,140,140);
+	background-color:$bgColor1;
 }
 #mainFoot{
 	.container{
 		display:block;
 	}
 	width:100%;
-	height:35px;
+	height:$footHeight;
+	position:fixed;
+	bottom:0px;
 	z-index:10;
-	bottom:0;
 	background-color:rgb(220,220,220);
 	border-top:2px solid white;
 	overflow-y:hidden;
@@ -115,13 +127,14 @@ p {
 }
 #footCopy{
 	span{
+		height:100%;
+		padding-top:.7em;
+		font-size:1.1em;
+		float:left;
 		&:first-child::after{
 			content:'-';
 			padding:0 4px;
 		}
-		line-height:2em;
-		font-size:1.5em;
-		color:$textColor2;
 	}
 }
 #footCredit{
@@ -134,53 +147,42 @@ p {
 		&:nth-child(2){margin-right:30px;}
 	}
 }
+
 ///////////Pages
 /////Home Page
+#homePage{position:relative;}
 #homeSlider{
 	margin-bottom:0px;
 	width:100%;
+	min-height:380px;
+	max-height:500px;
 	img{
 		width:100%;
 	}
 }
 #homeFeatured{
+	position:absolute;
+	bottom:0;
+	z-index:7;
 	width:100%;
 	padding:0 5%;
-	height:200px;
+	height:160px;
 	background-color:$bgColor1;
+	box-shadow: 0px -4px 4px 0px rgba(0, 0, 0, .5);
 	>div{
 		height:100%;
-		padding-top:1.2em;
+		padding-top:1.1em;
 	}
 }
-#avidLink{
-	position:absolute;
-	z-index:9;
-	top:0;
-	bottom:0;
-	left:0;
-	right:0;
-	&:hover{
-		background-color:rgba(150,150,150,.4);
+#col1, #col2 {
+	img{
+		box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, .5);
 	}
-}
-#avidLogo{
-	position:relative;
-	z-index:5;
-	//top:-13px;
-	width:80%;
-	margin:0 10%;
-}
-.avidCopy{
-	position:relative;
-	z-index:5;
-	width:80%;
-	margin:0 10%;
 }
 #col2{
 	padding:0 3%;
 	p{
-		font-size:1.15em;
+		//font-size:1.15em;
 		padding:0;
 	}
 }
@@ -200,23 +202,33 @@ p {
 	z-index:5;
 	background-color:rgba(140,140,140,0.6);
 	h2, p{color:white;}
-	p{font-size:1.2em;}
+	h2 {font-size:2.5em;}
+	p{font-size:1.4em;}
 }
 #slide1{
+	background:url(asset-path('panorama.jpg', image)) no-repeat;
+	background-position:center center;
+	background-size:cover;
 	.slideCopy{
-		max-width:350px;
+		max-width:450px;
 		top:75px;
 		left:100px;	
 	}
 }
 #slide2{
+	background:url(asset-path('panorama2.jpg', image)) no-repeat;
+	background-position:center center;
+	background-size:cover;
 	.slideCopy{
 		max-width:470px;
-		top:100px;
+		top:120px;
 		right:100px;
 	}
 }
 #slide3{
+	background:url(asset-path('panorama3.jpg', image)) no-repeat;
+	background-position:center center;
+	background-size:cover;
 	.slideCopy{
 		background-color:rgba(100,100,100,0.6);
 		max-width:475px;
@@ -226,6 +238,9 @@ p {
 }
 //////
 ////// Stacks Page
+#stackPage{
+	padding-bottom:$footHeight;
+}
 ul.featured.orbit{
 	margin-bottom:0px;
 }
@@ -252,4 +267,8 @@ ul.featured.orbit{
 	right:75px;
 	z-index:9;
 }
-
+//////
+////// Backend Styles
+.backend{
+	padding-bottom:$footHeight;
+}

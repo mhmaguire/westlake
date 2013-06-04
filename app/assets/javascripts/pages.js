@@ -1,15 +1,34 @@
 
 $(window).ready(function (){
-        var theContent = document.getElementById("mainContent");
-        var lessHeight = 85;
+        var hHeight = $("#mainHead").height();
+        var fHeight = $("#mainFoot").height();
+        var lessHeight = hHeight + fHeight;
         var space = window.innerHeight - lessHeight;
-        console.log(theContent.style.height = space + 'px');
+
+        $("#stackPage").css("height", space + 'px');
+
+        var sMin = 540;
+        var sMax = 660;
+
+        if(space < sMin) {space = sMin;}
+        else if(space > sMax) {space = sMax;}
+
+        $("#homePage").css("height", space + 'px');
     });
-    window.onresize = function (){
-        var theContent = document.getElementById("mainContent");
-        var lessHeight = 85;
+
+$(window).resize(function (){
+        var hHeight = $("#mainHead").height();
+        var fHeight = $("#mainFoot").height();
+        var lessHeight = hHeight + fHeight;
         var space = window.innerHeight - lessHeight;
-        theContent.style.height = space + 'px';
-    };
 
+        $("#stackPage").css("height", space + 'px');
 
+        var sMin = 540;
+        var sMax = 660;
+
+        if(space < sMin) {space = sMin;}
+        else if(space > sMax) {space = sMax;}
+
+        $("#homePage").css("height", space + 'px');
+    });
