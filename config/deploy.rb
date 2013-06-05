@@ -2,7 +2,7 @@ require "bundler/capistrano"
 load "deploy/assets"
 
 set :application, "WestlakePro"
-set :repository,  "git@github.com:mhmaguire/westlake.git"
+set :repository,  "git@github-as-matt:mhmaguire/westlake.git"
 
 set :scm, :git # You can set :scm explicitly or Capistrano will make an intelligent guess based on known version control directory names
 # Or: `accurev`, `bzr`, `cvs`, `darcs`, `git`, `mercurial`, `perforce`, `subversion` or `none`
