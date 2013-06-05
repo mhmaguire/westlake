@@ -1,3 +1,6 @@
+require "bundler/capistrano"
+load "deploy/assets"
+
 set :application, "WestlakePro"
 set :repository,  "git@github.com:mhmaguire/westlake.git"
 
@@ -12,7 +15,7 @@ role :db,  server, :primary => true # This is where Rails migrations will run
 set :user, "westlake"
 set :deploy_to, "/home/westlake/#{application}"
 
-set :user_sudo, false 
+set :use_sudo, false 
 
 default_run_options[:shell]= '/bin/bash --login'
 
