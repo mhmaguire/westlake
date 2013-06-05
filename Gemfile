@@ -12,7 +12,10 @@ end
 
 group :production do 
   gem 'pg'
-  gem 'unicorn'
+  platforms :ruby do 
+    gem 'unicorn'
+  end
+  
 end
 
 
