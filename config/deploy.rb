@@ -18,6 +18,8 @@ set :deploy_to, "/home/westlake/#{application}"
 
 set :use_sudo, false 
 
+set :ssh_options, { :forward_agent => true }
+
 default_run_options[:shell]= '/bin/bash --login'
 
 default_environment["RAILS_ENV"] = 'production'
