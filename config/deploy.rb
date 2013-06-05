@@ -23,6 +23,14 @@ set :ssh_options, { :forward_agent => true }
 default_run_options[:shell]= '/bin/bash --login'
 
 default_environment["RAILS_ENV"] = 'production'
+
+namespace :deploy do 
+	task :symlink_database_yml do
+	  run "rm #{release_path}/config/database.yml"
+	  run "ln -sfn #{shared_path}/config/database.yml #{release_path}/config/database.yml"
+	end
+end
+after "bundle:install", "deploy:symlink_database_yml"
 # if you want to clean up old releases on each deploy uncomment this:
 # after "deploy:restart", "deploy:cleanup"
 
