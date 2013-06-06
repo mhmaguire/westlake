@@ -11,7 +11,7 @@ $bodyFont: 'Quicksand', 'Myriad Pro', sans-serif;
 
 @font-face {
   font-family: 'Futura-BoldOblique';
-  src: url(asset-path('Futura-BoldOblique.ttf'));
+  src: url(asset-path('Futura-BoldOblique.ttf', 'font'));
 }
 
 //gradients
