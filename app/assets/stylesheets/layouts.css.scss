@@ -9,6 +9,10 @@ $footHeight: 35px;
 $headFont: 'Noto Sans', 'Myriad Pro', sans-serif;
 $bodyFont: 'Quicksand', 'Myriad Pro', sans-serif;
 
+@font-face {
+  font-family: 'Futura-BoldOblique';
+  src: url(asset-path('Futura-BoldOblique.ttf'));
+}
 
 //gradients
 .gradientBack {
@@ -49,6 +53,10 @@ body, html {
 	height:100%;
 }
 
+body{
+	background-color:$bgColor1 !important;
+}
+
 h1, h2, h3, h4, h5, h6 {
 	color:$textColor2;
 	font-family:$headFont;
@@ -81,6 +89,9 @@ p, a, li, span {
 		//text-align:right;
 		font-size:2.2em;
 		margin-top:.2em;
+		a{
+			font-family:'Futura-BoldOblique', $bodyFont;
+		}
 	}
 }
 #mainNav{
@@ -116,7 +127,6 @@ p, a, li, span {
 	min-width:768px;
 	border-top:1px solid white;
 	background-color:$bgColor1;
-	border-bottom:1px solid rgb(140,140,140);
 }
 #mainFoot{
 	.container{
@@ -167,7 +177,7 @@ p, a, li, span {
 	margin-bottom:0px;
 	width:100%;
 	min-height:380px;
-	max-height:500px;
+	max-height:650px;
 	img{
 		width:100%;
 	}
@@ -212,7 +222,7 @@ p, a, li, span {
 		margin:.5em 0;
 	}
 }
-//Home Slides
+///Home Slides
 .slideCopy{
 	padding:20px;
 	position:absolute;
@@ -228,10 +238,11 @@ p, a, li, span {
 		line-height:1.4em;
 	}
 }
+.homeSlide{
+	background-position:center center;
+}
 #slide1{
 	background:url(asset-path('panorama.jpg', image)) no-repeat;
-	background-position:center center;
-	background-size:cover;
 	.slideCopy{
 		max-width:450px;
 		top:75px;
@@ -240,8 +251,6 @@ p, a, li, span {
 }
 #slide2{
 	background:url(asset-path('panorama2.jpg', image)) no-repeat;
-	background-position:center center;
-	background-size:cover;
 	.slideCopy{
 		max-width:470px;
 		top:120px;
@@ -250,8 +259,6 @@ p, a, li, span {
 }
 #slide3{
 	background:url(asset-path('panorama3.jpg', image)) no-repeat;
-	background-position:center center;
-	background-size:cover;
 	.slideCopy{
 		background-color:rgba(100,100,100,0.6);
 		max-width:475px;

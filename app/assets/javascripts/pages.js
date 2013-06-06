@@ -8,15 +8,10 @@ $(window).ready(function (){
         $("#stackPage").css("height", space + 'px');
 
         var sMin = 540;
-        var sMax = 660;
+        var sMax = 810;
 
-        if(space < sMin) {
-            space = sMin;
-        }
-        else if(space > sMax) {
-            space = sMax;
-            $("#mainFoot").css("position","relative");
-        }
+        if(space < sMin) {space = sMin;}
+        else if(space > sMax) {space = sMax;}
 
         $("#homePage").css("height", space + 'px');
     });
@@ -30,14 +25,10 @@ $(window).resize(function (){
         $("#stackPage").css("height", space + 'px');
 
         var sMin = 540;
-        var sMax = 660;
+        var sMax = 810;
 
         if(space < sMin) {space = sMin;}
-        else if(space < sMax) {$("#mainFoot").css("position", "fixed")}
-        else if(space > sMax) {
-            space = sMax;
-            $("#mainFoot").css("position","relative");
-        }
+        else if(space > sMax) {space = sMax;}
 
         $("#homePage").css("height", space + 'px');
     });

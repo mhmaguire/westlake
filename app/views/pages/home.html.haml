@@ -1,14 +1,14 @@
 #homePage
   #homeSlider
-    #slide1
+    #slide1.homeSlide
       .slideCopy
         %h2 Pro Audio Enthusiasts
         %p Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Voluptatem eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
-    #slide2
+    #slide2.homeSlide
       .slideCopy
         %h2 Better Sound Through Superior Technology. 
         %p Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium. voluptatem accusantium doloremque laudantium, totam rem aperiam.
-    #slide3  
+    #slide3.homeSlide
       .slideCopy
         %h2 Westlake Pro Proudly Outfits the Bat Cave
         %p Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
@@ -43,4 +43,21 @@
           advanceSpeed: 6000,
         });
       });
+
+    :javascript
+      $(window).ready(function(){
+        var slideWidth = $("#homeSlider").width();
+
+        if(slideWidth > 1700) {$(".homeSlide").css("backgroundSize", "100%");}
+      });
+
+      $(window).resize(function(){
+        var slideWidth = $("#homeSlider").width();
+
+        if(slideWidth > 1700) {$(".homeSlide").css("backgroundSize", "100%");}
+        else if(slideWidth < 1700) {$(".homeSlide").css("backgroundSize", "auto");}
+      });
+      
+
+
 
