@@ -6,12 +6,12 @@ $bgColor2: rgb(250,250,250);
 $contentPadding:0 3%;
 $footHeight: 35px;
 
-$headFont: 'Noto Sans', 'Myriad Pro', sans-serif;
+$headFont: 'Roboto', 'Myriad Pro', sans-serif;
 $bodyFont: 'Quicksand', 'Myriad Pro', sans-serif;
 
 @font-face {
   font-family: 'Futura-BoldOblique';
-  src: url(asset-path('Futura-BoldOblique.ttf', 'font'));
+  src: url(font-path('Futura-BoldOblique.ttf')) format('truetype');
 }
 
 //gradients
@@ -90,7 +90,7 @@ p, a, li, span {
 		font-size:2.2em;
 		margin-top:.2em;
 		a{
-			font-family:'Futura-BoldOblique', $bodyFont;
+			font-family:$headFont;
 		}
 	}
 }
