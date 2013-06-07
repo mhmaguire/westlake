@@ -167,6 +167,8 @@ GEM
       i18n (~> 0.6.0)
     multi_json (1.7.4)
     multi_xml (0.5.3)
+    mysql2 (0.3.11)
+    mysql2 (0.3.11-x86-mingw32)
     nokogiri (1.5.9)
     nokogiri (1.5.9-x86-mingw32)
     nori (1.1.5)
@@ -177,8 +179,6 @@ GEM
       activesupport (>= 3.0.0)
       cocaine (~> 0.5.0)
       mime-types
-    pg (0.15.1)
-    pg (0.15.1-x86-mingw32)
     polyamorous (0.5.0)
       activerecord (~> 3.0)
     polyglot (0.3.3)
@@ -342,8 +342,8 @@ DEPENDENCIES
   haml-rails
   jquery-rails
   meta_request
+  mysql2
   paperclip
-  pg
   quiet_assets
   rails (= 3.2.13)
   sass-rails (~> 3.2.3)
@@ -353,5 +353,4 @@ DEPENDENCIES
   sqlite3
   thin
   uglifier (>= 1.0.3)
-  unicorn
   zurb-foundation (= 3.2.5)
