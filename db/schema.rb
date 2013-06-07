@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130529012606) do
+ActiveRecord::Schema.define(:version => 20130607171055) do
 
   create_table "shipping_methods_zones", :id => false, :force => true do |t|
     t.integer "shipping_method_id"
@@ -29,6 +29,7 @@ ActiveRecord::Schema.define(:version => 20130529012606) do
     t.string   "image_content_type"
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
+    t.string   "css_class"
   end
 
   create_table "spree_activators", :force => true do |t|
