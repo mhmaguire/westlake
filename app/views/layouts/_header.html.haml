@@ -3,6 +3,7 @@
     %h2
       =link_to 'Westlake Pro', root_path
   %nav#mainNav.eight.columns
-    =render partial: 'layouts/nav'
+    %ul
+      =render partial: 'layouts/nav'
   #logIn.one.columns
     %a.button{:"data-reveal-id" => "logInModal", :href => "#"} Sign In
