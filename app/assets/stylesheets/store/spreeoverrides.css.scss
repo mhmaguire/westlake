@@ -43,6 +43,7 @@ div.product-image:hover, ul#product-thumbnails li.selected, ul#product-thumbnail
 		width:58%;
 		margin-left:7%;
 		text-align: center;
+		height:70px;
 		a{
 			margin-left:2%;
 		}
@@ -55,4 +56,9 @@ div.product-image:hover, ul#product-thumbnails li.selected, ul#product-thumbnail
 			text-align:center;
 		}
 	}
+}
+
+#mainFoot.spreeFooter {
+	width:auto;
+	height:auto;
 }

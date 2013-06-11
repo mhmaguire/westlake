@@ -100,11 +100,10 @@ p, a, li, span {
 	margin:.8em 0 0;
 	height:inherit;
 	h2{
-		width:100%;
 		font-size:2.2em;
 		margin-top:.2em;
-	  width: 165px;
-		a{
+	  min-width: 170px;
+	  a{
 			font-family:$headFont;
 		}
 	}
@@ -118,7 +117,7 @@ p, a, li, span {
 		padding:0;
 		display:inline-block;
 		padding-top:1.8em;
-		
+		white-space:nowrap;
 		a {
 			font-size:1.3em;
 			padding:1em .6em;
@@ -164,6 +163,8 @@ p, a, li, span {
 	background-color:rgb(220,220,220);
 	border-top:2px solid white;
 	//overflow-y:hidden;
+	box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, .5);
+
 	>div{
 		display:inline-block;
 	}
