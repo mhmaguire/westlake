@@ -1,29 +1,32 @@
-#stackPage  
- #stackPage  
+#careersPage.stackPage  
   %ul.featured
     %li
-      %h1 About
+      %h1 Careers
     %li
-      =image_tag "rails.png"
-      %h1 Title 3
-      %h2 Summary 
-      %h3 Body blahblahblahblah 
+      %h1 Current Openings 
+      %ul
+        %li Awesome Job #1
+        %li Awesome Job #2
+        %li Awesome Job #3
     %li 
-      =image_tag "rails.png"
-      %h1 Title 2
-      %h2 Summary 
+      %h2 Benefits 
+      = image_tag "rails.png"
       %h3 Body blahblahblahblah 
     %li
-      =image_tag "rails.png"
-      %h1 Title 1
-      %h2 Summary 
+      %h2 Life in Los Angeles
+      = image_tag "rails.png"
       %h3 Body blahblahblahblah 
-      
+    %li
+      %h2 Company Culture
+      = image_tag "rails.png"
+      %h3 Body blahblahblahblah 
+
   %nav.stackNav
     %ul.side-nav.stackNavList
-      %li= link_to "Title 1", "#title1"
-      %li= link_to "Title 2", "#title2"
-      %li= link_to "Title 3", "#title3"
+      %li= link_to "Company Culture", "#title1"
+      %li= link_to "Life in Los Angeles", "#title2"
+      %li= link_to "Benefits", "#title3"
+      %li= link_to "Current Openings", "#title3"
 
 //=debug @stack
 
