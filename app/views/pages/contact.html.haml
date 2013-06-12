@@ -1,68 +1,15 @@
-#stackPage  
-  %ul.featured
-    %li
-      %h1 About
-    %li
-      =image_tag "rails.png"
-      %h1 Title 3
-      %h2 Summary 
-      %h3 Body blahblahblahblah 
-    %li 
-      =image_tag "rails.png"
-      %h1 Title 2
-      %h2 Summary 
-      %h3 Body blahblahblahblah 
-    %li
-      =image_tag "rails.png"
-      %h1 Title 1
-      %h2 Summary 
-      %h3 Body blahblahblahblah 
-      
-  %nav.stackNav
-    %ul.side-nav.stackNavList
-      %li= link_to "Title 1", "#title1"
-      %li= link_to "Title 2", "#title2"
-      %li= link_to "Title 3", "#title3"
+#contactPage
+  #contactCopy
+    %h1 Contact Westlake Pro
+    %p#cAddress 4101 Lankershim Blvd. <br/> North Hollywood, CA 91602
+    %p#cHours Our office is open from 9am to 6pm, Monday through Friday. Stop by during our office hours, we would love to meet you.  
+    %p You can call us at:
+    %p#cPhone (323) 845-1145
+    %p Or, feel free to contact us using the form to the right, we will respond to any questions or concerns as soon as we can. 
+  %form#contactForm
+    %input.input1{placeholder:'Your Name'}
+    %input.input1{placeholder:'Your Email'}
+    %textarea{placeholder:'Send Us a Message'}
+    %input#contactSubmit{type:'submit', value:'Submit'}
 
 //=debug @stack
-
-=content_for :scripts do
-  :javascript
-    $(function() {
-      $('.featured').orbit({
-        timer: false,
-        fluid: '16x6',
-        bulletThumbs: false,
-        animation: "vertical-slide",
-        animationSpeed: 500,
-        directionalNav: false,
-      });
-
-      $(document).on('mousewheel DOMMouseScroll', function(e){
-        console.log(e); 
-        var temp = (0 < e.originalEvent.wheelDelta ? 'orbit.next' : 'orbit.prev');
-        $('.featured').trigger(temp);
-        return false;
-      });
-
-      $(document).on('keydown', function(e){
-        var temp = e.originalEvent.keyCode; 
-        if(temp == 38 || temp == 40) {
-          if(temp == 40) {
-            temp = 'orbit.next';
-          } else {
-            temp = 'orbit.prev'
-          }
-          $('.featured').trigger(temp);  
-        }
-      });
-
-
-      var length = $('ul.stackNavList li').length - 1;  
-      $('ul.stackNavList li a').on('click', function(e){
-        var index = $(this).parent().index();
-        index = (length-index) +1 ; 
-        $(this).parent().addClass('current');
-        $('.featured').trigger('orbit.stop').trigger('orbit.goto', [index]); 
-      });
-    });

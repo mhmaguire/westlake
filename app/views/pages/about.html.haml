@@ -1,28 +1,72 @@
-#stackPage  
+.stackPage  
   %ul.featured
     %li
       %h1 About
     %li
-      =image_tag "rails.png"
-      %h1 Title 3
-      %h2 Summary 
-      %h3 Body blahblahblahblah 
+      %h2 Meet the Westlake Pro Team
+      #about3Bios
+        #first.team-member
+          %a{:onclick => "showdiv('first-bio', 'first');"}
+          %div
+            %h4 First Name
+          %h6 CEO
+        #second.team-member
+          %a{:onclick => "showdiv('second-bio', 'second');"}
+          %div
+            %h4 Second Name
+          %h6 President
+        #third.team-member
+          %a{:onclick => "showdiv('third-bio', 'third');"}
+          %div
+            %h4 Third Name
+          %h6 General Manager
+        #fourth.team-member
+          %a{:onclick => "showdiv('fourth-bio', 'fourth');"}
+          %div
+            %h4 Fourth Name
+          %h6 Techical Services Manager
+        #fifth.team-member
+          %a{:onclick => "showdiv('fifth-bio', 'fifth');"}
+          %div
+            %h4 Fifth Name
+          %h6 Pro Audio Sales Manager
+        #first-bio.team-member-details.hide
+          %h3 First Member Name
+          %h5 Position
+          %p Job description & other info
+        #second-bio.team-member-details.hide
+          %h3 Second Member Name
+          %h5 Position
+          %p Job description & other info
+        #third-bio.team-member-details.hide
+          %h3 Third Member Name
+          %h5 Position
+          %p Job description & other info
+        #fourth-bio.team-member-details.hide
+          %h3 Fourth Member Name
+          %h5 Position
+          %p Job description & other info
+        #fifth-bio.team-member-details.hide
+          %h3 Fifth Member Name
+          %h5 Position
+          %p Job description & other info
     %li 
+      %h2 Letter from the CEO
+      %p Body blahblahblahblah 
       =image_tag "rails.png"
-      %h1 Title 2
-      %h2 Summary 
-      %h3 Body blahblahblahblah 
     %li
-      =image_tag "rails.png"
-      %h1 Title 1
-      %h2 Summary 
-      %h3 Body blahblahblahblah 
+      #about1Copy
+        %h1 The Westlake Pro Story
+        %p Body blahblahblahblah 
+      #about1Gallery
+        =image_tag "rails.png"
+
       
   %nav.stackNav
     %ul.side-nav.stackNavList
-      %li= link_to "Title 1", "#title1"
-      %li= link_to "Title 2", "#title2"
-      %li= link_to "Title 3", "#title3"
+      %li= link_to "The Westlake Pro Story", "#title1"
+      %li= link_to "Letter from the CEO", "#title2"
+      %li= link_to "Meet the Team", "#title3"
 
 //=debug @stack
 
@@ -66,3 +110,20 @@
         $('.featured').trigger('orbit.stop').trigger('orbit.goto', [index]); 
       });
     });
+
+  :javascript
+    var _hidediv = null;
+    var _removecolor = null;
+    function showdiv(id, imgid) {
+        if(_hidediv)
+            _hidediv();
+      if(_removecolor)
+        _removecolor();
+        var div = document.getElementById(id);
+        div.style.display = 'block';
+        _hidediv = function () { div.style.display = 'none'; };
+      var imgdiv = document.getElementById(imgid);
+      imgdiv.className += ' color-img';
+      _removecolor = function () { imgdiv.className = ''; imgdiv.className = 'team-member' };
+      console.log("hello wes");
+    }

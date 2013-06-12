@@ -303,9 +303,9 @@ p, a, li, span {
 	}
 }
 //////
-////// Stacks Page
-#stackPage{
-	padding-bottom:$footHeight;
+////// Stacks Template
+.stackPage{
+	padding:2em 2em $footHeight;
 }
 ul.featured.orbit{
 	margin-bottom:0px;
