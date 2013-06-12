@@ -82,20 +82,6 @@ ActiveRecord::Schema.define(:version => 20130611232246) do
     t.integer "zone_id"
   end
 
-  create_table "slides", :force => true do |t|
-    t.string   "title"
-    t.string   "body"
-    t.string   "summary"
-    t.integer  "stack_id"
-    t.datetime "created_at",         :null => false
-    t.datetime "updated_at",         :null => false
-    t.string   "image_file_name"
-    t.string   "image_content_type"
-    t.integer  "image_file_size"
-    t.datetime "image_updated_at"
-    t.string   "css_class"
-  end
-
   create_table "spree_activators", :force => true do |t|
     t.string   "description"
     t.datetime "expires_at"
@@ -755,12 +741,6 @@ ActiveRecord::Schema.define(:version => 20130611232246) do
     t.integer  "zone_members_count", :default => 0
     t.datetime "created_at",                            :null => false
     t.datetime "updated_at",                            :null => false
-  end
-
-  create_table "stacks", :force => true do |t|
-    t.string   "title"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
   end
 
 end

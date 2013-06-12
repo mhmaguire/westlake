@@ -1,11 +1,29 @@
 #stackPage  
+ #stackPage  
   %ul.featured
-    =render @stack
-  =link_to 'Add Slides', edit_stack_path(@stack), :id => "addLink", :class => "button"
+    %li
+      %h1 About
+    %li
+      =image_tag "rails.png"
+      %h1 Title 3
+      %h2 Summary 
+      %h3 Body blahblahblahblah 
+    %li 
+      =image_tag "rails.png"
+      %h1 Title 2
+      %h2 Summary 
+      %h3 Body blahblahblahblah 
+    %li
+      =image_tag "rails.png"
+      %h1 Title 1
+      %h2 Summary 
+      %h3 Body blahblahblahblah 
+      
   %nav.stackNav
     %ul.side-nav.stackNavList
-      - @stack.slides.reverse.each do |slide|
-        %li= link_to "#{slide.title}", "##{slide.title.to_url}"
+      %li= link_to "Title 1", "#title1"
+      %li= link_to "Title 2", "#title2"
+      %li= link_to "Title 3", "#title3"
 
 //=debug @stack
 
@@ -44,7 +62,7 @@
       var length = $('ul.stackNavList li').length - 1;  
       $('ul.stackNavList li a').on('click', function(e){
         var index = $(this).parent().index();
-        index = (length - index) +1 ; 
+        index = (length-index) +1 ; 
         $(this).parent().addClass('current');
         $('.featured').trigger('orbit.stop').trigger('orbit.goto', [index]); 
       });
