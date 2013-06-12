@@ -1,8 +1,15 @@
-= link_to 'Store', '/store'
-= link_to 'Products', '/line_card'
-= link_to 'About', '/about'
-= link_to 'What We Do', '/what_we_do'
-= link_to 'Contact', '/contact'
-= link_to 'Careers', '/careers'
-%a{href:'#', id: 'avidLink'}
-  =image_tag "avid-logo-small.png", :id => "avidLogo"
+%li
+  = link_to 'Store', '/store', :class => "noneL"
+%li
+  = link_to 'Products', '/line_card'
+%li
+  = link_to 'About', '/about'
+%li
+  = link_to 'What We Do', '/what_we_do'
+%li
+  = link_to 'Contact', '/contact'
+%li
+  = link_to 'Careers', '/careers'
+%li
+  %a{href:'#', id: 'avidLink'}
+    =image_tag "avid-logo-small.png", :id => "avidLogo"

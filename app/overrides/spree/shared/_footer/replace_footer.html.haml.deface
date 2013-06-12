@@ -1,13 +1,17 @@
 /replace '#footer[data-hook]'
 %footer#mainFoot.gradientBack2.spreeFooter
   .container
-    #footCopy.nine.columns
+    #footCopy.twleve.columns
+      %span &copy; 2013 Westlake Pro Inc. All Rights Reserved.
+      %span 4101 Lankershim Blvd. North Hollywood, CA 91602
+      %span (323) 845-1145
+      %span Hours: 9a-6p, M-F
       %span
-        4101 Lankershim Blvd. North Hollywood, CA 91602
+        %a{:href => "#"} Directions
       %span
-        (310) 845-1145
-    #footCredit.seven.columns
+        %a{:href => "#"} Site Map
+      %span
+        %a{:href => "#"} Privacy Policy
       %span
         Site by
         %a{:href => "mailto:david.w.martin@me.com"} edG Design
-      %span &copy; 2013 Westlake Pro Inc. All Rights Reserved.
