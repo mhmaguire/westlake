@@ -1,0 +1,8 @@
+%li.stackSlide(class="#{yield :slide_class}") 
+	=yield :image if content_for? :image
+
+	%h1= yield :title if content_for? :title
+	%h2= yield :summary if content_for? :summary
+	%h3= yield :body if content_for? :body
+
+

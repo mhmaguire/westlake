@@ -1,6 +1,11 @@
-%li.stackSlide(class="#{slide.css_class}") 
+-content_for :slide_class do 
+	=slide.css_class 
+
+-content_for :image do 
 	=image_tag slide.image.url(:medium)
-	%h1
-		%h3=slide.title
-		=slide.summary
-		=slide.body
+
+-content_for :summary do 
+	=slide.summary
+
+-content_for :body do 
+	=slide.body 

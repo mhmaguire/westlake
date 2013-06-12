@@ -2,4 +2,4 @@
   %h2=stack.title
 
 -stack.slides.each do |slide|
-  =render partial: 'stacks/slide', object: slide 
+  =render partial: 'stacks/slide', object: slide, layout: get_template(slide)  
