@@ -3,12 +3,13 @@ class PagesController < ApplicationController
   def self.define_top_action(*names)
     names.each do |name|
       define_method name do
-        
+       @content = Content.last
       end
     end
   end
 
   def home
+    @content = Content.last
   end
 
   def email_contact  #TODO implement email pseudo model or full model to handle validations

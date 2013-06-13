@@ -5,9 +5,7 @@
     %li
       %h1 Current Openings 
       %ul
-        %li Awesome Job #1
-        %li Awesome Job #2
-        %li Awesome Job #3
+        =render partial: 'shared/career', collection: @content.careers
     %li 
       %h2 Benefits 
       = image_tag "rails.png"
