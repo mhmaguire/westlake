@@ -1,15 +1,19 @@
 #contactPage
-  #contactCopy
+  #cForm.eight.columns
     %h1 Contact Westlake Pro
+    %p#cHours Our office is open from 9am to 6pm, Monday through Friday. Stop by or send us a message, we would love to hear from you.
+    %form#contactForm
+      %input.input1{placeholder:'Your Name'}
+      %input.input1{placeholder:'Your Email'}
+      %textarea{placeholder:'Send Us a Message'}
+      %input#contactSubmit{type:'submit', value:'Submit'}
+  #cInfo.four.columns
+    %h2 Office
     %p#cAddress 4101 Lankershim Blvd. <br/> North Hollywood, CA 91602
-    %p#cHours Our office is open from 9am to 6pm, Monday through Friday. Stop by during our office hours, we would love to meet you.  
-    %p You can call us at:
+    %h2 Phone
     %p#cPhone (323) 845-1145
-    %p Or, feel free to contact us using the form to the right, we will respond to any questions or concerns as soon as we can. 
-  %form#contactForm
-    %input.input1{placeholder:'Your Name'}
-    %input.input1{placeholder:'Your Email'}
-    %textarea{placeholder:'Send Us a Message'}
-    %input#contactSubmit{type:'submit', value:'Submit'}
-
+    %h2 Email
+    %p
+      %a{:href => "mailto:bowens@westlakepro.com"} bowens@westlakepro.com
+    %h2 Social Media
 //=debug @stack

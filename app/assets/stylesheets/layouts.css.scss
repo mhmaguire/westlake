@@ -148,7 +148,7 @@ p, a, li, span {
 #mainContent{
 	min-width:768px;
 	border-top:1px solid white;
-	background-color:$bgColor1;
+	background-color:rgb(240,240,240);
 }
 #mainFoot{
 	.container{
@@ -302,6 +302,36 @@ p, a, li, span {
 		right:100px;
 	}
 }
+
+////////// Contact Page
+#contactPage {
+	margin:70px 6%;
+	#cForm{
+		padding:0 10%;
+		h1{
+			font-size:2em;
+		}
+		p{
+			font-size:1.5em;
+			line-height:1.1em;
+			margin:0;
+		}
+		form {
+			input, textarea{
+				width:100%;
+				margin:10px 0;
+			}
+			#contactSubmit{width:60px;}
+		}
+	}
+	#cInfo{
+		h2 {font-size:1.5em;}
+		p {
+			font-size:1.25em;
+			line-height: 1em;
+		}
+	}
+}
 //////
 ////// Stacks Template
 .stackPage{
@@ -326,13 +356,13 @@ ul.featured.orbit{
 		}
 	}
 }
-
 #addLink{
 	position:absolute;
 	top:65px;
 	right:75px;
 	z-index:9;
 }
+
 //////
 ////// Backend Styles
 .backend{
