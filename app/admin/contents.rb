@@ -1,9 +1,10 @@
-ActiveAdmin.register Content do
+ActiveAdmin.register Content, as: "Content" do
+	menu label: "Copy", parent: 'Content'
 	actions :index, :show, :edit, :update
 
 	index as: :block do |content|
 		div for: content do 
-			link_to "Edit Site Content", admin_contents_edit_path(content) 
+			h2 link_to "Edit Site Content", edit_admin_content_path(content) 
 			h3 "Ceo Letter"
 			div do 
 				content.ceo_letter 

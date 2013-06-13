@@ -1,5 +1,11 @@
 ActiveAdmin.setup do |config|
 
+  config.namespace :admin do |admin|
+    admin.build_menu do |menu|
+      menu.add label: "Content", priority: 3
+    end
+  end
+
   # == Site Title
   #
   # Set the title that is displayed on the main layout

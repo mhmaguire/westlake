@@ -1,5 +1,5 @@
 ActiveAdmin.register Category do
-
+	menu parent: "Content"
 	show do 
 		panel "Vendors" do 
 			table_for category.vendors do 

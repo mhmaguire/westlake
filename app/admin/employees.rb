@@ -1,4 +1,5 @@
 ActiveAdmin.register Employee do
+	menu parent: "Content"
 	form html: {enctype: "multipart/form-data" } do |f|
 		f.inputs do 
 			f.input :name 
