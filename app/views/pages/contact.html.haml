@@ -2,11 +2,17 @@
   #cForm.eight.columns
     %h1 Contact Westlake Pro
     %p#cHours Our office is open from 9am to 6pm, Monday through Friday. Stop by or send us a message, we would love to hear from you.
-    %form#contactForm
-      %input.input1{placeholder:'Your Name'}
-      %input.input1{placeholder:'Your Email'}
-      %textarea{placeholder:'Send Us a Message'}
-      %input#contactSubmit{type:'submit', value:'Submit'}
+    =form_for EmailContact.new, method: :post do |f|
+      =f.text_field :name, class: :input1, placeholder: 'Your Name'
+      =f.email_field :email, class: :input1, placeholder: 'Your Email'
+      =f.text_area :message, size: '20x3', placeholder: 'Send Us a Message'
+      =f.submit 'Submit', id: 'contactSubmit'
+    /
+      %form#contactForm
+        %input.input1{placeholder:'Your Name'}
+        %input.input1{placeholder:'Your Email'}
+        %textarea{placeholder:'Send Us a Message'}
+        %input#contactSubmit{type:'submit', value:'Submit'}
   #cInfo.four.columns
     %h2 Office
     %p#cAddress 4101 Lankershim Blvd. <br/> North Hollywood, CA 91602

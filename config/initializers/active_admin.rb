@@ -3,6 +3,7 @@ ActiveAdmin.setup do |config|
   config.namespace :admin do |admin|
     admin.build_menu do |menu|
       menu.add label: "Content", priority: 3
+      menu.add label: "Messages", priority: 4
     end
   end
 

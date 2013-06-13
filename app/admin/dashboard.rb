@@ -8,9 +8,10 @@ ActiveAdmin.register_page "Dashboard" do
     
         columns do
             column do
-                panel "Recent Posts" do
-                    h1 'recent'
-                    
+                panel "Recent Emails" do
+                    EmailContact.order('created_at').limit(5). each do |email|
+                        h1 email.name
+                    end
                 end
             end
             column do
