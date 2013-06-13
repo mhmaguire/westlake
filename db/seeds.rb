@@ -15,4 +15,21 @@ end
 content.save
 
 Spree::Core::Engine.load_seed if defined?(Spree::Core)
-Spree::Auth::Engine.load_seed if defined?(Spree::Auth)
+Spree::Auth::Engine.load_seed if defined?(Spree::
+    
+
+%w(Consoles Console_Automation,_Monitoring,_and_Playback
+    Recorders Amplifiers Preamplifiers
+    Loudspeakers_and_Monitors
+   	Interfaces_and_Synchronizers
+    Power_Protection
+    Noise_Reduction
+    Digital_Audio Workstations
+    Software
+    Computers,_Storage,_and_Peripherals
+    Microphones
+    Support_Equipment
+    Music_Production_and_Music_Instruments
+    Furniture,_Mounting Solutions,_Acoustic_Treatment).each do |cat|
+	Category.create(title: "#{cat.gsub('_', ' ')}")
+end

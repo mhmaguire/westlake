@@ -5,4 +5,5 @@ class Content < ActiveRecord::Base
   has_many :careers
   has_many :employees
   has_many :home_page_slides
+  has_many :categories
 end

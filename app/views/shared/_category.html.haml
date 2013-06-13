@@ -1,0 +1,4 @@
+.category
+	%h3= category.pretty_title
+	%ul.vendors
+		=render partial: 'shared/vendor', collection: category.vendors 
