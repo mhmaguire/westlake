@@ -1,0 +1,6 @@
+.team-member
+	=link_to '#', class: 'bioModal' do 
+		=image_tag(employee.image.url(:medium)) 
+	%div
+		%h4= employee.name
+	%h6= employee.title 

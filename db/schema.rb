@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130611232246) do
+ActiveRecord::Schema.define(:version => 20130612213256) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "resource_id",   :null => false
@@ -52,6 +52,17 @@ ActiveRecord::Schema.define(:version => 20130611232246) do
     t.date     "end_at"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
+    t.integer  "content_id"
+  end
+
+  create_table "contents", :force => true do |t|
+    t.text     "ceo_letter"
+    t.text     "gen_info"
+    t.text     "company_culture"
+    t.text     "la_life"
+    t.text     "benefits"
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
   end
 
   create_table "employees", :force => true do |t|
@@ -64,6 +75,17 @@ ActiveRecord::Schema.define(:version => 20130611232246) do
     t.string   "image_content_type"
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
+    t.integer  "content_id"
+  end
+
+  create_table "gallery_images", :force => true do |t|
+    t.datetime "created_at",         :null => false
+    t.datetime "updated_at",         :null => false
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
+    t.integer  "content_id"
   end
 
   create_table "home_page_slides", :force => true do |t|
@@ -75,6 +97,7 @@ ActiveRecord::Schema.define(:version => 20130611232246) do
     t.string   "image_content_type"
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
+    t.integer  "content_id"
   end
 
   create_table "shipping_methods_zones", :id => false, :force => true do |t|

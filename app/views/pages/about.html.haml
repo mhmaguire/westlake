@@ -5,51 +5,53 @@
     %li
       %h2 Meet the Westlake Pro Team
       #about3Bios
-        #first.team-member
-          %a{:onclick => "showdiv('first-bio', 'first');"}
-          %div
-            %h4 First Name
-          %h6 CEO
-        #second.team-member
-          %a{:onclick => "showdiv('second-bio', 'second');"}
-          %div
-            %h4 Second Name
-          %h6 President
-        #third.team-member
-          %a{:onclick => "showdiv('third-bio', 'third');"}
-          %div
-            %h4 Third Name
-          %h6 General Manager
-        #fourth.team-member
-          %a{:onclick => "showdiv('fourth-bio', 'fourth');"}
-          %div
-            %h4 Fourth Name
-          %h6 Techical Services Manager
-        #fifth.team-member
-          %a{:onclick => "showdiv('fifth-bio', 'fifth');"}
-          %div
-            %h4 Fifth Name
-          %h6 Pro Audio Sales Manager
-        #first-bio.team-member-details.hide
-          %h3 First Member Name
-          %h5 Position
-          %p Job description & other info
-        #second-bio.team-member-details.hide
-          %h3 Second Member Name
-          %h5 Position
-          %p Job description & other info
-        #third-bio.team-member-details.hide
-          %h3 Third Member Name
-          %h5 Position
-          %p Job description & other info
-        #fourth-bio.team-member-details.hide
-          %h3 Fourth Member Name
-          %h5 Position
-          %p Job description & other info
-        #fifth-bio.team-member-details.hide
-          %h3 Fifth Member Name
-          %h5 Position
-          %p Job description & other info
+        =render partial: 'shared/employee', collection: @content.employees
+        / 
+          #first.team-member
+            %a{:onclick => "showdiv('first-bio', 'first');"}
+            %div
+              %h4 First Name
+            %h6 CEO
+          #second.team-member
+            %a{:onclick => "showdiv('second-bio', 'second');"}
+            %div
+              %h4 Second Name
+            %h6 President
+          #third.team-member
+            %a{:onclick => "showdiv('third-bio', 'third');"}
+            %div
+              %h4 Third Name
+            %h6 General Manager
+          #fourth.team-member
+            %a{:onclick => "showdiv('fourth-bio', 'fourth');"}
+            %div
+              %h4 Fourth Name
+            %h6 Techical Services Manager
+          #fifth.team-member
+            %a{:onclick => "showdiv('fifth-bio', 'fifth');"}
+            %div
+              %h4 Fifth Name
+            %h6 Pro Audio Sales Manager
+          #first-bio.team-member-details.hide
+            %h3 First Member Name
+            %h5 Position
+            %p Job description & other info
+          #second-bio.team-member-details.hide
+            %h3 Second Member Name
+            %h5 Position
+            %p Job description & other info
+          #third-bio.team-member-details.hide
+            %h3 Third Member Name
+            %h5 Position
+            %p Job description & other info
+          #fourth-bio.team-member-details.hide
+            %h3 Fourth Member Name
+            %h5 Position
+            %p Job description & other info
+          #fifth-bio.team-member-details.hide
+            %h3 Fifth Member Name
+            %h5 Position
+            %p Job description & other info
     %li 
       %h2 Letter from the CEO
       %p Body blahblahblahblah 

@@ -8,4 +8,13 @@ ActiveAdmin.register Employee do
 		end
 		f.actions 
 	end
+
+	index as: :grid do |employee|
+		div for: employee do
+			h2 employee.name 
+			div do 
+				link_to( image_tag(employee.image.url(:medium)), admin_employee_path(employee)) 
+			end
+		end
+	end
 end

@@ -1,3 +1,10 @@
 class Career < ActiveRecord::Base
-  # attr_accessible :title, :body
+  before_save :set_content_association
+  attr_accessible :title, :description, :end_at
+
+  belongs_to :content
+
+  def set_content_association
+  	self.content = Content.last
+  end
 end
