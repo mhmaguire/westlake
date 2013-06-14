@@ -1,30 +1,13 @@
 #homePage
   #homeSlider
-    =render partial: 'shared/home_page_slide', collection: @content.home_page_slides
-
-    
-
+    #slide1.homeSlide
+    #slide2.homeSlide
+  //  =render partial: 'shared/home_page_slide', collection: @content.home_page_slides
   #homeFeatured
-    #col1.six.columns
-      .four.columns= image_tag "http://placehold.it/100x125"
-      .eight.columns
-        %h4 Awesome Product 1
-        %p You really ought to buy one, seriously. Voluptatem accusantium doloremque laudantium, totam rem aperiam.
-    #col2.six.columns
-      = image_tag "http://placehold.it/500x130&text=Banner+for+Upcoming+Event"
-      /#col3.four.columns
-      /=semantic_form_for 'email', url: '/email_contact', method: :post do |f|
-      /  =f.inputs do
-      /    =f.input :name, as: :string, wrapper_html: {class: 'input1'}, input_html: {class: 'input1', placeholder:'Your Name'}
-      /    =f.input :email, as: :email, wrapper_html: {class: 'input1', placeholder:'Your Email'}, input_html: {class: 'input1'}
-      /    =f.input :message, as: :text, input_html: {}
-      /  =f.actions do
-      /    =f.action :submit
-      /%form
-      /  %input.input1{placeholder:'Your Name'}
-      /  %input.input1{placeholder:'Your Email'}
-      /  %textarea{placeholder:'Send Us a Message'}
-      /  %input{type:'submit', value:'Submit'}
+    %p#homeCopy
+    #homeImages
+      = image_tag("http://placehold.it/650x150", :id => "homeImage1", :class => "six columns")
+      = image_tag("http://placehold.it/650x150", :id => "homeImage2", :class => "six columns")
 
   =content_for :scripts do
     :javascript
@@ -32,7 +15,9 @@
         $('#homeSlider').orbit({
           animation: "fade",
           animationSpeed: 1200,
-          advanceSpeed: 6000,
+          advanceSpeed: 10000,
+          directionalNav: false,
+          bulletThumbs: false,
         });
       });
 
