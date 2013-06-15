@@ -3,7 +3,7 @@ class AddContentFk < ActiveRecord::Migration
   	add_column :careers, :content_id, :integer
   	add_column :employees, :content_id, :integer
   	add_column :gallery_images, :content_id, :integer
-  	add_column :home_page_slides, :content_id, :intenger
+  	add_column :home_page_slides, :content_id, :integer
   end
 
   def down
