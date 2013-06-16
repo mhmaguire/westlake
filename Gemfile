@@ -73,4 +73,4 @@ gem 'activeadmin'
 
 gem 'rails-erd'
 
-gem 'responds_to_parent' 
+gem 'remotipart'

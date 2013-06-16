@@ -14,17 +14,10 @@ class CareerContactsController < ApplicationController
 		#TODO send mail to the westlake
 		respond_to do |format|
 			if @career_contact.save
-				format.js do
-					responds_to_parent do 
-						render 'create'
-					end
-				end
+				ContactMailer.career_inquiry(@career_contact).deliver
+				format.js { render 'create' }
 			else
-				format.js do 
-					responds_to_parent do 
-						render 'new'
-					end
-				end
+				format.js { render 'new' } 
 			end
 		end
 	end

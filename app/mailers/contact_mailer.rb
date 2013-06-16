@@ -8,9 +8,6 @@ class ContactMailer < ActionMailer::Base
 
   def career_inquiry(email)
   	@email = email
-  	if !@email.resume_file_name.nil?
-  		attatchments["#{@email.resume_file_name}"] = File.read("#{@email.resume.url}")
-  	end
   	mail(to: 'mhmaguire0@gmail.com', subject: 'New job application submitted')
   end
 end
