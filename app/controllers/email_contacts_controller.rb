@@ -1,12 +1,12 @@
 class EmailContactsController < ApplicationController
   	def create
-  		@email_contact = EmailContact.new(params[:email])
+  		@email_contact = EmailContact.new(params[:email_contact])
 		respond_to do |format|
 			if @email_contact.save 
 				ContactMailer.contact_email(@email_contact).deliver 
-				format.html {redirect_to(:back) }
+				format.js
 	  		else 
-	  			format.html {redirect_to(:back) }
+	  			format.js { render :errors }
 	  		end
 		end
 	end
