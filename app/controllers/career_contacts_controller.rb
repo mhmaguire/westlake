@@ -19,11 +19,7 @@ class CareerContactsController < ApplicationController
 					end
 				end
 			else
-				format.js do 
-					responds_to_parent do 
-						render 'new'
-					end
-				end
+				format.js { render 'new' }
 			end
 		end
 	end
