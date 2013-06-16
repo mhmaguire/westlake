@@ -42,6 +42,18 @@ ActiveAdmin.register_page "Dashboard" do
 
             column do 
                 panel "Career Messages" do 
+                    table_for CareerContact.order('created_at').limit(5).each do 
+                        column 'Email' do |email|
+                            link_to "#{email.email}", admin_career_contacts_path(email)
+                        end
+                        column 'Name' do |email|
+                            h4 email.name
+                        end
+
+                        column 'Date' do |email|
+                            p email.created_at
+                        end
+                    end
                 end
             end
         end # content
