@@ -17,10 +17,11 @@ WestlakePro::Application.routes.draw do
   get '/contact' => 'pages#contact'
   get '/careers' => 'pages#careers'
   get '/home' => 'pages#home'
+  get '/events' => 'pages#events'
   resources :email_contacts, only: :create
   
   match 'careers/:career_id/contact' => 'career_contacts#new', via: :get, as: :new_career_contact
-  match 'careers/:career_id/career' => 'career_contacts#create', via: :post
+  match 'careers/:career_id/contact' => 'career_contacts#create', via: :post
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

@@ -28,9 +28,16 @@ Category.all.each do |category|
     end
 end
 
+date = Time.now.advance(days: 2)
+
 5.times do |i|
-    Career.create(title:"career#{i}", description: 'this is the description of a career', end_at: Time.now)
+    career = Career.create(title:"career#{i}", description: 'this is the description of a career', end_at: Time.now)
     Employee.create(name: 'Employee', title: "Open Position #{i}", description: 'A description of an employee')
+    EmailContact.create(email: "hello@example.com", name: "Leeroy Jenkins", message: 'This is a message from Leeroy Jenkins')
+    cc = CareerContact.create(name: 'Someone', email: 'someone@example.com')
+    cc.career=career 
+    Event.create(title: 'A westlake Event', description: "This is an event for westlake pro, featuring interesting stuff", start_date: date)
+    date = date.advance(days: 7)
 end
 
 AdminUser.create(email: 'admin@example.com', password: 'password', password_confirmation: 'password')

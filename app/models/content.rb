@@ -6,4 +6,5 @@ class Content < ActiveRecord::Base
   has_many :employees
   has_many :home_page_slides
   has_many :categories
+  has_many :events
 end

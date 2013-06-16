@@ -1,7 +1,8 @@
 ActiveAdmin.register Content, as: "Content" do
 	menu label: "Copy", parent: 'Content'
 	actions :index, :show, :edit, :update
-
+	config.filters = false 
+	config.batch_actions = false 
 	index as: :block do |content|
 		div for: content do 
 			h2 link_to "Edit Site Content", edit_admin_content_path(content) 
