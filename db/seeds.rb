@@ -17,17 +17,6 @@ content.save!
 Spree::Core::Engine.load_seed if defined?(Spree::Core)
 Spree::Auth::Engine.load_seed if defined?(Spree::Auth) 
     
-
-%w(Consoles Console_Automation_Monitoring_and_Playback Recorders Amplifiers Preamplifiers Loudspeakers_and_Monitors Interfaces_and_Synchronizers Power_Protection Noise_Reduction Digital_Audio Workstations Software Computers_Storage_and_Peripherals Microphones Support_Equipment Music_Production_and_Music_Instruments Furniture_Mounting Solutions_Acoustic_Treatment).each do |cat|
-	Category.create(title: "#{cat.gsub('_', ' ')}")
-end
-
-Category.all.each do |category|
-    5.times do |i|
-        category.vendors.create(name: "Vendor #{i} in category: #{category.title}")
-    end
-end
-
 date = Time.now.advance(days: 2)
 
 5.times do |i|
