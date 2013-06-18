@@ -71,4 +71,6 @@ gem 'spree_auth_devise', :git => 'https://github.com/spree/spree_auth_devise.git
 
 gem 'activeadmin' 
 
-gem 'rails-erd' 
+gem 'rails-erd'
+
+gem 'remotipart'

@@ -4,7 +4,7 @@
       %h1 Careers
     %li
       %h1 Current Openings 
-      %ul
+      %ul.openings 
         =render partial: 'shared/career', collection: @content.careers
     %li 
       %h2 Benefits 
@@ -26,11 +26,17 @@
       %li= link_to "Benefits", "#title3"
       %li= link_to "Current Openings", "#title3"
 
+  #modal.reveal-modal.large
+    #modal-content
+    %a.close-reveal-modal &#215;
+
 //=debug @stack
 
 =content_for :scripts do
   :javascript
     $(function() {
+      
+
       $('.featured').orbit({
         timer: false,
         fluid: '16x6',

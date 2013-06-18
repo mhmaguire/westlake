@@ -2,7 +2,7 @@ class Category < ActiveRecord::Base
   before_save :set_content_association
   attr_accessible :title, :vendors_attributes
 
-  has_many :vendors
+  has_many :vendors, dependent: :destroy
   belongs_to :content
 
   accepts_nested_attributes_for :vendors

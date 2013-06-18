@@ -7,4 +7,15 @@ ActiveAdmin.register Career do
 			f.input :end_at
 		end
 	end
+
+	show do |c|
+		attributes_table do 
+			row :title 
+			row :description
+			row :end_at
+			row :created_at 
+			row :updated_at
+		end
+		active_admin_comments
+	end
 end

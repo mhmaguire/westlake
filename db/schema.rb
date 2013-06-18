@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130613185932) do
+ActiveRecord::Schema.define(:version => 20130615213126) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "resource_id",   :null => false
@@ -45,6 +45,20 @@ ActiveRecord::Schema.define(:version => 20130613185932) do
 
   add_index "admin_users", ["email"], :name => "index_admin_users_on_email", :unique => true
   add_index "admin_users", ["reset_password_token"], :name => "index_admin_users_on_reset_password_token", :unique => true
+
+  create_table "career_contacts", :force => true do |t|
+    t.integer  "career_id"
+    t.string   "name"
+    t.string   "email"
+    t.datetime "created_at",          :null => false
+    t.datetime "updated_at",          :null => false
+    t.string   "resume_file_name"
+    t.string   "resume_content_type"
+    t.integer  "resume_file_size"
+    t.datetime "resume_updated_at"
+  end
+
+  add_index "career_contacts", ["career_id"], :name => "index_career_contacts_on_career_id"
 
   create_table "careers", :force => true do |t|
     t.string   "title"
@@ -94,6 +108,21 @@ ActiveRecord::Schema.define(:version => 20130613185932) do
     t.datetime "image_updated_at"
     t.integer  "content_id"
   end
+
+  create_table "events", :force => true do |t|
+    t.string   "title"
+    t.string   "description"
+    t.date     "start_date"
+    t.integer  "content_id"
+    t.datetime "created_at",         :null => false
+    t.datetime "updated_at",         :null => false
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
+  end
+
+  add_index "events", ["content_id"], :name => "index_events_on_content_id"
 
   create_table "gallery_images", :force => true do |t|
     t.datetime "created_at",         :null => false

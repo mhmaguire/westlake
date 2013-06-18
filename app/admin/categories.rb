@@ -8,14 +8,18 @@ ActiveAdmin.register Category do
 					image_tag vendor.image.url(:small)
 				end
 				column 'Actions' do |vendor|
-					link_to 'Edit category', edit_admin_category_path(vendor.category)
+					link_to 'Delete Vendor', admin_category_vendor_path(vendor.category, vendor), method: :delete, confirm: 'Are you sure?'
 				end
 			end
 		end
 	end
 	sidebar "Category Info", only: :show do 
 		attributes_table_for category do 
-			row :title 
+			row :title
+			row :actions do |c|
+				link_to 'Add a Vendor', new_admin_category_vendor_path(c)
+			end
+
 		end
 	end
 

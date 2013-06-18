@@ -34,10 +34,15 @@ WestlakePro::Application.configure do
 
   # Expands the lines which load the assets
   config.assets.debug = true
-  config.action_mailer.perform_deliveries = true
+
   config.action_mailer.delivery_method = :smtp
+  config.action_mailer.perform_deliveries = true
   config.action_mailer.smtp_settings = {
-      :address              => "localhost",
-      :port                 => 1025
+      :address              => "smtp.gmail.com",
+      :port                 => 587,
+      :user_name            => "westlaketester4101@gmail.com", 
+      :password             => "4101Lankershim",
+      :authentication       => 'plain',
+      :enable_starttls_auto => true
      }
 end

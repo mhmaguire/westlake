@@ -1,0 +1,4 @@
+//$('#modal').trigger('reveal:close');
+//alert('something is happening');
+$('#modal-content').children().remove();
+$('#modal-content').append("<%=j render partial: 'career_contacts/career_ty', locals:{career: @career} %>");

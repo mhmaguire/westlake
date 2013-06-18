@@ -4,6 +4,8 @@ class Career < ActiveRecord::Base
 
   belongs_to :content
 
+  has_many :contacts, class_name: "CareerContact" 
+
   def set_content_association
   	self.content = Content.last
   end
