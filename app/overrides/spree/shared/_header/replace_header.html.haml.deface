@@ -2,8 +2,8 @@
 %header#mainHead.gradientBack
   #logo.three.columns
     %h2
-      =link_to 'Westlake Pro', '/'
+      <%=link_to 'Westlake Pro', '/' %>
   .nine.columns
     %nav#mainNav
       %ul
-        =render partial: 'layouts/nav'
+        <%=render partial: 'layouts/nav' %> 
