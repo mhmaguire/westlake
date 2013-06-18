@@ -1,55 +1,9 @@
-#line_card.stackPage 
-  =render partial: 'shared/category', collection: @content.categories
-  /
-    %h2 Products
-    #pConsoles
-      %h3 Consoles
-      %ul
-    #pConsoleAut
-      %h3 Console Automation, Monitoring, and Playback
-      %ul
-    #pRecorders
-      %h3 Recorders
-      %ul
-    #pAmplifiers
-      %h3 Amplifiers
-      %ul
-    #pPreamp
-      %h3 Preamplifiers
-      %ul
-    #pLoudspeakers
-      %h3 Loudspeakers and Monitors
-      %ul 
-    #pInterfaces
-      %h3 Interfaces and Synchronizers
-      %ul
-    #pPower
-      %h3 Power Protection
-      %ul
-    #pNoise
-      %h3 Noise Reduction
-      %ul
-    #pWorkstations
-      %h3 Digital Audio Workstations
-      %ul
-    #pSoftware
-      %h3 Software
-      %ul
-    #pComputers
-      %h3 Computers, Storage, and Peripherals
-      %ul
-    #pMicrophones
-      %h3 Microphones
-      %ul
-    #pSupport
-      %h3 Support Equipment
-      %ul
-    #pProduction
-      %h3 Music Production and Music Instruments
-      %ul
-    #pFurniture
-      %h3 Furniture, Mounting Solutions, Acoustic Treatment
-      %ul
-    
+#line_card.stackPage
+  %ul
+    =render partial: 'shared/category', collection: @content.categories
 
   //=debug @stack
+
+  =content_for :scripts do
+    :javascript 
+      $('');

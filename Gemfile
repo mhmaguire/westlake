@@ -74,3 +74,5 @@ gem 'activeadmin'
 gem 'rails-erd'
 
 gem 'remotipart'
+
+gem 'retina_rails'

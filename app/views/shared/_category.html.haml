@@ -1,4 +1,6 @@
-.category
-	%h3= category.pretty_title
-	%ul.vendors
-		=render partial: 'shared/vendor', collection: category.vendors 
+%li.category
+	.title
+		%h3= category.title
+	.conent
+		%ul.vendors.block-grid.four-up
+			=render partial: 'shared/vendor', collection: category.vendors 
