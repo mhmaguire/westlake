@@ -35,7 +35,7 @@ after "bundle:install", "deploy:symlink_database_yml"
 namespace :deploy do 
 	task :symlink_logos do 
 		run "rm -rf #{release_path}/lib/assets/Logos"
-		run "ln -sfn #{shared_path}/logos #{release}/lib/assets/Logos"
+		run "ln -sfn #{shared_path}/Logos #{release_path}/lib/assets/Logos"
 	end
 end
 after "deploy:symlink_database_yml", "deploy:symlink_logos"
