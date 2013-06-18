@@ -56,27 +56,25 @@
           animationSpeed: 1200,
           advanceSpeed: 10000,
           directionalNav: false,
-          bulletThumbs: true,
-          afterSlideChange: function(){
-            var current = $('.current').removeClass('current');
-            console.log('current '+current);
-            var next = current.next()
-            console.log('next '+next);
-            if (next.length) {
-              next.addClass('current');
-            }else { 
-              current.siblings().first().addClass('current');
-            }
-
-          }
+          bulletThumbs: true
         });
 
-         var length = $('ul.homeNavList li').length - 1;  
-          $('ul.homeNavList li a, ul.homeNavThumb li a').on('click', function(e){
-            var index = $(this).parent().index();
-            $(this).parent().addClass('current').siblings().removeClass('current');
-            $('#homeSlider').trigger('orbit.stop').trigger('orbit.goto', [index]); 
-          });
+        var length = $('ul.homeNavList li').length - 1;  
+        $('ul.homeNavList li a, ul.homeNavThumb li a').on('click', function(e){
+          var index = $(this).parent().index();
+          $(this).parent().addClass('current').siblings().removeClass('current');
+          $('#homeSlider').trigger('orbit.stop').trigger('orbit.goto', [index]); 
+        });
+
+        $('#homeSlider').on('orbit.next', function(){
+          var current = $('.current').removeClass('current');
+          var next = current.next()
+          if (next.length) {
+            next.addClass('current');
+          }else { 
+            current.siblings().first().addClass('current');
+          }
+        }); 
       });
 
     :javascript
