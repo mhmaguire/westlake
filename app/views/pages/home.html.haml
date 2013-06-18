@@ -1,13 +1,52 @@
 #homePage
   #homeSlider
     #slide1.homeSlide
+      .slideCopy  
+        %h2 Awesome Studio #456
+        %p Design and Installation by Westlake Pro.
     #slide2.homeSlide
+      .slideCopy
+        %h2 Awesome Studio #873
+        %p Design and Installation by Westlake Pro.
+    #slide3.homeSlide
+      .slideCopy  
+        %h2 Awesome Studio #456
+        %p Design and Installation by Westlake Pro.
+    #slide4.homeSlide
+      .slideCopy
+        %h2 Awesome Studio #873
+        %p Design and Installation by Westlake Pro.
   //  =render partial: 'shared/home_page_slide', collection: @content.home_page_slides
+
+  %nav
+    %ul.homeNavList
+      %li.current
+        %a{href:"#title1"}
+      %li
+        %a{href:"#title2"}
+      %li
+        %a{href:"#title3"}
+      %li
+        %a{href:"#title4"}
+    %ul.homeNavThumb
+      %li
+        %a{href:"#title1"}
+          =image_tag ("http://placehold.it/100x75")
+      %li
+        %a{href:"#title2"}
+          =image_tag ("http://placehold.it/100x75")
+      %li
+        %a{href:"#title3"}
+          =image_tag ("http://placehold.it/100x75")
+      %li
+        %a{href:"#title4"}
+          =image_tag ("http://placehold.it/100x75")
+  #thumbTrigger
+    %p close (x)
+
   #homeFeatured
-    %p#homeCopy
-    #homeImages
-      = image_tag("http://placehold.it/650x150", :id => "homeImage1", :class => "six columns")
-      = image_tag("http://placehold.it/650x150", :id => "homeImage2", :class => "six columns")
+    = image_tag("http://placehold.it/590x120", :id => "homeImage1")
+    = image_tag("http://placehold.it/590x120", :id => "homeImage2")
 
   =content_for :scripts do
     :javascript
@@ -17,7 +56,56 @@
           animationSpeed: 1200,
           advanceSpeed: 10000,
           directionalNav: false,
-          bulletThumbs: false,
+          bulletThumbs: true,
+          afterSlideChange: function(){
+            var current = $('.current').removeClass('current');
+            console.log('current '+current);
+            var next = current.next()
+            console.log('next '+next);
+            if (next.length) {
+              next.addClass('current');
+            }else { 
+              current.siblings().first().addClass('current');
+            }
+
+          }
+        });
+
+         var length = $('ul.homeNavList li').length - 1;  
+          $('ul.homeNavList li a, ul.homeNavThumb li a').on('click', function(e){
+            var index = $(this).parent().index();
+            $(this).parent().addClass('current').siblings().removeClass('current');
+            $('#homeSlider').trigger('orbit.stop').trigger('orbit.goto', [index]); 
+          });
+      });
+
+    :javascript
+      $(function() {
+        $('.homeNavList').mouseover(
+          function() {
+            console.log('in');
+            var myDelay = setTimeout(function() {
+              $('.homeNavThumb').animate({
+                opacity: 1,
+                top: '90px'
+              },750);
+              $('#thumbTrigger').delay(750).animate({
+                opacity: 1,
+              },250);
+              }, 1000 );
+            $('.homeNavList').mouseout(function(){
+              clearTimeout(myDelay);
+            });
+          }
+        );
+        $("#thumbTrigger").click(function() {
+          $('.homeNavThumb').animate({
+              opacity: 0,
+              top: '-45px'
+            },750);
+          $('#thumbTrigger').animate({
+              opacity: 0,
+            },250);
         });
       });
 
