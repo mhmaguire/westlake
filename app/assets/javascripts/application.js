@@ -15,3 +15,4 @@
 //= require jquery.remotipart
 //= require foundation
 //= require cocoon
+//= require retina 

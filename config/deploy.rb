@@ -32,6 +32,22 @@ namespace :deploy do
 end
 after "bundle:install", "deploy:symlink_database_yml"
 
+namespace :deploy do 
+	task :symlink_logos do 
+		run "rm -rf #{release_path}/lib/assets/Logos"
+		run "ln -sfn #{shared_path}/Logos #{release_path}/lib/assets/Logos"
+	end
+end
+after "deploy:symlink_database_yml", "deploy:symlink_logos"
+
+namespace :images do
+  task :symlink, :except => { :no_release => true } do
+    run "rm -rf #{release_path}/public/spree"
+    run "ln -nfs #{shared_path}/spree #{release_path}/public/spree"
+  end
+end
+after "bundle:install", "images:symlink"
+
 
 #namespace :unicorn do
 #  desc "Zero-downtime restart of Unicorn"
@@ -58,10 +74,10 @@ after "bundle:install", "deploy:symlink_database_yml"
 # these http://github.com/rails/irs_process_scripts
 
 # If you are using Passenger mod_rails uncomment this:
-# namespace :deploy do
-#   task :start do ; end
-#   task :stop do ; end
-#   task :restart, :roles => :app, :except => { :no_release => true } do
-#     run "#{try_sudo} touch #{File.join(current_path,'tmp','restart.txt')}"
-#   end
-# end
+ namespace :deploy do
+   task :start do ; end
+   task :stop do ; end
+   task :restart, :roles => :app, :except => { :no_release => true } do
+     run "#{try_sudo} touch #{File.join(current_path,'tmp','restart.txt')}"
+   end
+ end

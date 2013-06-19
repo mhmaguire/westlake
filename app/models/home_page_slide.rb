@@ -1,7 +1,8 @@
 class HomePageSlide < ActiveRecord::Base
   before_save :set_content_association
-  attr_accessible :header, :body, :image 
-  has_attached_file :image, styles: {large: '1700x650>'}
+  attr_accessible :header, :body, :image
+  retina!
+  has_attached_file :image, styles: {large: '1700x650>'}, retina: true
 
   belongs_to :content
 
