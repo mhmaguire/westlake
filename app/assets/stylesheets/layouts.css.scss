@@ -14,7 +14,7 @@ $rightBorder:2px solid rgba(255,255,255,0.3);
 $leftBorder:1px solid rgba(110,110,110,0.4);
 
 $headFont: 'Roboto', 'Myriad Pro', arial, sans-serif;
-$bodyFont: 'Quicksand', 'Myriad Pro', arial, sans-serif;
+$bodyFont: 'Myriad Pro', arial, sans-serif;
 
 @font-face {
   font-family: 'Futura-BoldOblique';
@@ -234,17 +234,20 @@ body{
 	bottom:0px;
 	left:0px;
 	z-index:5;
+	overflow-y:hidden;
+	height:100%;
 }
 #homeSlider{
 	width:100%;
 	height:100%;
-	min-height:700px;
+	min-height:500px;
 }
 .homeNavList{
 	position:absolute;
 	z-index: 9;
 	top: 60px;
-	left: 47.25%;
+	left: 50%;
+	margin-left:-42px;
 	background-color:rgba(0,0,0,.5);
 	padding:3px 10px 0;
 	border-radius: 10px;
@@ -341,7 +344,6 @@ body{
 
 ////////// Contact Page
 #contactPage {
-	margin:70px 6%;
 	#cForm{
 		padding:0 10%;
 		h1{
@@ -413,15 +415,6 @@ ul.featured.orbit{
 		}
 	}
 }
-@media (max-width:980px) AND (min-width:768px) {
-	#mainNav li a{
-		font-size:1em;
-	}
-	#footSocial{
-		display:none;
-	}
-	#footCopy{width:100%;}
-}
 @media (max-width:1250px) AND (min-width:$contentMin) {
 	#mainFoot span {
 		margin-left:.8%;
@@ -431,6 +424,50 @@ ul.featured.orbit{
 		padding:0 1em;
 	}
 }
+@media (max-width:980px) AND (min-width:768px) {
+	#mainNav li a{
+		font-size:1em;
+	}
+	#footCopy{
+		width:100%;
+		span{
+			font-size:.95em;
+			float:none;
+			margin:0;
+			&::after{
+				content:"\00a0\00a0\00a0"
+			}
+		}
+	}
+	#fGroup1, #fGroup2{
+		width: -moz-fit-content;
+	  width: -webkit-fit-content;
+	  width: fit-content;
+		margin:0 auto;
+	}
+	#fGroup2{
+		margin:.35em auto;
+	}
+	#footSocial{
+		position:relative;
+		left:50%;
+		margin-left:-60px;
+	}
+	.slideCopy{bottom:245px;}
+	#homeFeatured{bottom:95px;}
+}
+
 //Tablet Styles
-@media (max-width: $contentMin) {
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : portrait) {
+	#logo, #mainNavRow {
+		width:100%;
+	}
+}
+
+//Mobile Styles
+@media (max-width: 768px) {
+
 }
