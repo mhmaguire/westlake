@@ -1,4 +1,11 @@
 class EmailContactsController < ApplicationController
+  	
+  	def new
+  		respond_to do |format|
+  			format.js
+  		end
+  	end
+
   	def create
   		@email_contact = EmailContact.new(params[:email_contact])
 		respond_to do |format|
