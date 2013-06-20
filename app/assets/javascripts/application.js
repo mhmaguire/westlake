@@ -15,4 +15,5 @@
 //= require jquery.remotipart
 //= require foundation
 //= require cocoon
-//= require retina 
+//= require retina
+//= require jPanelMenu 
