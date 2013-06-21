@@ -40,14 +40,6 @@ namespace :deploy do
 end
 after "deploy:symlink_database_yml", "deploy:symlink_logos"
 
-namespace :images do
-  task :symlink, :except => { :no_release => true } do
-    run "rm -rf #{release_path}/public/spree"
-    run "ln -nfs #{shared_path}/spree #{release_path}/public/spree"
-  end
-end
-after "bundle:install", "images:symlink"
-
 
 #namespace :unicorn do
 #  desc "Zero-downtime restart of Unicorn"
