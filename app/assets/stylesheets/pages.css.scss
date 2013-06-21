@@ -106,6 +106,10 @@
 	h2, p {
 		color:white;
 	}
+	h2{
+		font-size:1.7em;
+		margin:0 0 10px;
+	}
 }
 #slide1{
 	background-image:url(asset-path('background1.jpg', image));
@@ -162,6 +166,7 @@
 			background-color:white;
 		}
 		h3{
+			font-size:1.5em;
 			line-height:1.3em;
 		}
 		h4{
@@ -176,6 +181,10 @@
 		}
 		p{
 			text-align:left;
+		}
+		> div > .button{
+			margin-top: .5em;
+			color:$textColor2;
 		}
 	}
 }
