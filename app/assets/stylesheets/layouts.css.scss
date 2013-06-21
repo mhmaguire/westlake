@@ -149,31 +149,30 @@ body{
   width: fit-content;
 	margin:0 auto;
 	overflow-y:hidden;
-	padding-left:5px;
-	padding-right:5px;
+	padding:5px 5px 0;
 	li {
 		height:40px;
 		margin-top:-7px;
 		margin-left:-3px;
-		padding:.8em 0 0;
+		padding:.5em 0 0;
 		display:inline-block;
 		white-space:nowrap;
 		a {
 			display:inherit;
 			height:100%;
 			font-size:1.3em;
-			padding:0 .6em;
-			//border-right:$rightBorder;
-			//border-left:$leftBorder;
+			padding:.3em .6em 0;
+			border-right:$rightBorder;
+			border-left:$leftBorder;
 			&.noneL{border-left:none !important;}
 			&#avidLink{border-right:none !important;}
 		}
 	}
 }
 #avidLogo{
-	max-height:25px;
+	max-height:20px;
 	position: relative;
-	top:7px;
+	top:4px;
 }
 #mainContent{
 	min-width:$contentMin;
@@ -305,7 +304,7 @@ body{
 	border:1px solid rgba(100,100,100,0.7);
 	> img {
 		width: ($contentMax - 32) / 2;
-		height:120px;
+		height:auto;
 		float:left;
 		&:first-child{margin-right:10px;}
 	}
