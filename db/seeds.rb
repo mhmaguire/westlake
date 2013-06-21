@@ -13,10 +13,7 @@ content=Content.new
 	content.send("#{attribute}=", 'This is the default text for all content attributes')
 end
 content.save!
-
-Spree::Core::Engine.load_seed if defined?(Spree::Core)
-Spree::Auth::Engine.load_seed if defined?(Spree::Auth) 
-    
+   
 date = Time.now.advance(days: 2)
 
 5.times do |i|
