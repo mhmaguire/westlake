@@ -24,18 +24,18 @@
             %h4 8/12/2013
             %p A really great career opportunity. You'd be a fool not to apply. Seriously, we need someone of your exact qualifications and experience level. 7 FIGURES guaranteed starting pay, plus 500% commision on all business.
             .button.gradientBack Apply 
-    %li 
+    %li.defaultSlide
+      = image_tag "rails.png" 
       %h2 Benefits 
+      %p Body blahblahblahblah 
+    %li.defaultSlide
       = image_tag "rails.png"
-      %h3 Body blahblahblahblah 
-    %li
       %h2 Life in Los Angeles
+      %p Body blahblahblahblah 
+    %li.defaultSlide
       = image_tag "rails.png"
-      %h3 Body blahblahblahblah 
-    %li
       %h2 Company Culture
-      = image_tag "rails.png"
-      %h3 Body blahblahblahblah 
+      %p Body blahblahblahblah 
 
   %nav.stackNav
     %ul.side-nav.stackNavList
@@ -48,43 +48,48 @@
 
 =content_for :scripts do
   :javascript
-    $(function() {
-      
+    if (window.matchMedia("(min-device-width: 768px)").matches) {
 
-      $('.featured').orbit({
-        timer: false,
-        fluid: '16x6',
-        bulletThumbs: false,
-        animation: "vertical-slide",
-        animationSpeed: 500,
-        directionalNav: false,
-      });
+      $(function() {
+        
+        $('.featured').orbit({
+          timer: false,
+          fluid: '16x6',
+          bulletThumbs: false,
+          animation: "vertical-slide",
+          animationSpeed: 500,
+          directionalNav: false,
+        });
 
-      $(document).on('mousewheel DOMMouseScroll', function(e){
-        console.log(e); 
-        var temp = (0 < e.originalEvent.wheelDelta ? 'orbit.next' : 'orbit.prev');
-        $('.featured').trigger(temp);
-        return false;
-      });
+        $(document).on('mousewheel DOMMouseScroll', function(e){
+          console.log(e); 
+          var temp = (0 < e.originalEvent.wheelDelta ? 'orbit.next' : 'orbit.prev');
+          $('.featured').trigger(temp);
+          return false;
+        });
 
-      $(document).on('keydown', function(e){
-        var temp = e.originalEvent.keyCode; 
-        if(temp == 38 || temp == 40) {
-          if(temp == 40) {
-            temp = 'orbit.next';
-          } else {
-            temp = 'orbit.prev'
+        $(document).on('keydown', function(e){
+          var temp = e.originalEvent.keyCode; 
+          if(temp == 38 || temp == 40) {
+            if(temp == 40) {
+              temp = 'orbit.next';
+            } else {
+              temp = 'orbit.prev'
+            }
+            $('.featured').trigger(temp);  
           }
-          $('.featured').trigger(temp);  
-        }
-      });
+        });
 
 
-      var length = $('ul.stackNavList li').length - 1;  
-      $('ul.stackNavList li a').on('click', function(e){
-        var index = $(this).parent().index();
-        index = (length-index) +1 ; 
-        $(this).parent().addClass('current');
-        $('.featured').trigger('orbit.stop').trigger('orbit.goto', [index]); 
+        var length = $('ul.stackNavList li').length - 1;  
+        $('ul.stackNavList li a').on('click', function(e){
+          var index = $(this).parent().index();
+          index = (length-index) +1 ; 
+          $(this).parent().addClass('current');
+          $('.featured').trigger('orbit.stop').trigger('orbit.goto', [index]); 
+        });
       });
-    });
+    }
+    else {
+      console.log('too small for slider');
+    }

@@ -16,4 +16,5 @@
 //= require foundation
 //= require cocoon
 //= require retina
-//= require jPanelMenu 
+//= require jPanelMenu
+//= require pages 

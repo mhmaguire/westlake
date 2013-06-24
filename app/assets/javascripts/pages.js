@@ -1,34 +1,36 @@
+if (window.matchMedia("(min-device-width: 768px)").matches) {
+    $(window).ready(function (){
+            var hHeight = $("#mainHead").height();
+            var fHeight = $("#mainFoot").height();
+            var lessHeight = hHeight + fHeight;
+            var space = window.innerHeight - lessHeight;
 
-$(window).ready(function (){
-        var hHeight = $("#mainHead").height();
-        var fHeight = $("#mainFoot").height();
-        var lessHeight = hHeight + fHeight;
-        var space = window.innerHeight - lessHeight;
+            $("#mainContent").css("height", space + 'px');
 
-        $("#stackPage").css("height", space + 'px');
+            var sMin = 500;
+            //var sMax = 810;
 
-        var sMin = 540;
-        var sMax = 810;
+            if(space < sMin) {space = sMin;}
+            //else if(space > sMax) {space = sMax;}
 
-        if(space < sMin) {space = sMin;}
-        else if(space > sMax) {space = sMax;}
+        });
 
-        $("#homePage").css("height", space + 'px');
-    });
+    $(window).resize(function (){
+            var hHeight = $("#mainHead").height();
+            var fHeight = $("#mainFoot").height();
+            var lessHeight = hHeight + fHeight;
+            var space = window.innerHeight - lessHeight;
 
-$(window).resize(function (){
-        var hHeight = $("#mainHead").height();
-        var fHeight = $("#mainFoot").height();
-        var lessHeight = hHeight + fHeight;
-        var space = window.innerHeight - lessHeight;
+            $("#mainContent").css("height", space + 'px');
 
-        $("#stackPage").css("height", space + 'px');
+            var sMin = 500;
+            //var sMax = 810;
 
-        var sMin = 540;
-        var sMax = 810;
+            if(space < sMin) {space = sMin;}
+            //else if(space > sMax) {space = sMax;}
 
-        if(space < sMin) {space = sMin;}
-        else if(space > sMax) {space = sMax;}
-
-        $("#homePage").css("height", space + 'px');
-    });
+        });
+}
+else{
+    console.log('too small for slider');
+}

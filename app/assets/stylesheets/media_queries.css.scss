@@ -207,6 +207,24 @@ and (orientation : portrait) {
 		h2{font-size:1.2em;}
 		p{font-size:1em;}
 	}
+	//Stack Pages
+	.featured > li {
+		list-style:none;
+		width:100%;
+		min-height:300px;
+		clear:both;
+		h2{
+			font-size:1.3em;
+		}
+		&.defaultSlide{
+			img{
+				width:40%;
+			}
+		}
+	}
+	.stackNav{
+		display:none;
+	}
 //end mobile styles
 }
 
