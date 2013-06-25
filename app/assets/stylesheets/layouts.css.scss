@@ -211,6 +211,21 @@ ul.featured.orbit{
 		}
 	}
 }
+////// default slide template
+.defaultSlide{
+	> img, #about1Gallery{
+		float:left;
+		width:30%;
+		height:auto;
+		margin-right:3%;
+	}
+	h2{
+		margin-top:0px;
+	}
+	p{
+		font-size:1.35em;
+	}
+}
 
 //////
 ////// Backend Styles
