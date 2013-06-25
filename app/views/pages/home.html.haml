@@ -62,10 +62,8 @@
         var length = $('ul.homeNavList li').length - 1;  
         $('ul.homeNavList li a, ul.homeNavThumb li a').on('click', function(e){
           var index = $(this).parent().index();
-          console.log(e); 
           $(this).parent().addClass('current').siblings().removeClass('current');
           var otherIndex = $(e.target.offsetParent).siblings().find('li').removeClass('current').get(index); 
-
           $(otherIndex).addClass('current'); 
           $('#homeSlider').trigger('orbit.stop').trigger('orbit.goto', [index]); 
         });
