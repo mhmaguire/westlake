@@ -29,7 +29,7 @@
       %li
         %a{href:"#title4"}
     %ul.homeNavThumb
-      %li
+      %li.current
         %a{href:"#title1"}
           =image_tag ("http://placehold.it/100x75")
       %li
@@ -62,12 +62,17 @@
         var length = $('ul.homeNavList li').length - 1;  
         $('ul.homeNavList li a, ul.homeNavThumb li a').on('click', function(e){
           var index = $(this).parent().index();
+          console.log(e); 
           $(this).parent().addClass('current').siblings().removeClass('current');
+          var otherIndex = $(e.target.offsetParent).siblings().find('li').removeClass('current').get(index); 
+
+          $(otherIndex).addClass('current'); 
           $('#homeSlider').trigger('orbit.stop').trigger('orbit.goto', [index]); 
         });
 
         $('#homeSlider').on('orbit.next', function(){
           var current = $('.current').removeClass('current');
+          console.log(current); 
           var next = current.next()
           if (next.length) {
             next.addClass('current');
