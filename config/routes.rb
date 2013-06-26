@@ -1,4 +1,6 @@
 WestlakePro::Application.routes.draw do
+  mount Rich::Engine => '/rich', :as => 'rich'
+
   root :to => 'pages#home'
 
   devise_for :admin_users, ActiveAdmin::Devise.config

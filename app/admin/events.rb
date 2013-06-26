@@ -4,7 +4,7 @@ ActiveAdmin.register Event do
 	form do |f|
 		f.inputs do 
 			f.input :title
-			f.input :description
+			f.input :description, as: :rich 
 			f.input :start_date
 			f.input :image 
 		end 

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130626023707) do
+ActiveRecord::Schema.define(:version => 20130626194646) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "resource_id",   :null => false
@@ -154,6 +154,19 @@ ActiveRecord::Schema.define(:version => 20130626023707) do
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
     t.integer  "content_id"
+  end
+
+  create_table "rich_rich_files", :force => true do |t|
+    t.datetime "created_at",                                 :null => false
+    t.datetime "updated_at",                                 :null => false
+    t.string   "rich_file_file_name"
+    t.string   "rich_file_content_type"
+    t.integer  "rich_file_file_size"
+    t.datetime "rich_file_updated_at"
+    t.string   "owner_type"
+    t.integer  "owner_id"
+    t.text     "uri_cache"
+    t.string   "simplified_type",        :default => "file"
   end
 
   create_table "vendors", :force => true do |t|

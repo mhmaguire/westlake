@@ -1,5 +1,5 @@
 =image_tag event.image.url(:small)
 =event.title
-=event.description 
+=raw event.description 
 =event.start_date
 =link_to "RSVP Now!", new_rsvp_path(event), remote: true
