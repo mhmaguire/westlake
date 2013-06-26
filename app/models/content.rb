@@ -7,4 +7,8 @@ class Content < ActiveRecord::Base
   has_many :home_page_slides
   has_many :categories
   has_many :events
+
+  def default_image
+  	home_page_slides.first.image
+  end
 end
