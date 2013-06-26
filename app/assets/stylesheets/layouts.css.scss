@@ -259,7 +259,7 @@ ul.featured.orbit{
 }
 ////// default slide templates
 .defaultSlide{
-	> img, #about1Gallery{
+	.slideContent>img, #about1Gallery{
 		float:left;
 		width:30%;
 		height:auto;
@@ -272,7 +272,17 @@ ul.featured.orbit{
 		font-size:1.35em;
 	}
 }
-
+.defaultSlide2{
+	.slideContent{
+		> img{
+			width:100%;
+			max-height:350px;
+			position:relative;
+			left:550px;
+			margin-left:-550px;
+		}
+	}
+}
 
 //////
 ////// Backend Styles
