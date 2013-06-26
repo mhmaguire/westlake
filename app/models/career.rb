@@ -7,6 +7,6 @@ class Career < ActiveRecord::Base
   has_many :contacts, class_name: "CareerContact" 
 
   def set_content_association
-  	self.content = Content.last
+  	self.content = Content.instance
   end
 end

@@ -1,3 +1,4 @@
 #description
 %h1 Create a new Career Inquiry
-=render partial: 'career_contacts/form', locals: {career: @career, contact: @career_contact} 
+=semantic_form_for @career_contact, url: "careers/#{@career.id}/contact.js", html: {multipart: true}, remote: true do |f|
+	=render partial: 'career_contacts/form', locals: {f: f} 

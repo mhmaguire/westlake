@@ -11,6 +11,11 @@ class ContactMailer < ActionMailer::Base
   	mail(to: 'mhmaguire0@gmail.com', subject: 'New job application submitted')
   end
 
+  def resume_inquiry(email)
+    @email = email
+    mail(to: 'mhmaguire0@gmail.com', subject: 'New resume submitted')
+  end
+
   def event_rsvp(email)
   	@email = email
   	mail(to: 'mhmaguire0@gmail.com', subject: 'New event RSVP!')

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130626194646) do
+ActiveRecord::Schema.define(:version => 20130626215806) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "resource_id",   :null => false
@@ -77,14 +77,37 @@ ActiveRecord::Schema.define(:version => 20130626194646) do
   end
 
   create_table "contents", :force => true do |t|
+    t.integer  "singleton_guard",           :default => 0
     t.text     "ceo_letter"
     t.text     "gen_info"
     t.text     "company_culture"
     t.text     "la_life"
     t.text     "benefits"
-    t.datetime "created_at",      :null => false
-    t.datetime "updated_at",      :null => false
+    t.datetime "created_at",                               :null => false
+    t.datetime "updated_at",                               :null => false
+    t.string   "ceo_img_file_name"
+    t.string   "ceo_img_content_type"
+    t.integer  "ceo_img_file_size"
+    t.datetime "ceo_img_updated_at"
+    t.string   "culture_img_file_name"
+    t.string   "culture_img_content_type"
+    t.integer  "culture_img_file_size"
+    t.datetime "culture_img_updated_at"
+    t.string   "la_life_img_file_name"
+    t.string   "la_life_img_content_type"
+    t.integer  "la_life_img_file_size"
+    t.datetime "la_life_img_updated_at"
+    t.string   "benefits_img_file_name"
+    t.string   "benefits_img_content_type"
+    t.integer  "benefits_img_file_size"
+    t.datetime "benefits_img_updated_at"
+    t.string   "openings_img_file_name"
+    t.string   "openings_img_content_type"
+    t.integer  "openings_img_file_size"
+    t.datetime "openings_img_updated_at"
   end
+
+  add_index "contents", ["singleton_guard"], :name => "index_contents_on_singleton_guard", :unique => true
 
   create_table "email_contacts", :force => true do |t|
     t.string   "email"
@@ -99,7 +122,8 @@ ActiveRecord::Schema.define(:version => 20130626194646) do
   create_table "employees", :force => true do |t|
     t.string   "name"
     t.string   "title"
-    t.string   "description"
+    t.string   "email"
+    t.string   "phone"
     t.datetime "created_at",         :null => false
     t.datetime "updated_at",         :null => false
     t.string   "image_file_name"

@@ -7,6 +7,6 @@ class Event < ActiveRecord::Base
   has_many :event_contacts
 
   def set_content_association
-  	self.content = Content.last
+  	self.content = Content.instance
   end
 end

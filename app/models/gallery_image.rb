@@ -5,10 +5,7 @@ class GalleryImage < ActiveRecord::Base
 
   belongs_to :content
 
-  scope :integrations, where(gallery_type: 'integrations')
-  scope :designs, where(gallery_type: 'designs')
-
   def set_content_association
-  	self.content = Content.last
+  	self.content = Content.instance
   end
 end

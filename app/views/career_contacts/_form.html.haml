@@ -1,9 +1,7 @@
-=semantic_form_for @career_contact, url: "careers/#{career.id}/contact.js", html: {multipart: true}, remote: true do |f|
-	=#f.semantic_errors 
-	=f.inputs do 
-		=f.input :email
-		=f.input :name 
-		=f.input :resume, as: :file
-	=f.actions do 
-		=f.action :submit, label: "Submit Application"
+=f.inputs do 
+	=f.input :email
+	=f.input :name 
+	=f.input :resume, as: :file
+=f.actions do 
+	=f.action :submit, button_html: { disable_with: "Submitting..."}, label: "Submit Application"
 

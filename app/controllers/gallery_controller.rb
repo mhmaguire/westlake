@@ -9,14 +9,10 @@ class GalleryController < ApplicationController
 
 	private 
 		def get_images
-			if params[:gallery_type] == 'integrations'
-				puts 'integrations \n \n'
-				return GalleryImage.integrations
-			if params[:gallery_type] == 'designs'
-				puts 'designs \n'
-				return GalleryImage.designs
+			if params[:gallery_type] == 'all'
+				GalleryImage.all
+			else 
+				GalleryImage.where(gallery_type: params[:gallery_type])
 			end
-			return GalleryImage.all 
-			end 
 		end
 end

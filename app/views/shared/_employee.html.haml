@@ -1,6 +1,7 @@
-.team-member
+.employeeContact
+	%h4= employee.name
 	=link_to '#', class: 'bioModal' do 
 		=image_tag(employee.image.url(:medium)) 
-	%div
-		%h4= employee.name
-	%h6= employee.title 
+	%p= employee.title
+	%p= employee.phone
+	%p= employee.email

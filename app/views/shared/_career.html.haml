@@ -3,5 +3,6 @@
 		%h3= career.title
 		%h4= career.end_at
 		%p= career.description
-		.button= link_to "Apply Now", new_career_contact_path(career), remote: true 
+		.button.gradientBlack
+			= link_to "Apply", new_career_contact_path(career), remote: true
 		

@@ -6,26 +6,8 @@
       .slideContent
         %h1 Current Openings 
         %ul.openings 
-          /=render partial: 'shared/career', collection: @content.careers
-          %li
-            %div
-              %h3 Supreme Overlord of Everything
-              %h4 8/12/2013
-              %p A really great career opportunity. You'd be a fool not to apply. Seriously, we need someone of your exact qualifications and experience level. 7 FIGURES guaranteed starting pay, plus 500% commision on all business.
-              .button.gradientBack Apply 
-          %li
-            %div
-              %h3 Supreme Overlord of Everything
-              %h4 8/12/2013
-              %p A really great career opportunity. You'd be a fool not to apply. Seriously, we need someone of your exact qualifications and experience level. 7 FIGURES guaranteed starting pay, plus 500% commision on all business.
-              .button.gradientBack Apply 
-          %li
-            %div
-              %h3 Supreme Overlord of Everything
-              %h4 8/12/2013
-              %p A really great career opportunity. You'd be a fool not to apply. Seriously, we need someone of your exact qualifications and experience level. 7 FIGURES guaranteed starting pay, plus 500% commision on all business.
-              .button.gradientBack Apply 
-        .button.gradientBack#resumeButton Submit A Resume
+          =render partial: 'shared/career', collection: @content.careers
+        .button.gradientBack#resumeButton= link_to "Submit A Resume", career_resume_path, remote: true
     %li.defaultSlide
       .slideContent  
         = image_tag "rails.png" 

@@ -3,7 +3,8 @@ class CreateEmployees < ActiveRecord::Migration
     create_table :employees do |t|
       t.string :name
       t.string :title
-      t.string :description
+      t.string :email
+      t.string :phone
       t.timestamps
     end
   end

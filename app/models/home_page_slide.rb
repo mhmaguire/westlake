@@ -7,6 +7,6 @@ class HomePageSlide < ActiveRecord::Base
   belongs_to :content
 
   def set_content_association
-  	self.content = Content.last
+  	self.content = Content.instance
   end
 end

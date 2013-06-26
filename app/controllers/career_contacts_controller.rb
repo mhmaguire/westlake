@@ -20,4 +20,23 @@ class CareerContactsController < ApplicationController
 			end
 		end
 	end
+
+	def resume 
+		@career_contact = CareerContact.new
+		respond_to do |format|
+			format.js
+		end
+	end
+
+	def create_resume
+		@career_contact = CareerContact.new(params[:career_contact])
+		respond_to do |format|
+			if @career_contact.save
+				ContactMailer.resume_inquiry(@career_contact).deliver
+				format.js { render 'create'}
+			else 
+				format.js { render 'resume'}
+			end
+		end
+	end
 end
