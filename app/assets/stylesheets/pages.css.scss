@@ -118,14 +118,87 @@
 	background-image:url(asset-path('background2.jpg', image));
 }
 .homeSlide{
-	background-position:center top;
+	background-attachment:fixed;
+	background-position:top center;
 	background-repeat:no-repeat;
 }
 ////////// Products Page
 #line_card .title h3 {
 	text-decoration: underline;
 }
-
+////////// What We Do
+#wwd1{
+	background-image:url(asset-path('wwd_bg1.jpg', image));
+}
+#sales{
+	background-image:url(asset-path('sales_bg.jpg', image));
+}
+#design{
+	background-image:url(asset-path('design_bg.jpg', image));
+}
+#integrations{
+	background-image:url(asset-path('integration_bg.jpg', image));
+}
+#wwd1, #sales, #design, #integrations{
+	background-attachment:fixed;
+	background-position:top center;
+	background-repeat:no-repeat;
+	background-size:cover;
+	h1, h2, h3, h4, p{
+		color: white;
+	}
+	.slideContent{
+		> img{
+			width:100%;
+			position:relative;
+			left:550px;
+			margin-left:-550px;
+		}
+	}
+}
+#wwd1{
+	h1{
+		margin:100px 0 150px;
+		width:100%;
+		font-size:4em;
+	}
+	.slideContent > a{
+		width:100%;
+		text-align: right;
+		clear:both;
+		float:right;
+		margin-top:.5em;
+	}
+}
+.wwd1Copy{
+	width:32%;
+	overflow:hidden;
+	min-height:240px;
+	float:left;
+	padding:15px;
+	box-sizing:border-box;
+	background-color:rgba(0,0,0,0.7);
+	border-radius:3px;
+	&:nth-child(3){
+		margin:0 2%;
+	}
+	p{
+		font-size:1.2em;
+	}
+	a::after{content:none !important;}
+}
+#sales{
+	a{
+		float:left;
+		&:nth-child(6){
+			float:right;
+			margin-right:100px;
+		}
+	}
+}
+#integrations{
+	padding-top:250px;
+}
 ////////// Contact Page
 #contactPage {
 	#cForm{

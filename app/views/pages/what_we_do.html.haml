@@ -1,24 +1,42 @@
-.stackPage  
-  %ul.featured
-    %li
-      %h1 About
-    %li
-      %h2 Installations
-      %p blahblahblahblah 
-      =image_tag "rails.png"
-    %li 
-      %h2 Design
-      %p blahblahblahblah 
-      =image_tag "rails.png"
-    %li
-      %h2 Sales
-      %p blahblahblahblah 
-      
+.stackPage 
   %nav.stackNav
-    %ul.side-nav.stackNavList
+    %ul.stackNavList
       %li= link_to "Sales", "#title1"
       %li= link_to "Design", "#title2"
-      %li= link_to "Installations", "#title3"
+      %li= link_to "Integrations", "#title3" 
+  %ul.featured
+    %li#wwd1
+      .slideContent
+        %h1 Welcome To Westlake Pro
+        .wwd1Copy
+          %h2 Sales
+          %p Whatever it is you need, we can get it. We have relationships with all major audio and video manufacturers and vendors, enabling us to get you exactly the right gear you need. Check out our product line card<a href="/line_card"> here</a>
+        .wwd1Copy
+          %h2 Design
+          %p We feel that nothing is more important than starting with the right plan in place, taking into consideration every element of your workflow before you make any buying decisions. A good design saves you money, time, and multiple headaches.
+        .wwd1Copy
+          %h2 Integrations
+          %p We have years of experience putting together some of the best audio and video production suites in the country. We have built studios all over the world and have the resources and know-how to realize your biggest dreams for you.
+        %a{href: '#'} Take a loot at the studios we've designed and built here
+    %li#integrations.noMobile
+      .slideContent
+        %h2 Integrations
+        %p Westlake Pro can  provide integration services from small editing suites to major installations including studio design and consultation, software configuration and networking, wiring, and furniture. Complete training packages can be customized for your staff, so your equipment investment can be utilized to its full potential.
+        %a{href: "#"} View the studios we've integrated here
+    %li#design.noMobile
+      .slideContent
+        =image_tag "design_image.png"
+        %h2 Design
+        %p Today’s audio production technology requires careful planning to achieve the best possible result. Our expert staff will work with you to provide a total solution to your music or post production needs. From small studios to large commercial installations, Westlake Pro will match the best technology and system design to meet your requirements. Your design will be optimzed based on your goals, objectives and budget.
+        %a{href: "#"} View the studios we've designed here 
+    %li#sales.noMobile
+      .slideContent
+        =image_tag "sales_image.png"
+        %h2 Sales
+        %p At Westlake Pro, you’ll find every major brand of pro audio equipment at the lowest prices. Take the guess work out of buying equipment and software. Visit our two fully functional studios to evaluate gear in a real studio environment.
+        %p Meet with our experienced and knowledgeable sales and technical service staff to get expert advice from the best in the audio business. Discuss your needs and get the right equipment at the best possible price - all in a calm, comfortable environment.
+        %a{href:'#'} View our pricing policy here
+        = link_to 'View our product line card here', '/line_card'
 
 //=debug @stack
 
@@ -32,16 +50,9 @@
           timer: false,
           fluid: '16x6',
           bulletThumbs: false,
-          animation: "vertical-slide",
-          animationSpeed: 500,
+          animation: "fade",
+          animationSpeed: 1000,
           directionalNav: false,
-        });
-
-        $(document).on('mousewheel DOMMouseScroll', function(e){
-          console.log(e); 
-          var temp = (0 < e.originalEvent.wheelDelta ? 'orbit.next' : 'orbit.prev');
-          $('.featured').trigger(temp);
-          return false;
         });
 
         $(document).on('keydown', function(e){
