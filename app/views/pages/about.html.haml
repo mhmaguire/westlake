@@ -66,7 +66,7 @@
 
       
   %nav.stackNav
-    %ul.side-nav.stackNavList
+    %ul.stackNavList
       %li= link_to "The Westlake Pro Story", "#title1"
       %li= link_to "Letter from the CEO", "#title2"
       %li= link_to "Meet the Team", "#title3"
@@ -83,17 +83,11 @@
           timer: false,
           fluid: '16x6',
           bulletThumbs: false,
-          animation: "vertical-slide",
-          animationSpeed: 500,
+          animation: "fade",
+          animationSpeed: 1500,
           directionalNav: false,
         });
 
-        $(document).on('mousewheel DOMMouseScroll', function(e){
-          console.log(e); 
-          var temp = (0 < e.originalEvent.wheelDelta ? 'orbit.next' : 'orbit.prev');
-          $('.featured').trigger(temp);
-          return false;
-        });
 
         $(document).on('keydown', function(e){
           var temp = e.originalEvent.keyCode; 

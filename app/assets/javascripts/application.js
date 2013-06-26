@@ -18,3 +18,4 @@
 //= require retina
 //= require jPanelMenu
 //= require pages 
+//= require stackNav

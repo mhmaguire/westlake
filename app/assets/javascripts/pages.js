@@ -8,10 +8,7 @@ if (window.matchMedia("(min-device-width: 768px)").matches) {
             $("#mainContent").css("height", space + 'px');
 
             var sMin = 500;
-            //var sMax = 810;
-
             if(space < sMin) {space = sMin;}
-            //else if(space > sMax) {space = sMax;}
 
         });
 
@@ -24,10 +21,7 @@ if (window.matchMedia("(min-device-width: 768px)").matches) {
             $("#mainContent").css("height", space + 'px');
 
             var sMin = 500;
-            //var sMax = 810;
-
             if(space < sMin) {space = sMin;}
-            //else if(space > sMax) {space = sMax;}
 
         });
 }
