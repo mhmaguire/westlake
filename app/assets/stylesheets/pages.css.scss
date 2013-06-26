@@ -158,19 +158,6 @@
 #integrations{
 	background-image:url(asset-path('integration_bg.jpg', image));
 }
-#wwd1, #sales, #design, #integrations{
-	h1, h2, h3, h4, p{
-		color: white;
-	}
-	.slideContent{
-		> img{
-			width:100%;
-			position:relative;
-			left:550px;
-			margin-left:-550px;
-		}
-	}
-}
 #wwd1{
 	h1{
 		margin:100px 0 150px;
@@ -178,9 +165,6 @@
 		font-size:4em;
 	}
 	.slideContent > a{
-		width:100%;
-		text-align: right;
-		clear:both;
 		float:right;
 		margin-top:.5em;
 	}
@@ -284,7 +268,7 @@
 	width:125px;
 	position:relative;
 	left:50%;
-	margin-left:-57px;
+	margin-left:-55px;
 	display:block;
 	clear:both;
 }
