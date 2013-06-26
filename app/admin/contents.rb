@@ -28,5 +28,45 @@ ActiveAdmin.register Content, as: "Content" do
 			end
 		end
 	end
-  
+
+	form html: {enctype: "multipart/form-data"} do |f|
+		f.inputs do 
+			f.input :ceo_letter
+			f.input :ceo_img
+			f.input :benefits
+			f.input :benefits_img
+			f.input :la_life
+			f.input :la_life_img
+			f.input :gen_info 
+			f.input :company_culture
+			f.input :culture_img
+			f.input :openings_img
+		end
+		f.actions
+	end	 
+
+	show do |c|
+		attributes_table do 
+			row :ceo_letter
+			row :benefits
+			row :la_life
+			row :gen_info
+			row :company_culture
+			row "Ceo Image" do 
+				image_tag c.ceo_img.url(:small)
+			end
+			row "Benefits Image" do 
+				image_tag c.benefits_img.url(:small)
+			end
+			row "LA Life Image" do 
+				image_tag c.la_life_img.url(:small)
+			end
+			row "Culture Image" do 
+				image_tag c.culture_img.url(:small)
+			end
+			row "Openings Image" do 
+				image_tag c.openings_img.url(:small)
+			end
+		end
+	end
 end

@@ -6,7 +6,7 @@
       .slideContent
         %h1 Current Openings 
         %ul.openings 
-          =render partial: 'shared/career', collection: @content.careers
+          =render partial: 'shared/career', collection: @content.careers.limit(3)
         .button.gradientBack#resumeButton= link_to "Submit A Resume", career_resume_path, remote: true
     %li.defaultSlide
       .slideContent  
