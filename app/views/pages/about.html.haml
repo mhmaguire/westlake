@@ -1,67 +1,66 @@
-.stackPage  
+#about.stackPage  
   %ul.featured
     %li
-      %h1 About
+      .slideContent
+        %h1 About
     %li
-      %h2 Meet the Westlake Pro Team
-      #about3Bios
-        =render partial: 'shared/employee', collection: @content.employees
-        / 
-          #first.team-member
-            %a{:onclick => "showdiv('first-bio', 'first');"}
-            %div
-              %h4 First Name
-            %h6 CEO
-          #second.team-member
-            %a{:onclick => "showdiv('second-bio', 'second');"}
-            %div
-              %h4 Second Name
-            %h6 President
-          #third.team-member
-            %a{:onclick => "showdiv('third-bio', 'third');"}
-            %div
-              %h4 Third Name
-            %h6 General Manager
-          #fourth.team-member
-            %a{:onclick => "showdiv('fourth-bio', 'fourth');"}
-            %div
-              %h4 Fourth Name
-            %h6 Techical Services Manager
-          #fifth.team-member
-            %a{:onclick => "showdiv('fifth-bio', 'fifth');"}
-            %div
-              %h4 Fifth Name
-            %h6 Pro Audio Sales Manager
-          #first-bio.team-member-details.hide
-            %h3 First Member Name
-            %h5 Position
-            %p Job description & other info
-          #second-bio.team-member-details.hide
-            %h3 Second Member Name
-            %h5 Position
-            %p Job description & other info
-          #third-bio.team-member-details.hide
-            %h3 Third Member Name
-            %h5 Position
-            %p Job description & other info
-          #fourth-bio.team-member-details.hide
-            %h3 Fourth Member Name
-            %h5 Position
-            %p Job description & other info
-          #fifth-bio.team-member-details.hide
-            %h3 Fifth Member Name
-            %h5 Position
-            %p Job description & other info
+      .slideContent
+        %h2 Our Staff
+        %p#staffCopy At Westlake Pro, you’ll encounter experienced and knowledgeable sales and technical service staff to get expert advice from the best in the audio business. Discuss your needs and get the right equipment at the best possible price - all in a calm, comfortable environment.
+        #about3Bios
+          /=render partial: 'shared/employee', collection: @content.employees
+          .employeeContact
+            %h4 Captain Underpants
+            %p CEO
+            %p Phone: (543) 345-4567 ext 000 
+            %p Email: jfdadsf@harroprease.com
+          .employeeContact
+            %h4 Captain Underpants
+            %p CEO
+            %p Phone: (543) 345-4567 ext 000 
+            %p Email: jfdadsf@harroprease.com
+          .employeeContact
+            %h4 Captain Underpants
+            %p CEO
+            %p Phone: (543) 345-4567 ext 000 
+            %p Email: jfdadsf@harroprease.com
+          .employeeContact
+            %h4 Captain Underpants
+            %p CEO
+            %p Phone: (543) 345-4567 ext 000 
+            %p Email: jfdadsf@harroprease.com
+          .employeeContact
+            %h4 Captain Underpants
+            %p CEO
+            %p Phone: (543) 345-4567 ext 000 
+            %p Email: jfdadsf@harroprease.com
+          .employeeContact
+            %h4 Captain Underpants
+            %p CEO
+            %p Phone: (543) 345-4567 ext 000 
+            %p Email: jfdadsf@harroprease.com
+          .employeeContact
+            %h4 Captain Underpants
+            %p CEO
+            %p Phone: (543) 345-4567 ext 000 
+            %p Email: jfdadsf@harroprease.com
+          .employeeContact
+            %h4 Captain Underpants
+            %p CEO
+            %p Phone: (543) 345-4567 ext 000 
+            %p Email: jfdadsf@harroprease.com
     %li.defaultSlide
-      =image_tag "rails.png" 
-      %h2 Letter from the CEO
-      %p Body blahblahblahblah   
+      .slideContent  
+        =image_tag "rails.png" 
+        %h2 Letter from the CEO
+        %p Body blahblahblahblah   
     %li.defaultSlide
-      #about1Gallery
-        =image_tag "rails.png"
-      #about1Copy
-        %h2 The Westlake Pro Story
-        %p Body blahblahblahblah 
+      .slideContent  
+        #about1Gallery
+          =image_tag "rails.png"
+        #about1Copy
+          %h2 The Westlake Pro Story
+          %p Body blahblahblahblah 
       
 
       
@@ -69,7 +68,7 @@
     %ul.stackNavList
       %li= link_to "The Westlake Pro Story", "#title1"
       %li= link_to "Letter from the CEO", "#title2"
-      %li= link_to "Meet the Team", "#title3"
+      %li= link_to "Our Staff", "#title3"
 
 //=debug @stack
 
@@ -114,20 +113,21 @@
     else {
       console.log('too small for slider');
     }
-
+  
   :javascript
-    var _hidediv = null;
-    var _removecolor = null;
-    function showdiv(id, imgid) {
-        if(_hidediv)
-            _hidediv();
-      if(_removecolor)
-        _removecolor();
-        var div = document.getElementById(id);
-        div.style.display = 'block';
-        _hidediv = function () { div.style.display = 'none'; };
-      var imgdiv = document.getElementById(imgid);
-      imgdiv.className += ' color-img';
-      _removecolor = function () { imgdiv.className = ''; imgdiv.className = 'team-member' };
-      console.log("hello wes");
-    }
+    $(window).ready(function (){
+      var teamItem = $('#staffCopy');
+      var teamTop = teamItem.offset().top;
+      var teamHeight = teamItem.height();
+      var teamDiff = teamTop + teamHeight + 10 + 'px';
+      $('#about3Bios').css('top', teamDiff);
+    });
+
+    $(window).resize(function (){
+      var teamItem = $('#staffCopy');
+      var teamTop = teamItem.offset().top;
+      var teamHeight = teamItem.height();
+      var teamDiff = teamTop + teamHeight + 10 + 'px';
+      $('#about3Bios').css('top', teamDiff);
+    });
+

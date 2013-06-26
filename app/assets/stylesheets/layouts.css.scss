@@ -130,7 +130,6 @@ body{
 	min-width:$contentMin;
 	max-width:$contentMax;
 	margin:$contentMargin;
-	background-color:rgb(240,240,240);
 	height:100%;
 	padding-bottom:$footHeight;
 }
@@ -193,12 +192,20 @@ body{
 			font-size:2em;
 			text-align: center;
 		}
+		background-image:url(asset-path('sales_bg.jpg', image));
+		background-attachment:fixed;
+		background-position:top center;
+		background-repeat:no-repeat;
+		background-size:cover;
 	}
 	.slideContent{
 		max-width:$contentMax;
 		min-width:$contentMin;
 		margin:$contentMargin;
 		padding:110px 2% 50px;
+		h1,h2,h3,h4,h5,h6,p,span{
+			color: white;
+		}
 		> h2{
 			font-size:4em;
 			text-align:left;

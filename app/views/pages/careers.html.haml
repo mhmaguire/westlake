@@ -3,39 +3,44 @@
     %li
       %h1 Careers
     %li
-      %h1 Current Openings 
-      %ul.openings 
-        /=render partial: 'shared/career', collection: @content.careers
-        %li
-          %div
-            %h3 Supreme Overlord of Everything
-            %h4 8/12/2013
-            %p A really great career opportunity. You'd be a fool not to apply. Seriously, we need someone of your exact qualifications and experience level. 7 FIGURES guaranteed starting pay, plus 500% commision on all business.
-            .button.gradientBack Apply 
-        %li
-          %div
-            %h3 Supreme Overlord of Everything
-            %h4 8/12/2013
-            %p A really great career opportunity. You'd be a fool not to apply. Seriously, we need someone of your exact qualifications and experience level. 7 FIGURES guaranteed starting pay, plus 500% commision on all business.
-            .button.gradientBack Apply 
-        %li
-          %div
-            %h3 Supreme Overlord of Everything
-            %h4 8/12/2013
-            %p A really great career opportunity. You'd be a fool not to apply. Seriously, we need someone of your exact qualifications and experience level. 7 FIGURES guaranteed starting pay, plus 500% commision on all business.
-            .button.gradientBack Apply 
+      .slideContent
+        %h1 Current Openings 
+        %ul.openings 
+          /=render partial: 'shared/career', collection: @content.careers
+          %li
+            %div
+              %h3 Supreme Overlord of Everything
+              %h4 8/12/2013
+              %p A really great career opportunity. You'd be a fool not to apply. Seriously, we need someone of your exact qualifications and experience level. 7 FIGURES guaranteed starting pay, plus 500% commision on all business.
+              .button.gradientBack Apply 
+          %li
+            %div
+              %h3 Supreme Overlord of Everything
+              %h4 8/12/2013
+              %p A really great career opportunity. You'd be a fool not to apply. Seriously, we need someone of your exact qualifications and experience level. 7 FIGURES guaranteed starting pay, plus 500% commision on all business.
+              .button.gradientBack Apply 
+          %li
+            %div
+              %h3 Supreme Overlord of Everything
+              %h4 8/12/2013
+              %p A really great career opportunity. You'd be a fool not to apply. Seriously, we need someone of your exact qualifications and experience level. 7 FIGURES guaranteed starting pay, plus 500% commision on all business.
+              .button.gradientBack Apply 
+        .button.gradientBack#resumeButton Submit A Resume
     %li.defaultSlide
-      = image_tag "rails.png" 
-      %h2 Benefits 
-      %p Body blahblahblahblah 
+      .slideContent  
+        = image_tag "rails.png" 
+        %h2 Benefits 
+        %p Body blahblahblahblah 
     %li.defaultSlide
-      = image_tag "rails.png"
-      %h2 Life in Los Angeles
-      %p Body blahblahblahblah 
+      .slideContent  
+        = image_tag "rails.png"
+        %h2 Life in Los Angeles
+        %p Body blahblahblahblah 
     %li.defaultSlide
-      = image_tag "rails.png"
-      %h2 Company Culture
-      %p Body blahblahblahblah 
+      .slideContent  
+        = image_tag "rails.png"
+        %h2 Company Culture
+        %p Body blahblahblahblah 
 
   %nav.stackNav
     %ul.stackNavList
