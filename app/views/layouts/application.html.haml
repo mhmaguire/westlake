@@ -36,13 +36,15 @@
   = javascript_include_tag "application"
 
   :javascript
-    var jPM = $.jPanelMenu({
-      menu: '#mainNav',
-      trigger: '.mobileNavTrigger',
-      openPosition: '50%',
-      duration: 250
-    });
-    jPM.on();
+    if (window.matchMedia("(max-device-width: 768px)").matches) {
+      var jPM = $.jPanelMenu({
+        menu: '#mainNav',
+        trigger: '.mobileNavTrigger',
+        openPosition: '50%',
+        duration: 250
+      });
+      jPM.on();
+    }
 
   = if content_for?(:scripts) then yield :scripts end
 

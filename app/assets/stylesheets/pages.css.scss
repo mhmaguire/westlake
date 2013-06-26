@@ -126,6 +126,25 @@
 #line_card .title h3 {
 	text-decoration: underline;
 }
+////////// Who We Are
+#about3Bios{
+	position:absolute;
+	bottom:50px;
+	overflow-y:auto;
+	max-width:1100px;
+	margin:10px 0;
+}
+.employeeContact{
+	width:30%;
+	display:inline-block;
+	margin:3em 1%;
+	h4{
+		font-size:2em;
+		margin:.2em 0 !important;
+	}
+	p{font-size:1.3em;}
+}
+
 ////////// What We Do
 #wwd1{
 	background-image:url(asset-path('wwd_bg1.jpg', image));
@@ -140,10 +159,6 @@
 	background-image:url(asset-path('integration_bg.jpg', image));
 }
 #wwd1, #sales, #design, #integrations{
-	background-attachment:fixed;
-	background-position:top center;
-	background-repeat:no-repeat;
-	background-size:cover;
 	h1, h2, h3, h4, p{
 		color: white;
 	}
@@ -239,9 +254,6 @@
 		min-height:300px;
 		padding:1em;
 		text-align:center;
-		&:nth-child(odd){
-			background-color:white;
-		}
 		h3{
 			font-size:1.5em;
 			line-height:1.3em;
@@ -259,9 +271,15 @@
 		p{
 			text-align:left;
 		}
-		> div > .button{
+	  .button{
 			margin-top: .5em;
 			color:$textColor2;
 		}
 	}
+}
+#resumeButton{
+	color:$textColor2;
+	width:125px;
+	display:block;
+	margin:0 auto;
 }
