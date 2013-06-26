@@ -156,9 +156,9 @@ body{
 		float:left;
 		text-align: center;
 		margin-left:1.5%;
-		&:first-child{
-			margin-left:0;
-		}
+	}
+	#fGroup1 span:first-child{
+		margin-left:0;
 	}
 }
 #footCopy{width:87%;}
