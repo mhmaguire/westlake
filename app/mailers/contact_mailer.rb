@@ -10,4 +10,9 @@ class ContactMailer < ActionMailer::Base
   	@email = email
   	mail(to: 'mhmaguire0@gmail.com', subject: 'New job application submitted')
   end
+
+  def event_rsvp(email)
+  	@email = email
+  	mail(to: 'mhmaguire0@gmail.com', subject: 'New event RSVP!')
+  end
 end

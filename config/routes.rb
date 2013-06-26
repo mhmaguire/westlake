@@ -21,6 +21,9 @@ WestlakePro::Application.routes.draw do
   
   match 'careers/:career_id/contact' => 'career_contacts#new', via: :get, as: :new_career_contact
   match 'careers/:career_id/contact' => 'career_contacts#create', via: :post
+  match 'events/:event_id/rsvp' => 'event_contacts#new', via: :get, as: :new_rsvp
+  match 'events/:event_id/rsvp' => 'event_contacts#create', via: :post 
+  match 'gallery/:gallery_type' => 'gallery#show', via: :get, as: :gallery
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

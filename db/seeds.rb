@@ -16,6 +16,12 @@ content.save!
    
 date = Time.now.advance(days: 2)
 
+%w(designs integrations).each do |type|
+	5.times do
+		GalleryImage.create!(gallery_type: type)
+	end
+end
+
 5.times do |i|
     career = Career.create(title:"career#{i}", description: 'this is the description of a career', end_at: Time.now)
     Employee.create(name: 'Employee', title: "Open Position #{i}", description: 'A description of an employee')

@@ -5,5 +5,6 @@ ActiveAdmin.register GalleryImage do
 		f.inputs do 
 			f.input :image 
 		end
+		f.actions 
 	end
 end
