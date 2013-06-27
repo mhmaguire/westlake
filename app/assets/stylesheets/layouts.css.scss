@@ -84,6 +84,7 @@ body{
 #logo{
 	margin:.4em 0 0;
 	height:inherit;
+	width:25%;
 	h1{
 		text-align:center;
 		font-size:2em;
@@ -94,6 +95,7 @@ body{
 		}
 	}
 }
+#mainNavRow{width:75%;}
 #mainNav{
 	width: -moz-fit-content;
   width: -webkit-fit-content;
@@ -120,6 +122,10 @@ body{
 			&#avidLink{border-right:none !important;}
 		}
 	}
+}
+#logo, #mainNavRow{
+	position:relative;
+	float: left;
 }
 #avidLogo{
 	max-height:19px;
