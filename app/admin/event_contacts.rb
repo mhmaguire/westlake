@@ -1,4 +1,4 @@
 ActiveAdmin.register EventContact do
 	actions :index, :show
-  	menu parent: "Contacts"
+  	menu parent: "Messages"
 end
