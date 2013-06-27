@@ -1,24 +1,8 @@
 -provide :title, '| Home'
 #homePage
   #homeSlider
-    #slide1.homeSlide
-      .slideCopy  
-        %h2 Awesome Studio #456
-        %p Design and Installation by Westlake Pro.
-    #slide2.homeSlide
-      .slideCopy
-        %h2 Awesome Studio #873
-        %p Design and Installation by Westlake Pro.
-    #slide3.homeSlide
-      .slideCopy  
-        %h2 Awesome Studio #456
-        %p Design and Installation by Westlake Pro.
-    #slide4.homeSlide
-      .slideCopy
-        %h2 Awesome Studio #873
-        %p Design and Installation by Westlake Pro.
-  //  =render partial: 'shared/home_page_slide', collection: @content.home_page_slides
-
+    =render partial: 'shared/home_page_slide', collection: @content.home_page_slides.limit(4)
+    
   %nav
     %ul.homeNavList
       %li.current
@@ -30,18 +14,19 @@
       %li
         %a{href:"#title4"}
     %ul.homeNavThumb
-      %li.current
-        %a{href:"#title1"}
-          =image_tag ("http://placehold.it/100x75")
-      %li
-        %a{href:"#title2"}
-          =image_tag ("http://placehold.it/100x75")
-      %li
-        %a{href:"#title3"}
-          =image_tag ("http://placehold.it/100x75")
-      %li
-        %a{href:"#title4"}
-          =image_tag ("http://placehold.it/100x75")
+      -@content.home_page_slides.limit(4).each do |img|
+        %li
+          %a{href:"#title1"}
+            =image_tag(img.image.url(:thumb))
+      /%li
+      /  %a{href:"#title2"}
+      /    =image_tag ("http://placehold.it/100x75")
+      /%li
+      /  %a{href:"#title3"}
+      /    =image_tag ("http://placehold.it/100x75")
+      /%li
+      /  %a{href:"#title4"}
+      /    =image_tag ("http://placehold.it/100x75")
   #thumbTrigger
     %p close (x)
 

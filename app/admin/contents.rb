@@ -41,6 +41,8 @@ ActiveAdmin.register Content, as: "Content" do
 			f.input :company_culture
 			f.input :culture_img
 			f.input :openings_img
+			f.input :feat_img
+			f.input :feat_img2 
 		end
 		f.actions
 	end	 
@@ -66,6 +68,12 @@ ActiveAdmin.register Content, as: "Content" do
 			end
 			row "Openings Image" do 
 				image_tag c.openings_img.url(:small)
+			end
+			row "Featured Image 1" do 
+				image_tag c.feat_img.url(:small)
+			end
+			row "Featured Image 2" do 
+				image_tag c.feat_img2.url(:small)
 			end
 		end
 	end

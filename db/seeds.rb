@@ -33,4 +33,10 @@ f = File.open("#{Rails.root}/app/assets/images/silhouette.jpg")
 end
 f.close
 
+4.times do |i|
+    f = File.open("#{Rails.root}/app/assets/images/panorama#{i}.jpg")
+    HomePageSlide.create!(header: "This is some header text", body: 'Body body body body body body', image: f)
+    f.close
+end
+
 AdminUser.create(email: 'admin@example.com', password: 'password', password_confirmation: 'password')

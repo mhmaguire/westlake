@@ -11,5 +11,13 @@ class PagesController < ApplicationController
   def home
     @content = Content.last
   end
+
+  def privacy 
+  end
+  def sitemap
+  end
+
+  def avid 
+  end
   define_top_action :line_card, :about, :what_we_do, :careers, :events
 end
