@@ -19,6 +19,9 @@ WestlakePro::Application.routes.draw do
   get '/careers' => 'pages#careers'
   get '/home' => 'pages#home'
   get '/events' => 'pages#events'
+  get '/site_map' => 'pages#sitemap'
+  get '/privacy_policy' => 'pages#privacy'
+  get '/avid' => 'pages#avid'
   resources :email_contacts, only: :create
   
   match 'careers/:career_id/contact' => 'career_contacts#new', via: :get, as: :new_career_contact

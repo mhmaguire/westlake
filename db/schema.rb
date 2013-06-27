@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130626215806) do
+ActiveRecord::Schema.define(:version => 20130627200823) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "resource_id",   :null => false
@@ -105,6 +105,14 @@ ActiveRecord::Schema.define(:version => 20130626215806) do
     t.string   "openings_img_content_type"
     t.integer  "openings_img_file_size"
     t.datetime "openings_img_updated_at"
+    t.string   "feat_img_file_name"
+    t.string   "feat_img_content_type"
+    t.integer  "feat_img_file_size"
+    t.datetime "feat_img_updated_at"
+    t.string   "feat_img2_file_name"
+    t.string   "feat_img2_content_type"
+    t.integer  "feat_img2_file_size"
+    t.datetime "feat_img2_updated_at"
   end
 
   add_index "contents", ["singleton_guard"], :name => "index_contents_on_singleton_guard", :unique => true
