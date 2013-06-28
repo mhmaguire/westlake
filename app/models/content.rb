@@ -1,15 +1,16 @@
 class Content < ActiveRecord::Base
   attr_accessible :ceo_letter, :la_life, :benefits, :company_culture, :gen_info,
-      :ceo_img, :benefits_img, :la_life_img, :culture_img, :openings_img
+      :ceo_img, :benefits_img, :la_life_img, :culture_img, :openings_img, :feat_img, :feat_img2
   validates_inclusion_of :singleton_guard, in: [0]
+  retina!
 
   has_attached_file :ceo_img, styles: {small: '200x200>', large: '1700x650>'}, retina: true
   has_attached_file :benefits_img, styles: {small: '200x200>', large: '1700x650>'}, retina: true
   has_attached_file :la_life_img, styles: {small: '200x200>', large: '1700x650>'}, retina: true
   has_attached_file :culture_img, styles: {small: '200x200>', large: '1700x650>'}, retina: true
   has_attached_file :openings_img, styles: {small: '200x200>', large: '1700x650>'}, retina: true
-  has_attached_file :feat_img, styles: {small: '200x200>', large: '1700x650>'}, retina: true
-  has_attached_file :feat_img2, styles: {small: '200x200>', large: '1700x650>'}, retina: true
+  has_attached_file :feat_img, styles: {small: '590x120'}, retina: true
+  has_attached_file :feat_img2, styles: {small: '590x120'}, retina: true
 
   has_many :gallery_images
   has_many :careers

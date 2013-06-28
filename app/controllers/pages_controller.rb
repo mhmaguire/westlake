@@ -16,7 +16,8 @@ class PagesController < ApplicationController
   end
   def sitemap
   end
-
+  def pricing
+  end
   def avid 
   end
   define_top_action :line_card, :about, :what_we_do, :careers, :events

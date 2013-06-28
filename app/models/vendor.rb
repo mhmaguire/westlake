@@ -1,6 +1,7 @@
 class Vendor < ActiveRecord::Base
-  attr_accessible :name, :image, :category_id  
-  has_attached_file :image, styles: {medium: '300x300>'}
+  attr_accessible :name, :image, :category_id 
+  retina! 
+  has_attached_file :image, styles: {medium: '300x300>'}, retina: true
 
   belongs_to :category 
 end

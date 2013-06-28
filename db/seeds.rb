@@ -7,21 +7,26 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 
-content= Content.last || Content.new
+content= Content.instance || Content.new
 
 %w(ceo_letter benefits la_life company_culture gen_info).each do |attribute|
 	content.send("#{attribute}=", 'This is the default text for all content attributes')
 end
+f = File.open("#{Rails.root}/app/assets/images/590x120.gif")
+content.feat_img = f
+content.feat_img2 = f
 content.save!
+f.close
    
 date = Time.now.advance(days: 2)
 
+f = File.open("#{Rails.root}/app/assets/images/silhouette.jpg")
 %w(designs integrations).each do |type|
 	5.times do
-		GalleryImage.create!(gallery_type: type)
+		GalleryImage.create!(gallery_type: type, image: f)
 	end
 end
-f = File.open("#{Rails.root}/app/assets/images/silhouette.jpg")
+
 5.times do |i|
     career = Career.create(title:"career#{i}", description: 'this is the description of a career', end_at: Time.now)
     Employee.create(name: 'Employee', title: "Position #{i}", email: 'employee@westlakepro.com', phone: "(123) 1234-567", image: f)

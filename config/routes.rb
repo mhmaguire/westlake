@@ -21,6 +21,7 @@ WestlakePro::Application.routes.draw do
   get '/events' => 'pages#events'
   get '/site_map' => 'pages#sitemap'
   get '/privacy_policy' => 'pages#privacy'
+  get '/pricing_policy' => 'pages#pricing'
   get '/avid' => 'pages#avid'
   resources :email_contacts, only: :create
   

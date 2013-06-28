@@ -1,3 +1,3 @@
 %li
-	%a(href="#{gallery_image.image.url(:large)}")
-		%img(src="#{gallery_image.image.url(:small)}") 
+	%a(href="#{gallery_image.image.url(:large_retina)}")
+		=image_tag(gallery_image.image.url(:small), retina: true, data: {caption: gallery_image.caption}) 

@@ -31,8 +31,8 @@
     %p close (x)
 
   #homeFeatured
-    = image_tag("http://placehold.it/590x120", :id => "homeImage1")
-    = image_tag("http://placehold.it/590x120", :id => "homeImage2")
+    = image_tag(@content.feat_img.url(:small), retina: true, :id => "homeImage1")
+    = image_tag(@content.feat_img2.url(:small), retina: true, :id => "homeImage2")
 
   =content_for :scripts do
     :javascript
