@@ -44,7 +44,7 @@ a:hover{
 ///
 h1, h2, h3, h4, h5, h6 {
 	color:$textColor2;
-	font-family:$headFont;
+	font-family:$bodyFont;
 	font-weight:400 !important;
 }
 
@@ -91,7 +91,7 @@ body{
 	  min-width: 170px;
 	  margin:2px 0 0;
 	  a{
-			font-family:'Futura', 'Myriad Pro', arial, sans-serif;
+			font-family:$headFont;
 		}
 	}
 }
@@ -212,34 +212,45 @@ body{
 		h1,h2,h3,h4,h5,h6,p,span{
 			color: white;
 		}
-		> h2{
+	}
+	.stackSlideCopy{
+		max-width: $contentMax;
+		margin:0 auto;
+		height:auto;
+		h2{
 			font-size:4em;
 			text-align:left;
 		}
-		> p, a {
+		
+		p, a {
 			font-size:1.3em;
 			line-height:1.2em;
 			margin-bottom:.5em;
 		}
-		a{
-			color:#50b0c5;
-			margin-top:1em;
-			&::after{
-				display:inline-block;
-				margin-left:.6em;
-				position:relative;
-				top:-2px;
-				content: '>';
-				color:white;
-				text-align:center;
-				font-size:.8em;
-				line-height:18px;
-				width:20px;
-				border-radius:10px;
-				background-color:rgb(50,50,50);
-				border:1px solid white;
-			}
-		}
+	}
+	.stackFrontCopy{
+		max-width: $contentMax;
+		margin: $contentMargin;
+		display:inline-block;
+	}
+}
+a.specialLink{
+	color:#50b0c5;
+	margin-top:1em;
+	&::after{
+		display:inline-block;
+		margin-left:.6em;
+		position:relative;
+		top:-2px;
+		content: '>';
+		color:white;
+		text-align:center;
+		font-size:.8em;
+		line-height:18px;
+		width:20px;
+		border-radius:10px;
+		background-color:rgb(50,50,50);
+		border:1px solid white;
 	}
 }
 ul.featured.orbit{
@@ -289,6 +300,20 @@ ul.featured.orbit{
 		}
 	}
 }
+/////////// Static Page Template
+.staticPage{
+	background-attachment:fixed;
+	background-position:top center;
+	background-repeat:no-repeat;
+	background-size:cover;
+	background-image:url(asset-path('sales_bg.jpg',image));
+	position:absolute;
+	top:0;
+	bottom:0;
+	left:0;
+	right:0;
+}
+
 
 //////
 ////// Backend Styles

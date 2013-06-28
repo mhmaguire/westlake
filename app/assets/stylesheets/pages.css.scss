@@ -164,14 +164,17 @@
 	background-image:url(asset-path('integration_bg.jpg', image));
 }
 #wwd1{
+	overflow-y:auto;
 	h1{
-		margin:100px 0 150px;
+		padding:100px 0 100px;
 		width:100%;
 		font-size:4em;
 	}
-	.slideContent > a{
+	.stackFrontCopy > a{
 		float:right;
 		margin-top:.5em;
+		font-size:1.3em;
+		line-height:1.2em;
 	}
 }
 .wwd1Copy{
@@ -183,7 +186,7 @@
 	box-sizing:border-box;
 	background-color:rgba(0,0,0,0.7);
 	border-radius:3px;
-	&:nth-child(3){
+	&:nth-child(2){
 		margin:0 2%;
 	}
 	p{
@@ -194,7 +197,7 @@
 #sales{
 	a{
 		float:left;
-		&:nth-child(6){
+		&:nth-child(4){
 			float:right;
 			margin-right:100px;
 		}
@@ -204,7 +207,9 @@
 	padding-top:250px;
 }
 ////////// Contact Page
-#contactPage {
+#contactPage {		
+	@extend .gradientBack2;
+	h1,h2 {font-family:$headFont;}
 	#cForm{
 		padding:0 10%;
 		h1{
@@ -277,3 +282,16 @@
 	display:block;
 	clear:both;
 }
+
+//////////////Avid Corner
+#avidPage{
+	h1{color:white;}
+	.comingSoon{
+		position:relative;
+		top:200px;
+		text-align:center;
+		a::after{font-size:.6em;}
+	}
+}
+
+
