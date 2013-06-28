@@ -1,3 +1,4 @@
 -provide :title, '| Events'
 #eventsPage.staticPage
-	=render partial: 'shared/event', collection: @content.events
+	.staticContent
+		=render partial: 'shared/event', collection: @content.events

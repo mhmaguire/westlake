@@ -312,6 +312,16 @@ ul.featured.orbit{
 	bottom:0;
 	left:0;
 	right:0;
+	padding-top:60px;
+	padding-bottom:40px;
+}
+.staticContent{
+	max-width:$contentMax;
+	margin:$contentMargin;
+	padding:$contentPadding;
+	padding-top:20px;
+	height:100%;
+	overflow-y:auto;
 }
 
 
