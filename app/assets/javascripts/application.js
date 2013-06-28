@@ -19,3 +19,4 @@
 //= require jPanelMenu
 //= require pages 
 //= require stackNav
+//= require stackResize

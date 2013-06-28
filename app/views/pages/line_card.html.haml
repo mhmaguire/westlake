@@ -1,4 +1,5 @@
 -provide :title, '| Products, Line Card'
-#line_card.stackPage
-  %ul
-    =render partial: 'shared/category', collection: @content.categories
+#line_card.staticPage
+  .staticContent
+    %ul
+      =render partial: 'shared/category', collection: @content.categories

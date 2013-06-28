@@ -9,21 +9,24 @@
         %ul.openings 
           =render partial: 'shared/career', collection: @content.careers.limit(3)
         .button.gradientBack#resumeButton= link_to "Submit A Resume", career_resume_path, remote: true
-    %li.defaultSlide
-      .slideContent  
-        = image_tag "rails.png" 
-        %h2 Benefits 
-        %p Body blahblahblahblah 
     %li.defaultSlide2
       .slideContent  
         = image_tag "rails.png"
-        %h2 Life in Los Angeles
-        %p Body blahblahblahblah 
+        .stackSlideCopy 
+          %h2 Benefits 
+          %p Body blahblahblahblah 
     %li.defaultSlide2
       .slideContent  
         = image_tag "rails.png"
-        %h2 Company Culture
-        %p Body blahblahblahblah 
+        .stackSlideCopy
+          %h2 Life in Los Angeles
+          %p Body blahblahblahblah 
+    %li.defaultSlide2
+      .slideContent  
+        = image_tag "rails.png"
+        .stackSlideCopy
+          %h2 Company Culture
+          %p Body blahblahblahblah 
 
   %nav.stackNav
     %ul.stackNavList
@@ -47,6 +50,19 @@
           animation: "fade",
           animationSpeed: 1000,
           directionalNav: false,
+          afterSlideChange: function (){
+            var sSCopy = $('.defaultSlide2 .stackSlideCopy');
+            var sSImg = $('.defaultSlide2 .slideContent > img');
+            var footP = $('#mainFoot').offset().top;
+            var copyP = $(sSImg).offset().top + sSImg.height() + $(sSCopy).height();
+
+            if (footP < copyP ){
+                sSCopy.css({'position':'fixed','bottom':'40px'});
+            }
+            else{
+                sSCopy.css('position', 'static');
+            }
+          }
         });
 
         $(document).on('keydown', function(e){
