@@ -63,10 +63,9 @@
         });
 
 
-        var length = $('ul.stackNavList li').length - 1;  
+        
         $('ul.stackNavList li a').on('click', function(e){
           var index = $(this).parent().index();
-          index = (length-index) +1 ; 
           $(this).parent().addClass('current');
           $('.featured').trigger('orbit.stop').trigger('orbit.goto', [index]); 
         });
