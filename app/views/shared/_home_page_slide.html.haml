@@ -1,4 +1,5 @@
 .homeSlide(style='background-image: url("#{home_page_slide.image.url(:large_retina)}")')
-	.slideCopy
-		%h2= home_page_slide.header 
-		%p= home_page_slide.body
+	-unless home_page_slide.header.nil?  
+		.slideCopy
+			%h2= home_page_slide.header 
+			%p= home_page_slide.body

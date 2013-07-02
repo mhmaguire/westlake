@@ -4,4 +4,4 @@
 		=event.title
 		=raw event.description 
 		=event.start_date
-	=link_to "RSVP for the event here", :class => "specialLink", new_rsvp_path(event), remote: true
+	=link_to "RSVP for the event here", new_rsvp_path(event), remote: true, :class => "specialLink"
