@@ -1,4 +1,20 @@
 -provide :title, '| Events'
 #eventsPage.staticPage
 	.staticContent
-		=render partial: 'shared/event', collection: @content.events
+		#eventSlider
+			.event2
+			.event3.eventSlide
+				%a.specialLink Click here to RSVP!!!
+			=render partial: 'shared/event', collection: @content.events
+
+
+=content_for :scripts do
+	:javascript
+		$(function() {
+			$('#eventSlider').orbit({
+				animationSpeed: 700,
+				advanceSpeed: 10000,
+				directionalNav: true,
+				bulletThumbs: true
+			});
+		});

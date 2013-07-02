@@ -318,7 +318,23 @@
 	display:block;
 	clear:both;
 }
-
+//////////////Events
+#eventSlider{
+	position:relative;
+	width:100%;
+	height:auto;
+	max-height:688px;
+}
+.eventSlide{
+	.specialLink{
+		position:absolute;
+		z-index:15;
+		bottom:75px;
+		width:100%;
+		text-align:center;
+		font-size:1.75em;
+	}
+}
 //////////////Avid Corner
 #avidPage{
 	h1{color:white;}
