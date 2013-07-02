@@ -13,22 +13,22 @@
         %h3 Visit our site from a desktop or laptop to view our current openings and submit a resume. 
     %li.defaultSlide2
       .slideContent  
-        /= image_tag "rails.png"
+        = image_tag @content.benefits_img.url(:large), retina: true
         .stackSlideCopy 
           %h2 Benefits 
-          %p Body blahblahblahblah 
+          %p= @content.benefits
     %li.defaultSlide2
       .slideContent  
-        /= image_tag "rails.png"
+        = image_tag @content.la_life_img.url(:large), retina: true 
         .stackSlideCopy
           %h2 Life in Los Angeles
-          %p Body blahblahblahblah 
+          %p= @content.la_life
     %li.defaultSlide2
       .slideContent  
-        /= image_tag "rails.png"
+        = image_tag @content.culture_img.url(:large), retina: true 
         .stackSlideCopy
           %h2 Company Culture
-          %p Body blahblahblahblah 
+          %p= @content.company_culture
 
   %nav.stackNav
     %ul.stackNavList
