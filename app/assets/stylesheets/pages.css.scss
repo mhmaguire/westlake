@@ -164,6 +164,10 @@
 	background-image:url(asset-path('integration_bg.jpg', image));
 }
 #wwd1{
+	background-attachment:fixed;
+  background-position:top center;
+  background-repeat:no-repeat;
+  background-size:cover;
 	overflow-y:auto;
 	h1{
 		padding:100px 0 100px;
@@ -210,24 +214,35 @@
 ////////// Gallery
 .wpGallery.block-grid.four-up{
 	li{
+		position:relative;
 		width:23%;
 		margin:0 1% 2em;
 		display:inline-block;
 		padding:10px 10px 50px;
 		background-color:lighten($bgColor1, .2);
-		border-radius:1px;
+		border-radius:3px;
 		a > img{
 			width:100%;
 			height:auto;
 			max-height:250px;
+		}
+		h4{
+			position:absolute;
+			bottom:0;
+			height:50px;
+			padding-top:10px;
+			font-size:1.75em;
+			width:100%;
+			color:black;
+			font-family:'Permanent Marker', cursive;
 		}
 	}
 }
 
 ////////// Contact Page
 #contactPage {		
-	@extend .gradientBack2;
 	h1,h2 {font-family:$headFont;}
+	h1,h2,p,a{color:$textColor2;}
 	#cForm{
 		padding:0 10%;
 		h1{
@@ -243,7 +258,10 @@
 				width:100%;
 				margin:10px 0;
 			}
-			#contactSubmit{width:60px;}
+			#contactSubmit{
+				width:60px;
+				background-color:rgb(240,240,240);
+			}
 		}
 	}
 	#cInfo{

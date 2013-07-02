@@ -55,3 +55,12 @@ $bodyFont: 'Myriad Pro', arial, sans-serif;
 }
 
 //end gradients
+// Background Image Default
+@mixin defaultBackground{
+   background-image:url(asset-path('sales_bg.jpg',image));
+   background-attachment:fixed;
+   background-position:top center;
+   background-repeat:no-repeat;
+   background-size:cover;
+}
+

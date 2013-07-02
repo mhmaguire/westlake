@@ -43,14 +43,20 @@ a:hover{
 }
 ///
 h1, h2, h3, h4, h5, h6 {
-	color:$textColor2;
+	color:$textColor1;
 	font-family:$bodyFont;
 	font-weight:400 !important;
 }
 
-p, a, li, span {
+a, li, span{
 	margin-bottom:0px;
 	color:$textColor2;
+	font-family:$bodyFont;
+}
+
+p, {
+	margin-bottom:0px;
+	color:$textColor1;
 	font-family:$bodyFont;
 }
 
@@ -198,11 +204,6 @@ body{
 			font-size:2em;
 			text-align: center;
 		}
-		background-image:url(asset-path('sales_bg.jpg', image));
-		background-attachment:fixed;
-		background-position:top center;
-		background-repeat:no-repeat;
-		background-size:cover;
 	}
 	.slideContent{
 		max-width:$contentMax;
@@ -275,6 +276,9 @@ ul.featured.orbit{
 	}
 }
 ////// default slide templates
+#careersPage,#about{
+	@include defaultBackground;
+}
 .defaultSlide{
 	.slideContent>img, #about1Gallery{
 		float:left;
@@ -302,11 +306,7 @@ ul.featured.orbit{
 }
 /////////// Static Page Template
 .staticPage{
-	background-attachment:fixed;
-	background-position:top center;
-	background-repeat:no-repeat;
-	background-size:cover;
-	background-image:url(asset-path('sales_bg.jpg',image));
+	@include defaultBackground;
 	position:absolute;
 	top:0;
 	bottom:0;

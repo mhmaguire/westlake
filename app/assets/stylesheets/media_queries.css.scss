@@ -83,6 +83,9 @@ and (orientation : portrait) {
 ////////Mobile Styles
 @media (min-device-width:768px) {
 	.onlyMobile{display:none;}
+	#contactPage{
+		@extend .gradientBack2;
+	}
 }
 @media (max-device-width: 767px) {
 	.noMobile{display:none;}
@@ -90,6 +93,7 @@ and (orientation : portrait) {
 
 	html, body{
 		overflow-x:hidden;
+		width:100%;
 	}
 	#mainHead, #mainContent, #mainFoot{
 		position:static;
@@ -102,6 +106,7 @@ and (orientation : portrait) {
 		z-index:25;
 		height:auto;
 		padding:5px 2%;
+		box-shadow:none;
 	}
 	#logo{
 		width:100%;
@@ -109,8 +114,10 @@ and (orientation : portrait) {
 	}
 	.mobileNavTrigger{
 		position:absolute;
-		top:12px;
+		top:14px;
 		opacity:.5;
+		width:22px;
+		height:auto;
 	}
 	#mainNav{
 		display:none;
@@ -132,27 +139,38 @@ and (orientation : portrait) {
 	}
 	#mainContent{
 		width:100%;
+		padding-bottom:0px;
 	}
 	#mainFoot{
 		height:auto;
-		min-height:150px;
+		min-height:210px;
+		box-shadow: none;
 		#footCopy{
 			width:100%;
 			span{margin:.1em 0;}
 		}
-		#fGroup1 span{
-			width:100%;
-			text-align:center;
-		}
-		#fGroup2 span {
-			a{text-decoration:underline;}
-			width: 33%;
-			text-align:center;
-			&:nth-child(4){
+		>span{
 				width:100%;
 				text-align:center;
-				clear:both;
-				//margin-left:-2px;
+				margin-top:5px;
+			}
+		#fGroup1,#fGroup2{
+			float: left;
+		}
+		#fGroup1{
+			width:58%;
+			margin:-8px 2% 0 0;
+			span{
+				font-size:1.3em;
+				text-align: left;
+			}
+		}
+		#fGroup2{
+			width:40%;
+			span{
+				text-align:left;
+				width:100%;
+				a{color:#50b0c5;}
 			}
 		}
 		#footSocial{
@@ -182,15 +200,14 @@ and (orientation : portrait) {
 		> img {
 			width:100%;
 			height:auto;
-			margin:0;
+			margin:10px 0 0;
 			float:none;
 		}
 	}
 	#homeSlider{
 		position:relative;
 		width:100%;
-		height:50%;
-		min-height:250px;
+		min-height:320px;
 		margin-bottom:0;
 	}
 	.homeSlide{
@@ -221,20 +238,77 @@ and (orientation : portrait) {
 		width:100%;
 		min-height:300px;
 		clear:both;
-		h2{
-			font-size:1.3em;
+		.slideContent{
+			min-width:0px;
+			width:100%;
 		}
+		h1,h2,h3,h4,h5,h6,a{
+			text-align:center;
+		}
+		p{text-align:left;}
 		&.defaultSlide{
 			img{
 				width:40%;
 			}
 		}
 	}
+	#wwd1{
+		h1{
+			padding:15px 5px;
+			background-color:rgba(0,0,0,.5);
+			border-radius:3px;
+			width:94%;
+			margin:0 3%;
+		}
+		.slideContent{
+			padding-top:20px;
+		}
+	}
+	.wwd1Copy{
+		width:94%;
+		float:none;
+		margin:10px 3%;
+		&:nth-child(2){
+			margin:10px 3%;
+		}
+		h2{
+			font-size:2.5em;
+			font-weight:bold;
+		}
+	}
 	.stackNav{
 		display:none;
 	}
-//end mobile styles
+	//Static Page
+	.staticPage{
+		padding: 30px 0 10px;
+		position:relative;
+		min-height:320px;
+	}
+	.staticContent{
+		overflow-y:visible;
+	}
+	/////Gallery
+	.wpGallery.block-grid.four-up{
+		li{
+			width:90%;
+			margin:0 5% 2em;
+			padding:15px 10px 60px;
+		}
+	}
+	/////Avid Corner
+	#avidPage{
+		.comingSoon{
+			top:30px;
+		}
+	}
 }
+@media (max-device-width:767px) AND (orientation:landscape) {
+	#fGroup2 span{
+		text-align:right;
+	}
+}
+//end mobile styles
 
 
 

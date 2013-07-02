@@ -4,11 +4,13 @@
     %li
       %h1 Careers
     %li
-      .slideContent
+      .slideContent.noMobile
         %h1 Current Openings 
         %ul.openings 
           =render partial: 'shared/career', collection: @content.careers.limit(3)
         .button.gradientBack#resumeButton= link_to "Submit A Resume", career_resume_path, remote: true
+      #mobileCareers.onlyMobile
+        %h3 Visit our site from a desktop or laptop to view our current openings and submit a resume. 
     %li.defaultSlide2
       .slideContent  
         /= image_tag "rails.png"
