@@ -7,7 +7,7 @@ ActiveAdmin.register Event do
 			f.input :description, as: :rich, config: { :width => '100%', :height => '300px'}
 			f.input :weekly
 			f.input :start_date
-			f.input :image, as: :rich_picker
+			f.input :image
 		end 
 		f.actions
 	end

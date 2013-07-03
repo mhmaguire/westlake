@@ -4,7 +4,7 @@ ActiveAdmin.register HomePageSlide do
 		f.inputs do 
 			f.input :header 
 			f.input :body, as: :rich
-			f.input :image, as: :rich_picker
+			f.input :image
 		end
 		f.actions 
 	end

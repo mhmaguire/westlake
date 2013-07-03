@@ -5,7 +5,7 @@ ActiveAdmin.register Vendor do
 		f.inputs do 
 			f.input :category
 			f.input :name
-			f.input :image, as: :rich_picker
+			f.input :image
 			f.input :href 
 		end
 		f.actions 

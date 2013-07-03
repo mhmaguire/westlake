@@ -31,7 +31,7 @@ ActiveAdmin.register Category do
 		f.inputs "Vendors" do
 			f.has_many :vendors do |v|
 				v.inputs :name, :href 
-				v.input :image, as: :rich_picker
+				v.input :image
 			end
 		end
 		f.actions

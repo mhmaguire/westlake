@@ -2,4 +2,4 @@
 	-unless home_page_slide.header.nil?  
 		.slideCopy
 			%h2= home_page_slide.header 
-			%p= home_page_slide.body
+			%p= raw(home_page_slide.body)
