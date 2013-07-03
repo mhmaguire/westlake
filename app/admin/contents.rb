@@ -32,17 +32,17 @@ ActiveAdmin.register Content, as: "Content" do
 	form html: {enctype: "multipart/form-data"} do |f|
 		f.inputs do 
 			f.input :ceo_letter
-			f.input :ceo_img
+			f.input :ceo_img, as: :rich_picker
 			f.input :benefits
-			f.input :benefits_img
+			f.input :benefits_img, as: :rich_picker
 			f.input :la_life
-			f.input :la_life_img
+			f.input :la_life_img, as: :rich_picker
 			f.input :gen_info 
 			f.input :company_culture
-			f.input :culture_img
-			f.input :openings_img
-			f.input :feat_img
-			f.input :feat_img2 
+			f.input :culture_img, as: :rich_picker
+			f.input :openings_img, as: :rich_picker
+			f.input :feat_img, as: :rich_picker
+			f.input :feat_img2, as: :rich_picker 
 		end
 		f.actions
 	end	 

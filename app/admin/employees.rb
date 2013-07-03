@@ -6,7 +6,7 @@ ActiveAdmin.register Employee do
 			f.input :title
 			f.input :email
 			f.input :phone
-			f.input :image
+			f.input :image, as: :rich_picker
 		end
 		f.actions 
 	end

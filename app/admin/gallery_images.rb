@@ -3,7 +3,7 @@ ActiveAdmin.register GalleryImage do
 
 	form html: {enctype: 'multipart/form-data'} do |f|
 		f.inputs do 
-			f.input :image 
+			f.input :image, as: :rich_picker
 		end
 		f.actions 
 	end

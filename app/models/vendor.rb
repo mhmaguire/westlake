@@ -4,4 +4,8 @@ class Vendor < ActiveRecord::Base
   has_attached_file :image, styles: {medium: '300x300>'}, retina: true
 
   belongs_to :category 
+
+  def get_href
+  	raw(href)
+  end
 end

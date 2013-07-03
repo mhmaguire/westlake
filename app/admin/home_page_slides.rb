@@ -3,8 +3,8 @@ ActiveAdmin.register HomePageSlide do
 	form html: {enctype: "multipart/form-data"} do |f|
 		f.inputs do 
 			f.input :header 
-			f.input :body
-			f.input :image
+			f.input :body, as: :rich
+			f.input :image, as: :rich_picker
 		end
 		f.actions 
 	end
