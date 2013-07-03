@@ -78,29 +78,11 @@
 		cursor:pointer;
 	}
 }
-#homeFeatured{
-	max-width:$contentMax;
-	position:fixed;
-	bottom: $footHeight + 10;
-	left:50%;
-	margin-left:-($contentMax / 2);
-	width:1200px;
-	z-index:10;
-	padding:$standardPad;
-	background-color:rgba(0,0,0,0.6);
-	border:1px solid rgba(100,100,100,0.7);
-	> img {
-		width: ($contentMax - 32) / 2;
-		height:auto;
-		float:left;
-		&:first-child{margin-right:10px;}
-	}
-}
 
 ///Home Slides
 .slideCopy{
 	position:fixed;
-	bottom:$footHeight + 150;
+	bottom:$footHeight + 15;
 	left:50%;
 	margin-left:-225px;
 	width:450px;
@@ -124,7 +106,7 @@
 }
 .homeSlide{
 	background-attachment:fixed;
-	background-position:top center;
+	background-position:center center;
 	background-repeat:no-repeat;
 }
 ////////// Products Page
