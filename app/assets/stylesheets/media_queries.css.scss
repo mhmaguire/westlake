@@ -3,16 +3,6 @@
 //////
 
 //Full size, smaller monitor
-@media (max-width: $contentMax) {
-	#homeFeatured{
-		left:0;
-		margin-left:0;
-		width:100%;
-		img{
-			width:49%;
-		}
-	}
-}
 @media (max-width:1250px) AND (min-width:$contentMin) {
 	#mainFoot span {
 		margin-left:.8%;
@@ -61,7 +51,6 @@
 		margin-left:-60px;
 	}
 	.slideCopy{bottom:230px;}
-	#homeFeatured{bottom:95px;}
 }
 
 @media (max-width:767px) AND (min-device-width:768px){
@@ -189,20 +178,6 @@ and (orientation : portrait) {
 	}
 	.homeNavList, .homeNavThumb{
 		display:none;
-	}
-	#homeFeatured{
-		position:static;
-		height:auto;
-		background-color:rgba(0,0,0,.9);
-		padding:5px 10px;
-		margin:0;
-		border:none; 
-		> img {
-			width:100%;
-			height:auto;
-			margin:10px 0 0;
-			float:none;
-		}
 	}
 	#homeSlider{
 		position:relative;

@@ -2,19 +2,18 @@
 #eventsPage.staticPage
 	.staticContent
 		#eventSlider
-			.event2
-			.event3.eventSlide
-				%a.specialLink Click here to RSVP!!!
-			=render partial: 'shared/event', collection: @events
+			=render partial: 'shared/event', collection: @content.events
 
 
 =content_for :scripts do
 	:javascript
 		$(function() {
 			$('#eventSlider').orbit({
-				animationSpeed: 700,
-				advanceSpeed: 10000,
-				directionalNav: true,
-				bulletThumbs: true
+				timer: false,
+        fluid: '16x6',
+        bulletThumbs: false,
+        animation: "fade",
+        animationSpeed: 1500,
+        directionalNav: false,
 			});
 		});

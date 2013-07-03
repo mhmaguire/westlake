@@ -59,7 +59,7 @@ $bodyFont: 'Myriad Pro', arial, sans-serif;
 @mixin defaultBackground{
    background-image:url(asset-path('sales_bg.jpg',image));
    background-attachment:fixed;
-   background-position:top center;
+   background-position:center center;
    background-repeat:no-repeat;
    background-size:cover;
 }
