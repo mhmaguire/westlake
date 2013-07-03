@@ -4,6 +4,6 @@
 		%ul
 			-@content.categories.each do |cat|
 				%li
-					%p= cat.title
+					%a{href: "##{cat.title}"}= cat.title
 		%ul
 			=render partial: 'shared/category', collection: @content.categories
