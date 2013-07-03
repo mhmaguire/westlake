@@ -18,7 +18,7 @@ WestlakePro::Application.routes.draw do
   get '/contact' => 'email_contacts#new'
   get '/careers' => 'pages#careers'
   get '/home' => 'pages#home'
-  get '/events' => 'pages#events'
+  
   get '/site_map' => 'pages#sitemap'
   get '/privacy_policy' => 'pages#privacy'
   get '/pricing_policy' => 'pages#pricing'
@@ -32,6 +32,17 @@ WestlakePro::Application.routes.draw do
   match 'events/:event_id/rsvp' => 'event_contacts#new', via: :get, as: :new_rsvp
   match 'events/:event_id/rsvp' => 'event_contacts#create', via: :post 
   match 'gallery/:gallery_type' => 'gallery#show', via: :get, as: :gallery
+  
+  get '/events' => 'events#index'
+  resources :events, only: :index do 
+    collection do 
+      get :past
+      get :weekly
+    end
+
+    #match 'events/pastevents' => 'events#past', via: :get, as: :past_events
+    #match 'events/weekly' => 'events#weekly', via: :get, as: :weekly_events
+  end
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

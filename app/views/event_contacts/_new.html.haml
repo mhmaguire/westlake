@@ -1,3 +1,9 @@
-#description
-	%h1 RSVP Now!
-	=render partial: 'event_contacts/form', locals:{event: event}
+
+%h1 RSVP Now!
+=render partial: 'event_contacts/form', locals:{event: event}
+
+=content_for :info do 
+	%h2 Event
+	%p= event.title
+	%h2 Date 
+	%p= event.start_date

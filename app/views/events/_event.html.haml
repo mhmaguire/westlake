@@ -1,0 +1,7 @@
+.eventSlide	
+	=image_tag event.image.url(:large, retina: true) 
+	.eventCaption
+		=event.title
+		=raw event.description 
+		=(event.is_weekly? ? event.day : event.start_date) unless event.is_past?
+	=link_to "RSVP for the event here", new_rsvp_path(event), remote: true, :class => "specialLink" unless event.is_past? 

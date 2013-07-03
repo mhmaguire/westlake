@@ -1,5 +1,13 @@
 =semantic_form_for EventContact.new, url: "events/#{event.id}/rsvp", remote: true do |f|
 	=f.inputs do 
 		=f.input :name
+		=f.input :last_name
+		=f.input :email
+		=f.input :phone, as: :string
+		=f.input :source
 	=f.actions do 
 		=f.action :submit, label: "RSVP"
+
+%ul
+	%li=event.title 
+	%li= event.start_date

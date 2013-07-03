@@ -1,7 +1,0 @@
-.eventSlide	
-	=image_tag event.image.url(:large, retina: true) 
-	.eventCaption
-		=event.title
-		=raw event.description 
-		=event.start_date
-	=link_to "RSVP for the event here", :class => "specialLink", new_rsvp_path(event), remote: true
