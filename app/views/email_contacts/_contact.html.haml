@@ -1,23 +1,11 @@
-#contactPage
-  #cForm.eight.columns
-    %h1 Contact Westlake Pro
-    %p#cHours Our office is open from 9am to 6pm, Monday through Friday. Stop by or send us a message, we would love to hear from you.
-    %p#errors Some errors prevented your submission. Please try again
-    .form 
-      =render partial: 'email_contacts/form'
-  #cInfo.four.columns
-    %h2 Office
-    %p#cAddress 4101 Lankershim Blvd. <br/> North Hollywood, CA 91602
-    %h2 Phone
-    %p#cPhone (323) 845-1145
-    %h2 Email
-    %p
-      %a{:href => "mailto:sales@westlakepro.com"} sales@westlakepro.com
-    %h2 Social Media
-    #cSocial
-      %a.fb.socialIcon{href: "https://www.facebook.com/westlakepro", target: "_blank"}
-      %a.tw.socialIcon{href: "https://twitter.com/WestlakePro", target: "_blank"}
-      %a.li.socialIcon{href: "http://www.linkedin.com/company/westlake-pro-inc-", target: "_blank"}
+
+%h1 Contact Westlake Pro
+%p#cHours Our office is open from 9am to 6pm, Monday through Friday. Stop by or send us a message, we would love to hear from you.
+%p#errors Some errors prevented your submission. Please try again
+.form
+  =render partial: 'email_contacts/form'
+
+ 
       
      
 //=debug @stack

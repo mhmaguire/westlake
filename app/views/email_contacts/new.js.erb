@@ -1,2 +1,2 @@
 $('#modal-content').children().remove()
-$('#modal-content').append("<%=j render partial: 'email_contacts/contact' %>").parent().reveal(); 
+$('#modal-content').append("<%=j render partial: 'email_contacts/contact', layout: 'layouts/modal' %>").parent().reveal(); 

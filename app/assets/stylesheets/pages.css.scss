@@ -240,10 +240,10 @@
 }
 
 ////////// Contact Page
-#contactPage {		
+#modal-container {		
 	h1,h2 {font-family:$headFont;}
 	h1,h2,p,a{color:$textColor2;}
-	#cForm{
+	#modal-form{
 		padding:0 10%;
 		h1{
 			font-size:2em;
@@ -258,13 +258,13 @@
 				width:100%;
 				margin:10px 0;
 			}
-			#contactSubmit{
+			#modal-ubmit{
 				width:60px;
 				background-color:rgb(240,240,240);
 			}
 		}
 	}
-	#cInfo{
+	#modal-info{
 		h2 {font-size:1.5em;}
 		p {
 			font-size:1.25em;
