@@ -1,9 +1,10 @@
 -provide :title, '| Products, Line Card'
 #line_card.staticPage
 	.staticContent
-		%ul.three.column
+		%ul.four.column
+			%h2 Categories
 			-@content.categories.each do |cat|
 				%li
 					%a{href: "##{cat.title}"}= cat.title
-		%ul.nine.column
+		%ul.eight.column
 			=render partial: 'shared/category', collection: @content.categories

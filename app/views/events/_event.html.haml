@@ -1,7 +1,16 @@
 .eventSlide	
-	=image_tag event.image.url(:large, retina: true) 
-	.eventCaption
-		=event.title
-		=raw event.description 
-		=(event.is_weekly? ? event.day : event.start_date) unless event.is_past?
-	=link_to "RSVP for the event here", new_rsvp_path(event), remote: true, :class => "specialLink" unless event.is_past? 
+	=image_tag event.image.url(:large, retina: true)
+	.eventContent 
+		.eventCaption
+			%h2=event.title
+			%p=raw event.description 
+			%h4=(event.is_weekly? ? event.day : event.start_date) unless event.is_past?
+		%ul.eventLinks
+			%li
+				=link_to "RSVP for the event here", new_rsvp_path(event), remote: true, :class => "specialLink" unless event.is_past?
+			%li
+				=link_to "View our upcoming events here", events_path, remote: true, :class => "specialLink" if (event.is_past? || event.is_weekly?)
+			%li
+				=link_to "View our weekly events here", weekly_events_path, remote: true, :class => "specialLink" unless event.is_weekly?
+			%li
+				=link_to "View our past events here", past_events_path, remote: true, :class => "specialLink" unless event.is_past?
