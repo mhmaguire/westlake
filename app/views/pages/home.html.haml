@@ -29,7 +29,19 @@
           animationSpeed: 1200,
           advanceSpeed: 10000,
           directionalNav: false,
-          bulletThumbs: true
+          bulletThumbs: true,
+          afterSlideChange: function (){
+            var myDelay2 = setTimeout(function() {
+              $('.slideCopy').animate({
+                opacity: 1,
+              },750);
+            }, 1500);
+            var myDelay3 = setTimeout(function() {
+              $('.slideCopy').animate({
+                opacity: 0,
+              },750);
+            }, 8000);
+          }
         });
 
         var length = $('ul.homeNavList li').length - 1;  
@@ -95,4 +107,18 @@
 
         if(slideWidth > 1700) {$(".homeSlide").css("backgroundSize", "100%");}
         else if(slideWidth < 1700) {$(".homeSlide").css("backgroundSize", "auto");}
+      });
+
+    :javascript
+      $(window).ready(function (){
+        var myDelay2 = setTimeout(function() {
+          $('.slideCopy').animate({
+            opacity: 1,
+          },750);
+        }, 1500);
+        var myDelay3 = setTimeout(function() {
+          $('.slideCopy').animate({
+            opacity: 0,
+          },750);
+        }, 8000);
       });

@@ -12,11 +12,8 @@ content= Content.instance || Content.new
 %w(ceo_letter benefits la_life company_culture gen_info).each do |attribute|
 	content.send("#{attribute}=", 'This is the default text for all content attributes')
 end
-f = File.open("#{Rails.root}/app/assets/images/590x120.gif")
-content.feat_img = f
-content.feat_img2 = f
-content.save!
-f.close
+
+contents.save
    
 date = Time.now.advance(days: 2)
 
@@ -28,7 +25,7 @@ f = File.open("#{Rails.root}/app/assets/images/silhouette.jpg")
 end
 
 5.times do |i|
-    career = Career.create(title:"career#{i}", description: 'this is the description of a career', end_at: Time.now)
+    career = Career.create(title:"career#{i}", description: 'this is the description of a career')
     Employee.create(name: 'Employee', title: "Position #{i}", email: 'employee@westlakepro.com', phone: "(123) 1234-567", image: f)
     EmailContact.create(email: "hello@example.com", name: "Leeroy Jenkins", message: 'This is a message from Leeroy Jenkins')
     cc = CareerContact.create(name: 'Someone', email: 'someone@example.com')

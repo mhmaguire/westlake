@@ -81,6 +81,7 @@
 
 ///Home Slides
 .slideCopy{
+	opacity:0; //fades in w/animation
 	position:fixed;
 	bottom:$footHeight + 15;
 	left:50%;
