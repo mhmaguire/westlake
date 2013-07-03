@@ -5,7 +5,7 @@ ActiveAdmin.register Event do
 		f.inputs do 
 			f.input :title
 			f.input :description, as: :rich, config: { :width => '100%', :height => '300px'}
-			f.input :is_weekly
+			f.input :weekly
 			f.input :start_date
 			f.input :image
 		end 

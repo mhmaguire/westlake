@@ -4,7 +4,6 @@ ActiveAdmin.register Career do
 		f.inputs do 
 			f.input :title
 			f.input :description
-			f.input :end_at
 		end
 		f.actions
 	end
