@@ -10,7 +10,7 @@ class EventsController < ApplicationController
 	end
 
 	def weekly
-		@events = Event.where(is_weekly: true)
+		@events = Event.where(weekly: true)
 		render 'index'
 	end
 end
