@@ -3,13 +3,13 @@ class PagesController < ApplicationController
   def self.define_top_action(*names)
     names.each do |name|
       define_method name do
-       @content = Content.last
+       @content = Content.instance
       end
     end
   end
 
   def home
-    @content = Content.last
+    @content = Content.instance
   end
 
   def privacy 
@@ -20,5 +20,5 @@ class PagesController < ApplicationController
   end
   def avid 
   end
-  define_top_action :line_card, :about, :what_we_do, :careers, :events
+  define_top_action :line_card, :about, :what_we_do, :careers
 end

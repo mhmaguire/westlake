@@ -5,10 +5,11 @@ ActiveAdmin.register Category do
 			table_for category.vendors do 
 				column :name
 				column 'Image' do |vendor|
-					image_tag vendor.image.url(:small)
+					image_tag vendor.image.url(:medium)
 				end
 				column 'Actions' do |vendor|
 					link_to 'Delete Vendor', admin_category_vendor_path(vendor.category, vendor), method: :delete, confirm: 'Are you sure?'
+					link_to 'Edit Vendor', edit_admin_category_vendor_path(category, vendor)
 				end
 			end
 		end
@@ -23,17 +24,13 @@ ActiveAdmin.register Category do
 		end
 	end
 
-
-
-
-
 	form html: {enctype: "multiaprt/form-data"} do |f|
 		f.inputs do 
 			f.input :title
 		end
 		f.inputs "Vendors" do
 			f.has_many :vendors do |v|
-				v.inputs :name, :image 
+				v.inputs :name, :image, :href 
 			end
 		end
 		f.actions

@@ -4,7 +4,8 @@ ActiveAdmin.register Employee do
 		f.inputs do 
 			f.input :name 
 			f.input :title
-			f.input :description
+			f.input :email
+			f.input :phone
 			f.input :image
 		end
 		f.actions 

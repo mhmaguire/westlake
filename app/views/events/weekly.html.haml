@@ -1,11 +1,11 @@
--provide :title, '| Events'
+-provide :title, '| Weekly Events'
 #eventsPage.staticPage
 	.staticContent
 		#eventSlider
 			.event2
 			.event3.eventSlide
 				%a.specialLink Click here to RSVP!!!
-			=render partial: 'shared/event', collection: @content.events
+			=render partial: 'shared/event', collection: @events
 
 
 =content_for :scripts do

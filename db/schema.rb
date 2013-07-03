@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130702232616) do
+ActiveRecord::Schema.define(:version => 20130703010807) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "resource_id",   :null => false
@@ -164,6 +164,7 @@ ActiveRecord::Schema.define(:version => 20130702232616) do
     t.string   "image_content_type"
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
+    t.boolean  "weekly"
   end
 
   add_index "events", ["content_id"], :name => "index_events_on_content_id"
@@ -214,6 +215,7 @@ ActiveRecord::Schema.define(:version => 20130702232616) do
     t.string   "image_content_type"
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
+    t.string   "href"
   end
 
   add_index "vendors", ["category_id"], :name => "index_vendors_on_category_id"

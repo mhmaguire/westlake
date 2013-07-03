@@ -6,6 +6,7 @@ ActiveAdmin.register Career do
 			f.input :description
 			f.input :end_at
 		end
+		f.actions
 	end
 
 	show do |c|

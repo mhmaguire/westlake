@@ -1,0 +1,20 @@
+-provide :title, "| #{get_event_title}"
+#eventsPage.staticPage
+	.staticContent
+		#eventSlider
+			.event2
+			.event3.eventSlide
+				%a.specialLink Click here to RSVP!!!
+			=render @events
+
+
+=content_for :scripts do
+	:javascript
+		$(function() {
+			$('#eventSlider').orbit({
+				animationSpeed: 700,
+				advanceSpeed: 10000,
+				directionalNav: true,
+				bulletThumbs: true
+			});
+		});
