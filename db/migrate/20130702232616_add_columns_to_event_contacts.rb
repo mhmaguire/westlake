@@ -5,6 +5,6 @@ class AddColumnsToEventContacts < ActiveRecord::Migration
   	add_column :event_contacts, :phone, :integer
   	add_column :event_contacts, :source, :text
   	#remove end_date from careers
-  	remove_column :careers, :end_at, :date
+  	remove_column :careers, :end_at
   end
 end

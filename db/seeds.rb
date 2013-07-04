@@ -13,7 +13,7 @@ content= Content.instance || Content.new
 	content.send("#{attribute}=", 'This is the default text for all content attributes')
 end
 
-contents.save
+content.save
    
 date = Time.now.advance(days: 2)
 
