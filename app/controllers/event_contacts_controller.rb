@@ -12,6 +12,7 @@ class EventContactsController < ApplicationController
   	@event_contact = @event.event_contacts.build(params[:event_contact])
   	respond_to do |format|
       if @event_contact.save 
+        ContactMailer.event_rsvp(@event_contact).deliver
         format.js { render 'create' }
       else 
         format.js { render 'new' }

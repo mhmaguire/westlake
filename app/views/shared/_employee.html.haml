@@ -2,4 +2,5 @@
 	%h4= employee.name
 	%p= employee.title
 	%p= employee.phone
-	%p= employee.email
+	%p
+		%a{href: "mailto:#{employee.email}"}= employee.email

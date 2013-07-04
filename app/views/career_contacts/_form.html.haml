@@ -1,7 +1,8 @@
-=f.inputs do 
-	=f.input :email
-	=f.input :name 
-	=f.input :resume, as: :file
-=f.actions do 
-	=f.action :submit, button_html: { disable_with: "Submitting..."}, label: "Submit Application"
+
+=f.email_field :email, placeholder: 'Email'
+=f.text_field :name, placeholder: 'Name'
+=f.label 'Resume'
+=f.file_field :resume
+
+=f.submit 'Submit Application', button_html: { disable_with: "Submitting..."}
 
