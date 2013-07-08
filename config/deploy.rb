@@ -74,4 +74,11 @@ after "deploy:symlink_database_yml", "deploy:symlink_logos"
    end
  end
 
+ namespace :deploy do 
+ 	task :symlink_store do 
+ 		run "ln -s /home/westlake/store/public /home/westlake/public_html/public/store"
+ 	end
+ end
+ after "deploy:restart", "deploy:symlink_store"
+
  set :keep_releases, 5 
