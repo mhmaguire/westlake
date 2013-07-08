@@ -9,7 +9,7 @@
         #about1Copy
           %h2 The Westlake Pro Story
           %p= @content.gen_info 
-    %li.defaultSlide
+    %li.defaultSlide.noMobile
       .slideContent  
         =image_tag @content.ceo_img.url(:large), retina: true
         %h2 Letter from the CEO

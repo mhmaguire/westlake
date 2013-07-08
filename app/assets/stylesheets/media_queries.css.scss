@@ -227,6 +227,12 @@ and (orientation : portrait) {
 			}
 		}
 	}
+	.stackPage{
+		overflow-y:visible;
+		.slideContent{
+			padding-top:20px;
+		}
+	}
 	#wwd1{
 		h1{
 			padding:15px 5px;
@@ -259,11 +265,30 @@ and (orientation : portrait) {
 		padding: 30px 0 10px;
 		position:relative;
 		min-height:320px;
+		overflow-y:visible;
 	}
 	.staticContent{
 		overflow-y:visible;
 	}
-	/////Gallery
+	//About (who we are)
+	#about3Bios{
+		position:static;
+		overflow-y:visible;
+		max-width:100%;
+	}
+	.employeeContact{
+		width:100%;
+		display:block;
+		margin:3em 1%;
+		h4, p {text-align:center !important;}
+		h4{
+			font-size:2em;
+			margin:.2em 0 !important;
+		}
+		p{font-size:1.3em;}
+		a{color:#50b0c5;}
+	}
+	//Gallery
 	.wpGallery.block-grid.four-up{
 		li{
 			width:90%;
@@ -271,7 +296,50 @@ and (orientation : portrait) {
 			padding:15px 10px 60px;
 		}
 	}
-	/////Avid Corner
+	//Events
+	#eventSlider{
+	}
+	.eventSlide{
+		.eventContent{
+			height:100%;
+			max-width:100%;
+			margin:0;
+			padding:0 2%;
+			overflow-y:visible;
+		}
+		.eventCaption{
+			position:static;
+			width:100%;
+			max-width:inherit;
+			h2, h4, p{
+				width:100%;
+				text-align:center;
+				padding:0;
+			}
+			h2{
+				font-size:2.5em;
+				text-transform: capitalize;
+			}
+			p{font-size:1.35em;}
+		}
+		.eventLinks{
+			width:100%;
+			max-width:inherit;
+			position:static;
+			text-align:center;
+			list-style: none;
+			a{
+				font-size:1.25em;
+				margin-top:.15em;
+			}
+		}
+	}
+	//Careers
+	#mobileCareers {
+		margin-top:0px;
+		padding-top:27%;
+	}
+	//Avid Corner
 	#avidPage{
 		.comingSoon{
 			top:30px;
