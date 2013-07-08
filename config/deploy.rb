@@ -73,3 +73,5 @@ after "deploy:symlink_database_yml", "deploy:symlink_logos"
      run "#{try_sudo} touch #{File.join(current_path,'tmp','restart.txt')}"
    end
  end
+
+ set :keep_releases, 5 
