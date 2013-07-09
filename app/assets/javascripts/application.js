@@ -20,3 +20,4 @@
 //= require pages 
 //= require stackNav
 //= require stackResize
+//= require rich 
