@@ -4,7 +4,7 @@ ActiveAdmin.register Event do
 	form do |f|
 		f.inputs do 
 			f.input :title
-			f.input :description, as: :rich, config: { :width => '100%', :height => '300px'}
+			f.input :description
 			f.input :weekly
 			f.input :start_date
 			f.input :image
