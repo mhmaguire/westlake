@@ -1,4 +1,6 @@
 WestlakePro::Application.routes.draw do
+  get "products/index"
+
   mount Rich::Engine => '/rich', :as => 'rich'
 
   root :to => 'pages#home'
@@ -12,7 +14,7 @@ WestlakePro::Application.routes.draw do
   #
   # We ask that you don't use the :as option here, as Spree relies on it being the default of "spree"
         
-  get '/line_card' => 'pages#line_card'
+  
   get '/about' => 'pages#about'
   get '/what_we_do' => 'pages#what_we_do'
   get '/contact' => 'email_contacts#new'
@@ -33,6 +35,9 @@ WestlakePro::Application.routes.draw do
   match 'events/:event_id/rsvp' => 'event_contacts#create', via: :post 
   match 'gallery/:gallery_type' => 'gallery#show', via: :get, as: :gallery
   
+  get '/line_card' => 'products#index'
+  resources :products, only: :index 
+
   get '/events' => 'events#index'
   resources :events, only: :index do 
     collection do 

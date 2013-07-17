@@ -4,4 +4,4 @@
 			%a{name: "#{category.title}"}= category.title
 	.conent
 		%ul.vendors.block-grid.three-up
-			=render partial: 'shared/vendor', collection: category.vendors 
+			=render partial: 'shared/vendor', collection: category.vendors.order(:name) 

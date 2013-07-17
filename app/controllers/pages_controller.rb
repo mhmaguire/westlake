@@ -20,5 +20,5 @@ class PagesController < ApplicationController
   end
   def avid 
   end
-  define_top_action :line_card, :about, :what_we_do, :careers
+  define_top_action :about, :what_we_do, :careers
 end
