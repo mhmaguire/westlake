@@ -4,7 +4,7 @@ ActiveAdmin.register HomePageSlide do
 		f.inputs do 
 			f.input :header 
 			f.input :body
-			f.input :image
+			f.input :image, hint: f.template.image_tag(f.object.image.url(:thumb))
 		end
 		f.actions 
 	end

@@ -32,17 +32,17 @@ ActiveAdmin.register Content, as: "Content" do
 	form html: {enctype: "multipart/form-data"} do |f|
 		f.inputs do 
 			f.input :ceo_letter
-			f.input :ceo_img
+			f.input :ceo_img,  hint: f.template.image_tag(f.object.ceo_img.url(:small))
 			f.input :benefits
-			f.input :benefits_img
+			f.input :benefits_img,  hint: f.template.image_tag(f.object.benefits_img.url(:small))
 			f.input :la_life
-			f.input :la_life_img
+			f.input :la_life_img,  hint: f.template.image_tag(f.object.la_life_img.url(:small))
 			f.input :gen_info 
 			f.input :company_culture
-			f.input :culture_img
-			f.input :openings_img
-			f.input :feat_img
-			f.input :feat_img2 
+			f.input :culture_img,  hint: f.template.image_tag(f.object.culture_img.url(:small))
+			f.input :openings_img,  hint: f.template.image_tag(f.object.openings_img.url(:small))
+			f.input :feat_img,  hint: f.template.image_tag(f.object.feat_img.url(:small))
+			f.input :feat_img2,  hint: f.template.image_tag(f.object.feat_img2.url(:small)) 
 		end
 		f.actions
 	end	 

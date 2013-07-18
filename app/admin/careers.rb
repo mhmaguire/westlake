@@ -12,7 +12,6 @@ ActiveAdmin.register Career do
 		attributes_table do 
 			row :title 
 			row :description
-			row :end_at
 			row :created_at 
 			row :updated_at
 		end

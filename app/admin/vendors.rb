@@ -1,11 +1,11 @@
 ActiveAdmin.register Vendor do
 	belongs_to :category
 
-	form do |f|
+	form html: {enctype: "multipart/form-data"} do |f|
 		f.inputs do 
 			f.input :category
 			f.input :name
-			f.input :image
+			f.input :image, hint: f.template.image_tag(f.object.image.url(:medium))
 			f.input :href 
 		end
 		f.actions 

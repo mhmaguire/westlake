@@ -7,7 +7,7 @@ ActiveAdmin.register Event do
 			f.input :description
 			f.input :weekly
 			f.input :start_date
-			f.input :image
+			f.input :image,  hint: f.template.image_tag(f.object.image.url(:small))
 		end 
 		f.actions
 	end
