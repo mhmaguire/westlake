@@ -74,5 +74,8 @@ WestlakePro::Application.configure do
       :password             => "4101Lankershim",
       :authentication       => 'plain',
       :enable_starttls_auto => true
-     }
+    }
+
+  #Google Analytics Tracking
+  GA.tracker = 'UA-41855317-1'
 end

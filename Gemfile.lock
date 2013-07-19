@@ -92,6 +92,7 @@ GEM
     formtastic (2.2.1)
       actionpack (>= 3.0)
     fssm (0.2.10)
+    google-analytics-rails (0.0.4)
     haml (4.0.3)
       tilt
     haml-rails (0.4)
@@ -241,6 +242,7 @@ DEPENDENCIES
   coffee-rails (~> 3.2.1)
   compass-rails
   formtastic
+  google-analytics-rails
   haml
   haml-rails
   jquery-rails

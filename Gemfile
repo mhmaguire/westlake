@@ -74,3 +74,5 @@ gem 'remotipart'
 gem 'retina_rails'
 
 gem 'rich'
+
+gem 'google-analytics-rails' 
