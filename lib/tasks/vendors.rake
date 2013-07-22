@@ -11,7 +11,9 @@ namespace :vendors do
 		    category = Category.find_or_create_by_title(title)
 		    cdir.each do |vendor|
 	        	f = File.open("#{Dir.pwd}/Logos/#{title}/#{vendor}")
-	        	obj = category.vendors.create!(name: vendor.split('.').first, image: f)
+	        	obj = category.vendors.find_or_create_by_name(vendor.split('.').first)
+		        obj.image = f
+		        obj.save
 		        f.close 
 		    end
 		end
