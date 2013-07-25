@@ -150,6 +150,15 @@
 	}
 }
 ////////// Who We Are
+#storySlide{
+	height:inherit;
+}
+#about1Copy{
+	height:inherit;
+	width:80%;
+	margin:0 auto;
+	overflow-y:auto;
+}
 #about3Bios{
 	position:absolute;
 	bottom:50px;
@@ -225,10 +234,6 @@
 		}
 	}
 }
-#integrations{
-	padding-top:250px;
-}
-
 ////////// Gallery
 .wpGallery.block-grid.four-up{
 	li{
