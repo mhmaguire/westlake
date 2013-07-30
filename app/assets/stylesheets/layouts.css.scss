@@ -208,11 +208,17 @@ body{
 	.slideContent{
 		max-width:$contentMax;
 		min-width:$contentMin;
-		margin:$contentMargin;
-		padding:110px 2% 50px;
+		padding:0px 2% 50px;
 		h1,h2,h3,h4,h5,h6,p,span{
 			color: white;
 		}
+		position:absolute;
+		top:110px;
+		bottom:50px;
+		left:50%;
+		margin-left:-($contentMax/2);
+		overflow-y:auto;
+		@media (max-width:$contentMax){left:0;right:0;margin:0;}
 	}
 	.stackSlideCopy{
 		max-width: $contentMax;
