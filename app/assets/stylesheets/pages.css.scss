@@ -149,7 +149,7 @@
 		}
 	}
 }
-////////// Who We Are
+////////// Who We Are (About)
 #storySlide{
 	height:inherit;
 }
@@ -158,17 +158,12 @@
 	width:80%;
 	margin:0 auto;
 }
-#about3Bios{
-	position:absolute;
-	bottom:50px;
-	overflow-y:auto;
-	max-width:1100px;
-	margin:10px 0;
-}
 .employeeContact{
-	width:30%;
+	text-align:center;
+	width:33%;
 	display:inline-block;
-	margin:3em 1%;
+	margin:0 0;
+	padding:3em 1%;
 	h4{
 		font-size:2em;
 		margin:.2em 0 !important;

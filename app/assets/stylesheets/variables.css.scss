@@ -66,7 +66,7 @@ $bodyFont: 'Myriad Pro', arial, sans-serif;
 //end gradients
 // Background Image Default
 @mixin defaultBackground{
-   background-image:url(asset-path('sales_bg.jpg',image));
+   background-image:url(asset-path('wlp-new-bg.png',image));
    background-attachment:fixed;
    background-position:center center;
    background-repeat:no-repeat;
