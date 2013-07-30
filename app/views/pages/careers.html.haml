@@ -16,19 +16,19 @@
         = image_tag @content.benefits_img.url(:large), retina: true
         .stackSlideCopy 
           %h2 Benefits 
-          %p= @content.benefits
+          %p= raw @content.benefits
     %li.defaultSlide2.noMobile
       .slideContent  
         = image_tag @content.la_life_img.url(:large), retina: true 
         .stackSlideCopy
           %h2 Los Angeles
-          %p= @content.la_life
+          %p= raw @content.la_life
     %li.defaultSlide2.noMobile
       .slideContent  
         = image_tag @content.culture_img.url(:large), retina: true 
         .stackSlideCopy
           %h2 Company Culture
-          %p= @content.company_culture
+          %p= raw @content.company_culture
 
   %nav.stackNav
     %ul.stackNavList
