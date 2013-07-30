@@ -96,20 +96,6 @@
       });
 
     :javascript
-      $(window).ready(function(){
-        var slideWidth = $("#homeSlider").width();
-
-        if(slideWidth > 1700) {$(".homeSlide").css("backgroundSize", "100%");}
-      });
-
-      $(window).resize(function(){
-        var slideWidth = $("#homeSlider").width();
-
-        if(slideWidth > 1700) {$(".homeSlide").css("backgroundSize", "100%");}
-        else if(slideWidth < 1700) {$(".homeSlide").css("backgroundSize", "auto");}
-      });
-
-    :javascript
       $(window).ready(function (){
         var myDelay2 = setTimeout(function() {
           $('.slideCopy').animate({
