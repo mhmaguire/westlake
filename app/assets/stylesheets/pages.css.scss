@@ -380,12 +380,136 @@
 	}
 }
 //////////////Avid Corner
+////Avid Home
 #avidPage{
-	h1{color:white;}
-	.comingSoon{
-		position:relative;
-		top:200px;
+	.staticContent{
+		padding:20px 0;
+	}
+	.orbit-wrapper{
+		height:100%;
+		max-height: 400px;
+	}
+}
+#avidSlider{
+	@include contentShadow;
+}
+#avidLinks{
+	margin:2em 0;
+	>div{
+		display:inline-block;
+		width:31%;
+		margin:0;
+		padding:0;
 		text-align:center;
-		a::after{font-size:.6em;}
+		position:relative;
+		@include contentShadow;
+		&:nth-child(2){margin:0 3%;}
+		>img{width:100%;height:auto;}
+		a{
+			position:absolute;
+			top:0;
+			right:0;
+			bottom:0;
+			left:0;
+			z-index:10;
+		}
+	}
+}
+.avidLinkCopy{
+	@extend .gradientBack;
+	padding:.75em 0;
+	margin-top:-2px;
+	h3, p{
+		color:$textColor2;
+		margin:0;
+	}
+}
+////Avid Tabs
+#avidTabs{
+	dd{
+		a{
+			background-color:rgba(200,200,200,0.5);
+			font-size:1.5em;
+			color:white;
+		}
+		&.active{
+			border-top:none;
+			margin-top:0;
+			a{
+				@extend .gradientBack;
+				color:$textColor2;
+				font-weight:normal;
+			}
+		}
+		&:first-child a{border-top-left-radius:5px;}
+		&:nth-child(3) a{border-top-right-radius:5px;}
+	}
+	.tabs-content{
+		>li{
+			width:80%;
+			margin:0 auto;
+			>p{
+				font-size:1.25em;
+				margin-top:1em;
+			} 
+		}
+		li >ul li{color:white;}
+	}
+}
+//Resources
+#resourceTable{
+	td, ul li, span{color:rgb(51,51,51);}
+	tr:first-child td{
+		font-weight:bold;
+		font-size:1.5em;
+	}
+	td:first-child{
+		font-weight:bold;
+	}
+}
+#footnotes p{
+	font-style:italic;
+}
+//Experience
+#avidExperienceTab{
+	p:nth-child(8){
+		clear:both;
+		padding-top:1em;
+	}
+}
+.pFloat{
+	float:left;
+	width:67%;
+	margin-right:2%;
+}
+.sideQuote{
+	float:right;
+	width:30%;
+	background-color:rgba(220,220,220,0.75);
+	border-radius:4px;
+	padding:2em 3em;
+	position:relative;
+	top:40px;
+	p{
+		color:$textColor2;
+		font-size:1.2em;
+		&::before{
+			content:"''";
+			font-size:3em;
+			position:absolute;
+			left:15px;
+			top:8px;
+		}
+	}
+	&::after{
+		content:'';
+		position:absolute;
+		width: 0; 
+		height: 0; 
+		border-left: 20px solid transparent;
+		border-right: 20px solid transparent;
+		border-top: 20px solid rgba(220,220,220,0.75);
+		bottom:-20px;
+		left:15px;
 	}
 }

@@ -63,3 +63,8 @@ $bodyFont: 'Myriad Pro', arial, sans-serif;
    background-size:cover;
 }
 
+@mixin contentShadow{
+   -webkit-box-shadow: 6px 6px 7px black;
+   -moz-box-shadow:    6px 6px 7px black;
+   box-shadow:         6px 6px 7px black;
+}
