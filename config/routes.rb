@@ -25,6 +25,7 @@ WestlakePro::Application.routes.draw do
   get '/privacy_policy' => 'pages#privacy'
   get '/pricing_policy' => 'pages#pricing'
   get '/avid' => 'pages#avid'
+  get '/avid_tabs' => 'pages#avid_tabs'
   resources :email_contacts, only: :create
   
   match 'careers/:career_id/contact' => 'career_contacts#new', via: :get, as: :new_career_contact
