@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130703010807) do
+ActiveRecord::Schema.define(:version => 20130731231800) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "resource_id",   :null => false
@@ -45,6 +45,13 @@ ActiveRecord::Schema.define(:version => 20130703010807) do
 
   add_index "admin_users", ["email"], :name => "index_admin_users_on_email", :unique => true
   add_index "admin_users", ["reset_password_token"], :name => "index_admin_users_on_reset_password_token", :unique => true
+
+  create_table "announcements", :force => true do |t|
+    t.string   "title"
+    t.text     "body"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "career_contacts", :force => true do |t|
     t.integer  "career_id"
@@ -138,6 +145,7 @@ ActiveRecord::Schema.define(:version => 20130703010807) do
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
     t.integer  "content_id"
+    t.string   "cell_phone"
   end
 
   create_table "event_contacts", :force => true do |t|
@@ -216,6 +224,8 @@ ActiveRecord::Schema.define(:version => 20130703010807) do
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
     t.string   "href"
+    t.boolean  "featured"
+    t.integer  "announcement_id"
   end
 
   add_index "vendors", ["category_id"], :name => "index_vendors_on_category_id"

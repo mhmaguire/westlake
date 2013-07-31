@@ -4,3 +4,4 @@
 	%p= employee.phone
 	%p
 		%a{href: "mailto:#{employee.email}"}= employee.email
+	=link_to "view full", employee_path(employee), remote: true

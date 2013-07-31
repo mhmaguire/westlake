@@ -6,6 +6,7 @@ ActiveAdmin.register Employee do
 			f.input :title
 			f.input :email
 			f.input :phone
+			f.input :cell_phone
 			f.input :image, hint: f.template.image_tag(f.object.image.url(:medium))
 		end
 		f.actions 
@@ -16,6 +17,7 @@ ActiveAdmin.register Employee do
 			row :name
 			row :title 
 			row :phone
+			row :cell_phone
 			row :created_at 
 			row :updated_at
 			row 'Image' do 
