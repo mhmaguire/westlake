@@ -1,6 +1,20 @@
 #avidPage.staticPage
 	.staticContent
-		.comingSoon
-			%h1 Avid Corner Coming Soon
-			%h3
-				%a.specialLink{href:'http://www.avid.com', target: '_blank'} Visit Avid on the Web
+		#avidSlider
+			=image_tag('http://placehold.it/1100x400')
+		#avidLinks
+			#avidProdLink
+				=image_tag('http://placehold.it/300x100')
+				.avidLinkCopy
+					%h3 View Avid Products
+					%p Find the right solution you need. 
+			#avidResLink
+				=image_tag('http://placehold.it/300x100')
+				.avidLinkCopy
+					%h3 Avid Resources
+					%p Find the answers you need. 
+			#avidExpLink
+				=image_tag('http://placehold.it/300x100')
+				.avidLinkCopy
+					%h3 Avid Artist Experience
+					%p Learn tips from the best in the business. 
