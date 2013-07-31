@@ -25,6 +25,15 @@
 			}
 		}
 	}
+@media (max-width:825px){
+	#logo {
+		width:100%;
+		a{margin:0 auto;}
+	}
+	#mainNavRow{
+		width:100%;
+	}
+}
 	#footCopy{
 		width:100%;
 		span{
