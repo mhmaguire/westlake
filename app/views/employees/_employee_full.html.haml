@@ -1,0 +1,9 @@
+.employeeContact
+	-unless !!(employee.image.to_s =~ /(missing.png)$/)
+		=image_tag(employee.image.url(:medium)) 
+	%h4= employee.name
+	%p= employee.title
+	%p= employee.phone
+	%p= employee.cell_phone unless(employee.cell_phone == nil || employee.cell_phone == '')
+	%p
+		%a{href: "mailto:#{employee.email}"}= employee.email

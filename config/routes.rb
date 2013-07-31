@@ -48,6 +48,10 @@ WestlakePro::Application.routes.draw do
     #match 'events/pastevents' => 'events#past', via: :get, as: :past_events
     #match 'events/weekly' => 'events#weekly', via: :get, as: :weekly_events
   end
+
+  resources :announcements, only: [:index, :show]
+
+  resources :employees, only: :show
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

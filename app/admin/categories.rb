@@ -4,6 +4,7 @@ ActiveAdmin.register Category do
 		panel "Vendors" do 
 			table_for category.vendors do 
 				column :name
+				column :featured
 				column 'Image' do |vendor|
 					image_tag vendor.image.url(:medium)
 				end

@@ -1,0 +1,7 @@
+%h2= @announcement.title
+%ul 
+	-@announcement.vendors.each do |v|
+		%li
+			=link_to v.href do
+				=image_tag v.image.url(:medium), retina: true
+=raw @announcement.body

@@ -6,7 +6,10 @@ ActiveAdmin.register Vendor do
 			f.input :category
 			f.input :name
 			f.input :image, hint: f.template.image_tag(f.object.image.url(:medium))
-			f.input :href 
+			f.input :href
+		end
+		f.inputs "Announcements Cross-Link" do
+			f.input :announcement, as: :select, collection: Announcement.all
 		end
 		f.actions 
 	end
@@ -17,6 +20,7 @@ ActiveAdmin.register Vendor do
 			row :image do 
 				image_tag v.image.url(:medium)
 			end
+			row :featured
 		end
 	end
 
