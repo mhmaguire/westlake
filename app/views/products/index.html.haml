@@ -14,6 +14,8 @@
 				%li
 					%a{href: "##{cat.title}"}= cat.title
 		%ul.lineCard.eight.column
+			%nav#alphaNav
+				%p < A B C D E F G H I J K L M N O P Q R S T U V W X Y Z >
 			=render partial: 'shared/category', collection: @categories
 
 =content_for :scripts do
@@ -23,14 +25,22 @@
 				var threshold = $('.featuredVendors').height();
 				var scrollPos = $('#line_card .staticContent').scrollTop();
 				var sidePos = $('.lineSide').offset();
+				var aNavPos = $('#alphaNav').offset();
 				if (scrollPos > threshold) {
 					$('.lineSide').css({
 						'position':'fixed',
 						'top': sidePos.top + 'px',
-					})
+					});
+					$('#alphaNav').css({
+						'position':'fixed',
+						'top': aNavPos.top + 'px',
+					});
 				}
 				else {
 					$('.lineSide').css({
+						'position':'static',
+					})
+					$('#alphaNav').css({
 						'position':'static',
 					})
 				}
