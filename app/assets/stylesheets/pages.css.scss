@@ -112,35 +112,46 @@
 	background-size: cover !important;
 }
 ////////// Products Page
-#line_card .title h3 {
-	text-decoration: underline;
-}
-
-#line_card {
-	ul {			
-	list-style: none;
-		li::before {
-			display:inline-block;
-				margin-right:1em;
-				position:relative;
-				top:-4px;
-				content: '>';
-				color:white;
-				text-align:center;
-				font-size:.5em;
-				line-height:10px;
-				width:10px;
-				border-radius:10px;
-				background-color:rgb(50,50,50);
-				border:1px solid white;
-		}
-		a {
-			font-size:1.5em;
-			line-height:1.2em;
-			color:white;
-			text-transform: capitalize;
-		}
+#line_card{
+	.staticContent h2 {font-size:2.2em;} 
+	.title h3 {
+		text-decoration: underline;
 	}
+	ul a{
+		color:white;
+		text-transform: capitalize;
+	}
+}
+ul.lineSide {			
+	list-style: none;
+	padding-left:0;
+	li::before {
+		display:inline-block;
+		margin-right:1em;
+		position:relative;
+		top:-4px;
+		content: '>';
+		color:white;
+		text-align:center;
+		font-size:.5em;
+		line-height:10px;
+		width:10px;
+		border-radius:10px;
+		background-color:rgb(50,50,50);
+		border:1px solid white;
+	}
+	a {
+		font-size:1.25em;
+		line-height:1.2em;
+	}
+}
+#alphaNav{
+	width:100%;
+}
+.lineCard .block-grid.three-up > li{
+	width:33%;
+	display:inline-block;
+	float:none;
 }
 ////////// Who We Are (About)
 #storySlide{
@@ -165,9 +176,7 @@
 }
 
 ////////// What We Do
-#wwd1{
-	background-image:url(asset-path('wwd_bg1.jpg', image));
-}
+
 #sales{
 	background-image:url(asset-path('sales_bg.jpg', image));
 }
@@ -178,15 +187,11 @@
 	background-image:url(asset-path('integration_bg.jpg', image));
 }
 #wwd1{
-	background-attachment:fixed;
-  background-position:top center;
-  background-repeat:no-repeat;
-  background-size:cover;
-	overflow-y:auto;
-	h1{
-		padding:100px 0 100px;
-		width:100%;
-		font-size:4em;
+	@include defaultBackground;
+	img{
+		@include contentShadow;
+		display:block;
+		margin:0 auto 10px;
 	}
 	.stackFrontCopy > a{
 		float:right;
@@ -341,6 +346,10 @@
 	max-height:688px;
 }
 .eventSlide{
+	img{
+		display:block;
+		margin:0 auto;
+	}
 	.eventContent{
 		height:100%;
 		max-width:$contentMax;
@@ -450,6 +459,7 @@
 			margin:0 auto;
 			>p{
 				font-size:1.25em;
+				line-height:1.5em;
 				margin-top:1em;
 			} 
 		}
@@ -458,6 +468,7 @@
 }
 //Resources
 #resourceTable{
+	@include contentShadow;
 	td, ul li, span{color:rgb(51,51,51);}
 	tr:first-child td{
 		font-weight:bold;
@@ -482,7 +493,9 @@
 	width:67%;
 	margin-right:2%;
 }
+#expLink img{@include contentShadow;}
 .sideQuote{
+	@include contentShadow;
 	float:right;
 	width:30%;
 	background-color:rgba(220,220,220,0.75);

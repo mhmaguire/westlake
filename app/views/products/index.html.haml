@@ -8,10 +8,42 @@
 					%li
 						= link_to announcement_path(v.announcement) do 
 							=image_tag(v.image.url(:medium), retina: true)
-		%ul.four.column
+		%ul.lineSide.four.column
 			%h2 Categories
 			-@categories.each do |cat|
 				%li
 					%a{href: "##{cat.title}"}= cat.title
-		%ul.eight.column
+		%ul.lineCard.eight.column
+			%nav#alphaNav
+				%p < A B C D E F G H I J K L M N O P Q R S T U V W X Y Z >
 			=render partial: 'shared/category', collection: @categories
+
+=content_for :scripts do
+	:javascript
+		if (window.matchMedia("(min-device-width: 768px)").matches) {
+			$('#line_card .staticContent').scroll(function () {
+				var threshold = $('.featuredVendors').height();
+				var scrollPos = $('#line_card .staticContent').scrollTop();
+				var sidePos = $('.lineSide').offset();
+				var aNavPos = $('#alphaNav').offset();
+				if (scrollPos > threshold) {
+					$('.lineSide').css({
+						'position':'fixed',
+						'top': sidePos.top + 'px',
+					});
+					$('#alphaNav').css({
+						'position':'fixed',
+						'top': aNavPos.top + 'px',
+					});
+				}
+				else {
+					$('.lineSide').css({
+						'position':'static',
+					})
+					$('#alphaNav').css({
+						'position':'static',
+					})
+				}
+			});
+		}
+		
