@@ -60,7 +60,7 @@ after "deploy:symlink_database_yml", "deploy:symlink_logos"
 
 #after "deploy:restart", "unicorn:restart"
 # if you want to clean up old releases on each deploy uncomment this:
-# after "deploy:restart", "deploy:cleanup"
+
 
 # if you're still using the script/reaper helper you will need
 # these http://github.com/rails/irs_process_scripts
@@ -82,3 +82,5 @@ after "deploy:symlink_database_yml", "deploy:symlink_logos"
  after "deploy:restart", "deploy:symlink_store"
 
  set :keep_releases, 5 
+
+ after "deploy:restart", "deploy:cleanup"

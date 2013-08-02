@@ -4,15 +4,12 @@
   %ul.featured
     %li.defaultSlide
       .slideContent  
-        #about1Gallery
-          /=image_tag "rails.png"
         #about1Copy
           %h2 The Westlake Pro Story
           %p= raw(@content.gen_info)
         
     %li.defaultSlide.noMobile
       .slideContent  
-        =image_tag @content.ceo_img.url(:large), retina: true
         %h2 The Westlake Experience
         %p= raw(@content.ceo_letter)
     %li
