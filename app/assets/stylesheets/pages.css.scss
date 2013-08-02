@@ -352,6 +352,10 @@ ul.lineSide {
 	max-height:688px;
 }
 .eventSlide{
+	img{
+		display:block;
+		margin:0 auto;
+	}
 	.eventContent{
 		height:100%;
 		max-width:$contentMax;
