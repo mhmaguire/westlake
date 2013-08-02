@@ -8,18 +8,18 @@
   %ul.featured
     %li#wwd1
       .slideContent
-        %h1 Welcome To Westlake Pro
+        =image_tag('wwd_splash.jpg')
         .stackFrontCopy  
           .wwd1Copy
             %h2 Sales
-            %p Whatever it is you need, we can get it. We have relationships with all major audio and video manufacturers and vendors, enabling us to get you exactly the right gear you need. Check out our product line card<a href="/line_card"> here</a>
+            %p Meet with our highly experienced ,and knowledgeable sales and technical service staff to get expert advice from the best in the audio business. Discuss your needs and get the right equipment at the best possible price - all in a calm, comfortable environment.
           .wwd1Copy
             %h2 Design
-            %p We feel that nothing is more important than starting with the right plan in place, taking into consideration every element of your workflow before you make any buying decisions. A good design saves you money, time, and multiple headaches.
+            %p Nothing is more important than starting with the right plan. Westlake will take into consideration every aspect, including budget, workflow, and growth, so you can make the most informed buying decision possible.
           .wwd1Copy
             %h2 Integration
-            %p We have years of experience putting together some of the best audio and video production suites in the country. We have built studios all over the world and have the resources and know-how to realize your biggest dreams for you.
-          =link_to "Take a look at the studios we've designed and built here", gallery_path('all'), :class => "specialLink"
+            %p Westlake Pro can  provide integration services from small editing suites to major installations, including studio design, consultation, software configuration, networking, wiring, and furniture.
+          =link_to "Click here to view our studio gallery", gallery_path('all'), :class => "specialLink"
     %li#integrations.defaultSlide2.noMobile
       .slideContent
         =image_tag "design_image.png"
@@ -49,7 +49,6 @@
 =content_for :scripts do
   :javascript
     if (window.matchMedia("(min-device-width: 768px)").matches) {
-
       $(function() {
         
         $('.featured').orbit({
