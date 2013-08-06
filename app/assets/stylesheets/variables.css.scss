@@ -68,3 +68,9 @@ $bodyFont: 'Myriad Pro', arial, sans-serif;
    -moz-box-shadow:    6px 6px 7px black;
    box-shadow:         6px 6px 7px black;
 }
+
+@mixin subnavBG {
+   background-color:rgba(0,0,0,0.4);
+   border-radius:5px;
+   border:1px solid rgba(240,240,240,0.5);
+}

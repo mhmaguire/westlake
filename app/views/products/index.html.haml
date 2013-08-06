@@ -13,10 +13,11 @@
 			-@categories.each do |cat|
 				%li
 					%a{href: "##{cat.title}"}= cat.title
-		%ul.lineCard.eight.column
+		.lineCard.eight.column
 			%nav#alphaNav
 				%p < A B C D E F G H I J K L M N O P Q R S T U V W X Y Z >
-			=render partial: 'shared/category', collection: @categories
+			%ul.lineCategories
+				=render partial: 'shared/category', collection: @categories
 
 =content_for :scripts do
 	:javascript

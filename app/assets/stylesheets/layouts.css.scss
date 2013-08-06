@@ -269,9 +269,7 @@ ul.featured.orbit{
 	top:65px;
 	left:50%;
 	z-index:20;
-	background-color:rgba(0,0,0,0.4);
-	border-radius:5px;
-	border:1px solid rgba(240,240,240,0.5);
+	@include subnavBG;
 	.stackNavList{margin:0;padding:0;}
 	li {
 		display:inline-block; 

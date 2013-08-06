@@ -144,6 +144,8 @@ ul.lineSide {
 }
 #alphaNav{
 	width:100%;
+	padding:1em 5%;
+	@include subnavBG;
 }
 .lineCard .block-grid.three-up > li{
 	width:33%;
