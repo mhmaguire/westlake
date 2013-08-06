@@ -1,22 +1,12 @@
 -provide :title, '| Careers'
 #careersPage.stackPage  
   %ul.featured
-    %li.noMobile
-      %h1 Careers
-    %li
-      .slideContent.noMobile
-        %h1 Current Openings 
-        %ul.openings 
-          =render partial: 'shared/career', collection: @content.careers.limit(3)
-        .button.gradientBack#resumeButton= link_to "Submit A Resume", career_resume_path, remote: true
-      #mobileCareers.onlyMobile
-        %h3 Visit our site from a desktop or laptop to view our current openings and submit a resume. 
     %li.defaultSlide2.noMobile
       .slideContent  
-        = image_tag @content.benefits_img.url(:large), retina: true
-        .stackSlideCopy 
-          %h2 Benefits 
-          %p= raw @content.benefits
+        = image_tag @content.culture_img.url(:large), retina: true 
+        .stackSlideCopy
+          %h2 Company Culture
+          %p= raw @content.company_culture
     %li.defaultSlide2.noMobile
       .slideContent  
         = image_tag @content.la_life_img.url(:large), retina: true 
@@ -25,17 +15,25 @@
           %p= raw @content.la_life
     %li.defaultSlide2.noMobile
       .slideContent  
-        = image_tag @content.culture_img.url(:large), retina: true 
-        .stackSlideCopy
-          %h2 Company Culture
-          %p= raw @content.company_culture
+        = image_tag @content.benefits_img.url(:large), retina: true
+        .stackSlideCopy 
+          %h2 Benefits 
+          %p= raw @content.benefits
+    %li 
+      .slideContent.noMobile
+        %h1 Current Openings 
+        %ul.openings 
+          =render partial: 'shared/career', collection: @content.careers.limit(3)
+        .button.gradientBack#resumeButton= link_to "Submit A Resume", career_resume_path, remote: true
+      #mobileCareers.onlyMobile
+        %h3 Visit our site from a desktop or laptop to view our current openings and submit a resume. 
 
   %nav.stackNav
     %ul.stackNavList
       %li= link_to "Company Culture", "#title1"
       %li= link_to "Los Angeles", "#title2"
       %li= link_to "Benefits", "#title3"
-      %li= link_to "Current Openings", "#title3"
+      %li= link_to "Current Openings", "#title4"
 
 //=debug @stack
 
@@ -66,11 +64,8 @@
           }
         });
 
-
-        var length = $('ul.stackNavList li').length - 1;  
         $('ul.stackNavList li a').on('click', function(e){
           var index = $(this).parent().index();
-          index = (length-index) +1 ; 
           $(this).parent().addClass('current');
           $('.featured').trigger('orbit.stop').trigger('orbit.goto', [index]); 
         });
