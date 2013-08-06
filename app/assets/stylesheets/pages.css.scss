@@ -432,6 +432,7 @@ ul.lineSide {
 }
 ////Avid Tabs
 #avidTabs{
+	dl{margin-bottom:10px;}
 	dd{
 		a{
 			background-color:rgba(200,200,200,0.5);
@@ -494,41 +495,19 @@ ul.lineSide {
 		}
 	}
 }
-//Products
-#avidProductsTab .pdfList li{
-	&:nth-child(8), &:nth-child(9){
-	  a p{margin-top:.6em;}
-	}
-}
-//Resources
-#avidSupport{
-	width:80%;
-	margin:0 auto;
-}
-//Experience
-#avidExperienceTab{
-	p:nth-child(8){
-		clear:both;
-		padding-top:1em;
-	}
-}
-.pFloat{
-	float:left;
-	width:67%;
-	margin-right:2%;
-}
-#expLink img{@include contentShadow;}
+//Quote Blocks
 .sideQuote{
 	@include contentShadow;
-	float:right;
+	float:left;
 	width:30%;
+	margin-right:3%;
 	background-color:rgba(220,220,220,0.75);
 	border-radius:4px;
 	padding:2em 3em;
 	position:relative;
 	top:40px;
 	p{
-		color:$textColor2;
+		color:rgb(50,50,50);
 		font-size:1.2em;
 		&::before{
 			content:"''";
@@ -549,4 +528,47 @@ ul.lineSide {
 		bottom:-20px;
 		left:15px;
 	}
+}
+//Products
+#avidProductsTab .pdfList li{
+	&:nth-child(8), &:nth-child(9){
+	  a p{margin-top:.6em;}
+	}
+}
+//Resources
+#avidSupport{
+	width:80%;
+	margin:0 auto;
+}
+//Experience
+#avidTestimonials{
+	margin-bottom:25px;
+}
+.pFloat{
+	float:left;
+	width:67%;
+	margin-right:2%;
+}
+.artist{
+	p{
+		margin-bottom:15px;
+	}
+}
+#avidStories{
+	position:relative;
+	top:90px;
+}
+#Vrenna {
+	.sideQuote{
+		float:right;
+		margin:0;
+	}
+}
+.artist img {@include contentShadow;}
+#avidExperienceTab > a{
+	display:block;
+	clear:both;
+	position:relative;
+	top:130px;
+	font-size:2em;
 }
