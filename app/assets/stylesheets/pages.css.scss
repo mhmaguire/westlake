@@ -106,10 +106,7 @@
 	background-image:url(asset-path('background2.jpg', image));
 }
 .homeSlide{
-	background-attachment:fixed;
-	background-position:center center;
-	background-repeat:no-repeat;
-	background-size: cover !important;
+	@include defaultBackground;
 }
 ////////// Products Page
 #line_card{
@@ -464,6 +461,37 @@ ul.lineSide {
 			} 
 		}
 		li >ul li{color:white;}
+	}
+}
+//Products
+#avidProductsList {
+	li{
+		padding:0px;
+		height:150px;
+		text-overflow:ellipsis;
+		position:relative; 
+		a{
+			display:block;
+			position:absolute;
+			top:1em;
+			right:1em;
+			bottom:1em;
+			left:1em;
+			text-align:center;
+			background-color:rgba(150,150,150,0.7);
+			border-radius:3px;
+			@include contentShadow;
+			p{
+				font-size:2.4em;
+				line-height:1.5em;
+				margin-top:1.4em;
+				color:white;
+				text-shadow:4px 4px rgb(100,100,100);
+			}
+		}
+		&:nth-child(8), &:nth-child(9),{
+		  a p{margin-top:.6em;}
+		}
 	}
 }
 //Resources
