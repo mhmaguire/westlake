@@ -51,22 +51,7 @@
           bulletThumbs: false,
           animation: "fade",
           animationSpeed: 1000,
-          directionalNav: false,
-          afterSlideChange: function (){
-            var sSCopy = $('.defaultSlide2 .stackSlideCopy');
-            var sSImg = $('.defaultSlide2 .slideContent > img');
-            if (sSImg.length) {
-              var footP = $('#mainFoot').offset().top;
-              var copyP = $(sSImg).offset().top + sSImg.height() + $(sSCopy).height();
-
-              if (footP < copyP ){
-                  sSCopy.css({'position':'fixed','bottom':'40px'});
-              }
-              else{
-                  sSCopy.css('position', 'static');
-              }
-            }
-          }
+          directionalNav: false
         });
 
         $(document).on('keydown', function(e){

@@ -81,4 +81,11 @@ after "deploy:symlink_database_yml", "deploy:symlink_logos"
  end
  after "deploy:restart", "deploy:symlink_store"
 
+namespace :deploy do 
+ 	task :symlink_images do 
+ 		run "ln -s #{shared_path}/images #{release_path}/public"
+ 	end
+ end
+ after "deploy:restart", "deploy:symlink_images"
+
  set :keep_releases, 5 
