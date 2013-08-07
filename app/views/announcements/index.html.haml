@@ -1,3 +1,4 @@
-=@announcements.each do |a|
-	%h2= a.title
-	=link_to "Show", (announcement_path a)
+.staticPage 
+	-@announcements.each do |a|
+		%h2= a.title
+		=link_to "Show", (announcement_path a)
