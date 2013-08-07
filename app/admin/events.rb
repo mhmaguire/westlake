@@ -20,6 +20,7 @@ ActiveAdmin.register Event do
 		column :image do |e|
 			image_tag e.image.url(:small)
 		end
+		column :weekly
 		column :created_at 
 		column :updated_at
 		default_actions 
@@ -29,6 +30,7 @@ ActiveAdmin.register Event do
 		attributes_table do 
 			row :title
 			row :description
+			row :weekly
 			row :start_date
 			row :image do 
 				image_tag e.image.url(:small)
