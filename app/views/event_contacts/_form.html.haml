@@ -3,5 +3,6 @@
 	=f.text_field :last_name, placeholder: 'Last Name'
 	=f.email_field :email, placeholder: 'Email'
 	=f.text_field :phone, placeholder: 'Phone #'
+	=f.label "Where did you hear about this event?"
 	=select_tag :source, options_for_select(['Ad', 'Word of Mouth', 'Salesperson', 'E-mail', 'Our Website', 'Social Media', 'Other']), placeholder: 'Where did you hear about the event'
 	=f.submit 'Submit'
