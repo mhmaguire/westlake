@@ -3,7 +3,7 @@
 	.staticContent
 		.featuredVendors
 			%h2 Featured Vendors
-			.ul.twelve.column
+			.ul.twelve.column.block-grid.four-up
 				-@featured_vendors.each do |v|
 					%li
 						= link_to announcement_path(v.announcement) do 
@@ -22,11 +22,14 @@
 =content_for :scripts do
 	:javascript
 		if (window.matchMedia("(min-device-width: 768px)").matches) {
+			window.aNavWidth = $('#alphaNav').css('width');
+			
 			$('#line_card .staticContent').scroll(function () {
 				var threshold = $('.featuredVendors').height();
 				var scrollPos = $('#line_card .staticContent').scrollTop();
 				var sidePos = $('.lineSide').offset();
 				var aNavPos = $('#alphaNav').offset();
+				console.log(aNavWidth);
 				if (scrollPos > threshold) {
 					$('.lineSide').css({
 						'position':'fixed',
@@ -35,6 +38,7 @@
 					$('#alphaNav').css({
 						'position':'fixed',
 						'top': aNavPos.top + 'px',
+						'width': aNavWidth,
 					});
 				}
 				else {

@@ -1,6 +1,6 @@
-.staticPage
+.announcementShow
 	%h2= @announcement.title
-	%ul 
+	%ul.block-grid.three-up
 		-@announcement.vendors.each do |v|
 			%li
 				=link_to v.href do
