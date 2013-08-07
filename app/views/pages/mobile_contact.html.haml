@@ -1,0 +1,23 @@
+#mobileContact.staticPage
+	.staticContent
+		%h1 Contact Westlake Pro
+		%p#cHours Our office is open from 9am to 6pm, Monday through Friday. Stop by or send us a message, we would love to hear from you.
+		%p#errors Some errors prevented your submission. Please try again
+		.form
+			=render partial: 'email_contacts/form'
+
+		%h2 Location
+		%a.address{href:'https://maps.google.com/maps?daddr=4101+Lankershim+Blvd,+Los+Angeles,+CA+91602&hl=en&ll=34.142711,-118.357086&spn=0.041841,0.083685&sll=34.144202,-118.362441&sspn=0.01046,0.020921&gl=us&mra=ls&t=m&z=14', target:'blank'} 4101 Lankershim Blvd. <br/> North Hollywood, CA 91602
+		%h2 Phone
+		%p#cPhone 323-845-1145
+		%h2 Fax
+		%p 323-845-1199
+		%h2 Email
+		%p
+			%a{:href => "mailto:sales@westlakepro.com"} sales@westlakepro.com
+		%h2 Social Media
+		#cSocial
+			
+			%a.fb.socialIcon{href: "https://www.facebook.com/westlakepro", target: "_blank"}
+			%a.tw.socialIcon{href: "https://twitter.com/WestlakePro", target: "_blank"}
+			%a.li.socialIcon{href: "http://www.linkedin.com/company/westlake-pro-inc-", target: "_blank"}

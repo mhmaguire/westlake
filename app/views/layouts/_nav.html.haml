@@ -8,8 +8,10 @@
   = link_to 'Who We Are', '/about'
 %li
   = link_to 'What We Do', '/what_we_do'
-%li
+%li.noMobile
   = link_to 'Contact', '/contact', remote: true
+%li.onlyMobile
+  = link_to 'Contact', '/mobile_contact'
 %li
   = link_to 'Careers', '/careers'
 %li

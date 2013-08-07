@@ -18,6 +18,7 @@ WestlakePro::Application.routes.draw do
   get '/about' => 'pages#about'
   get '/what_we_do' => 'pages#what_we_do'
   get '/contact' => 'email_contacts#new'
+  get '/mobile_contact' => 'pages#mobile_contact'
   get '/careers' => 'pages#careers'
   get '/home' => 'pages#home'
   
