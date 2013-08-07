@@ -1,6 +1,6 @@
 #avidTabs.staticPage
 	.staticContent
-		%dl.tabs.three-up
+		%dl.tabs.three-up.mobile
 			%dd.active
 				%a{href:"#avidProducts"} View Avid Products
 			%dd
@@ -9,7 +9,7 @@
 				%a{href:"#avidExperience"} Avid Artist Experience
 		%ul.tabs-content
 			%li.active#avidProductsTab
-				%ul.pdfList.block-grid.three-up
+				%ul.pdfList.block-grid.three-up.mobile-one-up
 					%li 
 						=link_to asset_path('exchanges.pdf') do
 							%p Exchanges
@@ -38,7 +38,7 @@
 						=link_to asset_path('network.pdf') do 
 							%p Network and Storage
 			%li#avidResourcesTab
-				%ul.pdfList.block-grid.two-up
+				%ul.pdfList.block-grid.two-up.mobile-one-up
 					%li 
 						=link_to asset_path('contact_info.pdf') do 
 							%p Worldwide Contact Info

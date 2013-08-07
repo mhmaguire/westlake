@@ -199,8 +199,8 @@ and (orientation : portrait) {
 		margin-bottom:0;
 	}
 	.homeSlide{
-		background-position:center center;
-		background-size:cover;
+		background-size:130% auto;
+		background-color:black;
 	}
 	.slideCopy{
 		position:absolute;
@@ -244,6 +244,8 @@ and (orientation : portrait) {
 		overflow-y:visible;
 		.slideContent{
 			padding-top:20px;
+			position:static;
+			top:0;
 		}
 	}
 	#wwd1{
@@ -275,7 +277,7 @@ and (orientation : portrait) {
 	}
 	//Static Page
 	.staticPage{
-		padding: 30px 0 10px;
+		padding: 0px 0 10px;
 		position:relative;
 		min-height:320px;
 		overflow-y:visible;
@@ -310,7 +312,8 @@ and (orientation : portrait) {
 		}
 	}
 	//Events
-	#eventSlider{
+	#eventSlider.orbit{
+		overflow:visible;
 	}
 	.eventSlide{
 		.eventContent{
@@ -353,10 +356,36 @@ and (orientation : portrait) {
 		padding-top:27%;
 	}
 	//Avid Corner
-	#avidPage{
-		.comingSoon{
-			top:30px;
+	#avidLinks {
+		margin:0;
+		> div {
+			display:block;
+			width:90%;
+			margin:1em auto;
+			&:nth-child(2){margin:0 auto;}
 		}
+	}
+	#avidTabs{
+		.tabs {
+			margin-top:0px;
+			dd {
+				width:100% !important;
+			}
+		}
+	}
+	#avidStories{position:static;}
+	.sideQuote{
+		width:90%;
+		display:block;
+		margin:1em auto;
+		clear:both;
+		top:0px;
+		margin-bottom:15px;
+	}
+	.pFloat{
+		width:100%;
+		margin-right:0;
+		float:none;
 	}
 }
 @media (max-device-width:767px) AND (orientation:landscape) {
