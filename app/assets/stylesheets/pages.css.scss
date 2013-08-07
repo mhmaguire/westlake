@@ -219,6 +219,8 @@ ul.lineSide {
 #sales{
 	a{
 		float:left;
+		width:50%;
+		margin-bottom:1.75em;
 		&:nth-child(4){
 			float:right;
 			margin-right:100px;
