@@ -10,6 +10,7 @@ class EventContactsController < ApplicationController
   def create
   	@event = Event.find(params[:event_id])
   	@event_contact = @event.event_contacts.build(params[:event_contact])
+    @event_contact.source = params[:source].delete
   	respond_to do |format|
       if @event_contact.save 
         ContactMailer.event_rsvp(@event_contact).deliver

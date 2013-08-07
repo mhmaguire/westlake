@@ -1,5 +1,5 @@
-%h1 New event RSVP
-%p= "from #{@event_contact.name} #{@event_contact.last_name}"
-%p= "Email #{@event_contact.email}"
-%p= "Phone #{@event_contact.phone}"
-%p= "Source #{@event_contact.source}"
+%h1= "New event RSVP for #{@email.event.title}"
+%p= "from #{@email.name} #{@email.last_name}"
+%p= "Email #{@email.email}"
+%p= "Phone #{@email.phone}"
+%p= "Source #{@email.source}"
