@@ -2,4 +2,4 @@
 	=f.text_field :name, class: :input1, placeholder: 'Your Name (Required)'
 	=f.email_field :email, class: :input1, placeholder: 'Your Email (Required)'
 	=f.text_area :message, size: '20x3', placeholder: 'Send Us a Message'
-	=f.submit 'Submit', disable_with: 'Please Wait...' , id: 'contactSubmit'
+	=f.submit 'Submit', id: 'contactSubmit', data: {disable_with: 'Please Wait...' }
