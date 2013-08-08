@@ -233,6 +233,7 @@ ul.lineSide {
 }
 ////////// Gallery
 .wpGallery.block-grid.four-up{
+	width: auto !important;
 	li{
 		position:relative;
 		width:23%;
