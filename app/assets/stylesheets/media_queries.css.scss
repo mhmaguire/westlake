@@ -3,11 +3,6 @@
 //////
 
 //Full size, smaller monitor
-@media (min-device-width:1600px){
-	.homeSlide{
-		background-size:auto !important;
-	}
-}
 @media (max-width:1250px) AND (min-width:$contentMin) {
 	#mainFoot span {
 		margin-left:.8%;

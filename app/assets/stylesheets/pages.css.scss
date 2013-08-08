@@ -181,6 +181,22 @@ ul.lineSide {
 	}
 	p{font-size:1.3em;}
 }
+.employeeFull{
+	text-align:center;
+	h4, p{color:$textColor2;}
+	>div,>p{
+		width:45%;
+		float:left;
+	}
+	>div{
+		margin:0 3% 0;
+	}
+	>p{
+		margin:0 0 0 3%;
+	}
+	h4{font-size:2em;}
+	.bioBox p{font-size:1.25em;}
+}
 
 ////////// What We Do
 
