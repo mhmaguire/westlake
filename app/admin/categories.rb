@@ -29,12 +29,6 @@ ActiveAdmin.register Category do
 		f.inputs do 
 			f.input :title
 		end
-		f.inputs "Vendors" do
-			f.has_many :vendors do |v|
-				v.inputs :name, :href 
-				v.input :image, hint: f.template.image_tag(v.object.image.url(:medium))
-			end
-		end
 		f.actions
   	end
 end
