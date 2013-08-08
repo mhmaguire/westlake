@@ -65,6 +65,19 @@
 	#mainNavRow{
 		width:100%;
 	}
+	#mainNav{
+		width:100%;
+		text-align:center;
+	}
+	#fGroup1,#fGroup2{
+		text-align:center;
+	}
+	.stackNav{top:105px}
+	.defaultSlide, .defaultSlide2 {
+		.slideContent{
+			padding-top:55px;
+		}
+	}
 }
 @media (max-width:767px) AND (min-device-width:768px){
 	body > *, #homePage > * {
@@ -79,6 +92,17 @@ and (max-device-width : 1024px)
 and (orientation : portrait) {
 	#logo, #mainNavRow {
 		width:100%;
+	}
+	#homeSlider{
+		position:relative;
+		width:100%;
+		min-height:320px;
+		margin-bottom:0;
+		@include defaultBackground;
+	}
+	.homeSlide{
+		background-size:130% auto;
+		background-position:50% 30%;
 	}
 }
 
@@ -197,10 +221,10 @@ and (orientation : portrait) {
 		width:100%;
 		min-height:320px;
 		margin-bottom:0;
+		@include defaultBackground;
 	}
 	.homeSlide{
 		background-size:130% auto;
-		background-color:black;
 	}
 	.slideCopy{
 		position:absolute;
