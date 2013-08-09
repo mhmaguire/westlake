@@ -25,7 +25,7 @@
 			window.aNavWidth = $('#alphaNav').css('width');
 			
 			$('#line_card .staticContent').scroll(function () {
-				var threshold = $('.featuredVendors').height();
+				var threshold = $('.featuredVendors').height() + $('.featuredVendors .block-grid').height();
 				var scrollPos = $('#line_card .staticContent').scrollTop();
 				var sidePos = $('.lineSide').offset();
 				var aNavPos = $('#alphaNav').offset();
