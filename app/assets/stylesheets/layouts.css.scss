@@ -210,7 +210,8 @@ body{
 		width:100%;
 		max-width:$contentMax;
 		min-width:$contentMin;
-		padding:0px 2% 50px;
+		padding:0px 0 50px;
+		@media screen AND (max-width:$contentMax){padding:0px 2% 50px;}
 		h1,h2,h3,h4,h5,h6,p,span{
 			color: white;
 		}
