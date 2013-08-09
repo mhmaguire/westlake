@@ -28,7 +28,7 @@
 	#footCopy{
 		width:100%;
 		span{
-			font-size:.95em;
+			font-size:.9em;
 			float:none;
 			margin:0;
 			&::after{
@@ -62,9 +62,6 @@
 	}
 	#mainNav{
 		width:100%;
-		text-align:center;
-	}
-	#fGroup1,#fGroup2{
 		text-align:center;
 	}
 	.stackNav{top:105px}
@@ -105,13 +102,13 @@ and (orientation : portrait) {
 
 ////////Mobile Styles
 @media (min-device-width:768px) {
-	.onlyMobile{display:none;}
+	.onlyMobile{display:none !important;}
 	#contactPage{
 		@extend .gradientBack2;
 	}
 }
 @media (max-device-width: 767px) {
-	.noMobile{display:none;}
+	.noMobile{display:none !important;}
 	.onlyMobile{display:block;}
 
 	html, body{
