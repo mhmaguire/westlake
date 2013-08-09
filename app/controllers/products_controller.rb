@@ -1,6 +1,6 @@
 class ProductsController < ApplicationController
   def index
   	@categories = Category.includes(:vendors).order(:title)
-  	@featured_vendors = Vendor.featured
+  	@features = Announcement.all
   end
 end

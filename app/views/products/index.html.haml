@@ -1,13 +1,10 @@
 -provide :title, '| Products, Line Card'
 #line_card.staticPage
 	.staticContent
-		.featuredVendors
-			%h2 Featured Vendors
-			.ul.twelve.column.block-grid.four-up
-				-@featured_vendors.each do |v|
-					%li
-						= link_to announcement_path(v.announcement) do 
-							=image_tag(v.image.url(:medium), retina: true)
+		#featuredSlider
+			-@features.each do |f|
+				=link_to announcement_path(f) do
+					=image_tag f.image.url(:large), retina:true
 		%ul.lineSide.four.column
 			%h2 Categories
 			-@categories.each do |cat|
@@ -21,6 +18,15 @@
 
 =content_for :scripts do
 	:javascript
+		$('#featuredSlider').orbit({
+			fluid:true,
+			animation: "fade",
+			advanceSpeed: 5000,
+			animationSpeed: 1500,
+			directionalNav: true,
+		});
+		
+
 		if (window.matchMedia("(min-device-width: 768px)").matches) {
 			window.aNavWidth = $('#alphaNav').css('width');
 			
