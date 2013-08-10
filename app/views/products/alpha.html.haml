@@ -1,0 +1,31 @@
+-provide :title, '| Products, Line Card'
+#line_card.staticPage
+	.staticContent
+		#featuredSlider
+			-@features.each do |f|
+				=link_to announcement_path(f) do
+					=image_tag f.image.url(:large), retina:true
+		%ul.lineSide.four.column
+			%nav#alphaNav
+				%p 
+					-%w(A B C D E F G H I J K L M N O P Q R S T U V W X Y Z).each do |letter|
+						=link_to "#{letter}", "##{letter}"
+		.lineCard.eight.column
+			%ul.lineCategories
+				-@vendors.keys.sort.each do |letter|
+					%a(name="#{letter.upcase}") 
+						%h3="#{letter.upcase}"
+					%ul.block-grid.four-up
+						-@vendors[letter].each do |v|
+							%li
+								=image_tag v.image.url(:small), retina: true
+=content_for :scripts do 
+	:javascript
+		$('#featuredSlider').orbit({
+			fluid:true,
+			animation: "fade",
+			advanceSpeed: 5000,
+			animationSpeed: 1500,
+			directionalNav: true,
+		});
+		

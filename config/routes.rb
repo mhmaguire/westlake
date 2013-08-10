@@ -38,7 +38,11 @@ WestlakePro::Application.routes.draw do
   match 'gallery/:gallery_type' => 'gallery#show', via: :get, as: :gallery
   
   get '/line_card' => 'products#index'
-  resources :products, only: :index 
+  resources :products, only: :index do 
+    collection do
+      get :alpha
+    end
+  end 
 
   get '/events' => 'events#index'
   resources :events, only: :index do 
