@@ -2,6 +2,21 @@
 	.staticContent	
 		%ul.wpGallery.block-grid.four-up(data-clearing=true)
 			=render partial: 'shared/gallery_image', collection: @gallery_images 
+
+
+=content_for :scripts do 
+	:javascript
+		$(function() {
+			var retina = window.devicePixelRatio > 1; 
+			if(retina) {
+				var $links = $('ul.wpGallery a'), 
+				string = '';
+				$links.each(function(){
+					string = $(this).attr('href').replace('.jpg', '@2x.jpg');
+					$(this).attr('style', string);
+				});
+			};
+		});
 			
 		
 
