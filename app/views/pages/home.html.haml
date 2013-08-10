@@ -24,6 +24,18 @@
   =content_for :scripts do
     :javascript
       $(function() {
+        var retina = window.devicePixelRatio > 1; 
+        if(!retina) {
+          var $slides = $('#homeSlider .homeSlide'), 
+          string = ''; 
+          $slides.each(function(){
+            string = $(this).attr('style').replace('.jpg', '@2x.jpg');
+            $(this).attr('style', string);
+          });
+        };
+      });
+    :javascript
+      $(function() {
         $('#homeSlider').orbit({
           animation: "fade",
           animationSpeed: 1200,
