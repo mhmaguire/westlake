@@ -1,4 +1,6 @@
 .staticPage 
-	-@announcements.each do |a|
-		%h2= a.title
-		=link_to "Show", (announcement_path a)
+	.staticContent
+		.announcementIndex
+			-@announcements.each do |a|
+				%h2= a.title
+				=link_to "Show", (announcement_path a)
