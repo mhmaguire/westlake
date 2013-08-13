@@ -110,7 +110,10 @@
 }
 ////////// Products Page
 #line_card{
-	.staticContent h2 {font-size:2.2em;} 
+	.staticContent{ 
+		height:auto;
+		h2 {font-size:2.2em;}
+	} 
 	.title h3 {
 		text-decoration: underline;
 	}
@@ -118,6 +121,7 @@
 		color:white;
 		text-transform: capitalize;
 	}
+	
 }
 ul.lineSide {			
 	list-style: none;

@@ -2,9 +2,8 @@
 #line_card.staticPage
 	.staticContent
 		#featuredSlider
-			-@features.each do |f|
-				=link_to announcement_path(f) do
-					=image_tag f.image.url(:large), retina:true
+			=image_tag('avid_slide1.png')
+			=image_tag('avid_slide2.png')
 		%ul.lineSide.four.column
 			%h2 Categories
 			-@categories.each do |cat|
