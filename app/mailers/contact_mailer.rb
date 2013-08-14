@@ -3,21 +3,21 @@ class ContactMailer < ActionMailer::Base
 
   def contact_email(email)
     @email = email
-    mail(to: 'mhmaguire0@gmail.com', subject: 'New message from a user of westlakepro.com')
+    mail(to: 'sales@westlakepro.com', subject: 'New message from a user of westlakepro.com')
   end
 
   def career_inquiry(email)
   	@email = email
-  	mail(to: 'mhmaguire0@gmail.com', subject: 'New job application submitted')
+  	mail(to: 'sales@westlakepro.com', subject: 'New job application submitted')
   end
 
   def resume_inquiry(email)
     @email = email
-    mail(to: 'mhmaguire0@gmail.com', subject: 'New resume submitted')
+    mail(to: 'sales@westlakepro.com', subject: 'New resume submitted')
   end
 
   def event_rsvp(email)
   	@email = email
-  	mail(to: 'mhmaguire0@gmail.com', subject: 'New event RSVP!')
+  	mail(to: 'joep@westlakepro.com', subject: 'New event RSVP!')
   end
 end
