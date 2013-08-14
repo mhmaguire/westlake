@@ -18,7 +18,7 @@
 					%ul.block-grid.four-up
 						-@vendors[letter].each do |v|
 							%li
-								=image_tag v.image.url(:small), retina: true
+								=image_tag v.image.url(:medium), retina: true
 =content_for :scripts do 
 	:javascript
 		$('#featuredSlider').orbit({
