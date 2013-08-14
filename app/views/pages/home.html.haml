@@ -38,7 +38,7 @@
       $(function() {
         $('#homeSlider').orbit({
           animation: "fade",
-          animationSpeed: 500,
+          animationSpeed: 1000,
           advanceSpeed: 6000,
           directionalNav: false,
           bulletThumbs: true,
@@ -46,12 +46,12 @@
             var myDelay2 = setTimeout(function() {
               $('.slideCopy').animate({
                 opacity: 1,
-              },750);
+              },500);
             }, 1500);
             var myDelay3 = setTimeout(function() {
               $('.slideCopy').animate({
                 opacity: 0,
-              },750);
+              },500);
             }, 8000);
           }
         });
