@@ -1,5 +1,5 @@
 class Event < ActiveRecord::Base
-  before_save :set_content_association
+  before_save :set_content_association, :set_weekly_date
   attr_accessible :title, :description, :start_date, :image, :weekly
   retina!
   has_attached_file :image, styles: {small: '150x150>', large: '1700x650>'}, retina: true
@@ -26,4 +26,11 @@ class Event < ActiveRecord::Base
   def day
   	DAYNAMES[self.start_date.wday] 
   end
+
+  private
+    def set_weekly_date
+      if weekly && start_date.nil?
+        self.start_date = Time.now - 25.years
+      end
+    end
 end
