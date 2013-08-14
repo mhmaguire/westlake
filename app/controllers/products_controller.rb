@@ -5,7 +5,7 @@ class ProductsController < ApplicationController
   end
 
   def alpha
-  	@vendors = Vendor.group(:name)
+  	@vendors = Vendor.group(:name).group_by{|v| v.name[0]}
   	@features = Announcement.all
   end
 end
