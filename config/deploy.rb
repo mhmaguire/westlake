@@ -89,3 +89,4 @@ namespace :deploy do
  after "deploy:restart", "deploy:symlink_images"
 
  set :keep_releases, 5 
+ after "deploy:restart", "deploy:cleanup"
