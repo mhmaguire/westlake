@@ -11,12 +11,15 @@
         =image_tag('wwd_splash.png')
         .stackFrontCopy  
           .wwd1Copy
+            =link_to '', '#title1', :class => "wwd1CopyLink" 
             %h2 Sales
             %p Meet with our highly experienced ,and knowledgeable sales and technical service staff to get expert advice from the best in the audio business. Discuss your needs and get the right equipment at the best possible price - all in a calm, comfortable environment.
           .wwd1Copy
+            =link_to '', '#title2', :class => "wwd1CopyLink" 
             %h2 Design
             %p Nothing is more important than starting with the right plan. Westlake will take into consideration every aspect, including budget, workflow, and growth, so you can make the most informed buying decision possible.
           .wwd1Copy
+            =link_to '', '#title3', :class => "wwd1CopyLink" 
             %h2 Integration
             %p Westlake Pro can  provide integration services from small editing suites to major installations, including studio design, consultation, software configuration, networking, wiring, and furniture.
           =link_to "Click here to view our studio gallery", gallery_path('studios'), :class => "specialLink"
@@ -77,6 +80,12 @@
 
         var length = $('ul.stackNavList li').length - 1;  
         $('ul.stackNavList li a').on('click', function(e){
+          var index = $(this).parent().index();
+          index = (length-index) +1 ; 
+          $(this).parent().addClass('current');
+          $('.featured').trigger('orbit.stop').trigger('orbit.goto', [index]); 
+        });
+        $('.wwd1CopyLink').on('click', function(e){
           var index = $(this).parent().index();
           index = (length-index) +1 ; 
           $(this).parent().addClass('current');

@@ -38,7 +38,7 @@
       $(function() {
         $('#homeSlider').orbit({
           animation: "fade",
-          animationSpeed: 1000,
+          animationSpeed: 500,
           advanceSpeed: 6000,
           directionalNav: false,
           bulletThumbs: true,
@@ -47,12 +47,12 @@
               $('.slideCopy').animate({
                 opacity: 1,
               },500);
-            }, 1500);
+            }, 0);
             var myDelay3 = setTimeout(function() {
               $('.slideCopy').animate({
                 opacity: 0,
               },500);
-            }, 8000);
+            }, 5200);
           }
         });
 
@@ -112,11 +112,11 @@
         var myDelay2 = setTimeout(function() {
           $('.slideCopy').animate({
             opacity: 1,
-          },750);
-        }, 1500);
+          },500);
+        }, 0);
         var myDelay3 = setTimeout(function() {
           $('.slideCopy').animate({
             opacity: 0,
-          },750);
-        }, 8000);
+          },500);
+        }, 5200);
       });

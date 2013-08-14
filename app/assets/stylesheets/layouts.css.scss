@@ -235,7 +235,7 @@ body{
 		p, a {
 			font-size:1.3em;
 			line-height:1.2em;
-			margin-bottom:.5em;
+			margin-bottom:1em;
 		}
 	}
 	.stackFrontCopy{
@@ -246,8 +246,8 @@ body{
 }
 a.specialLink{
 	color:#50b0c5;
-	margin-top:1em;
 	margin-bottom:1.75em;
+	display:inline-block;
 	&::after{
 		display:inline-block;
 		margin-left:.6em;
