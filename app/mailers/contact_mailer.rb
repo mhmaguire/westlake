@@ -8,12 +8,12 @@ class ContactMailer < ActionMailer::Base
 
   def career_inquiry(email)
   	@email = email
-  	mail(to: 'sales@westlakepro.com', subject: 'New job application submitted')
+  	mail(to: 'georgea@westlakepro.com', subject: 'New job application submitted')
   end
 
   def resume_inquiry(email)
     @email = email
-    mail(to: 'sales@westlakepro.com', subject: 'New resume submitted')
+    mail(to: 'georgea@westlakepro.com', subject: 'New resume submitted')
   end
 
   def event_rsvp(email)
