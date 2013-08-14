@@ -1,7 +1,7 @@
 -provide :title, '| Products, Line Card'
 #line_card.staticPage
 	.staticContent
-		#productSliderWrapper
+		.productSliderWrapper
 			#featuredSlider
 				-@features.each do |f|
 					=link_to announcement_path(f) do

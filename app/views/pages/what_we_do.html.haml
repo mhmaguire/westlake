@@ -60,19 +60,6 @@
           animation: "fade",
           animationSpeed: 1000,
           directionalNav: false,
-          afterSlideChange: function (){
-            var sSCopy = $('.defaultSlide2 .stackSlideCopy');
-            var sSImg = $('.defaultSlide2 .slideContent > img');
-            var footP = $('#mainFoot').offset().top;
-            var copyP = $(sSImg).offset().top + sSImg.height() + $(sSCopy).height();
-
-            if (footP < copyP ){
-                sSCopy.css({'position':'fixed','bottom':'50px'});
-            }
-            else{
-                sSCopy.css('position', 'static');
-            }
-          }
         });
 
         $(document).on('keydown', function(e){
