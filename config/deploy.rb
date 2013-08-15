@@ -88,5 +88,12 @@ namespace :deploy do
  end
  after "deploy:restart", "deploy:symlink_images"
 
+ namespace :deploy do 
+ 	task :symlink_troy do 
+ 		run "ln -s #{shared_path}/troymorrismemorial.html #{release_path}/public/troymorrismemorial.html"
+ 	end
+ end
+ after "deploy:restart", "deploy:symlink_troy"
+
  set :keep_releases, 5 
  after "deploy:restart", "deploy:cleanup"
