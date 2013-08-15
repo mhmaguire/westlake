@@ -286,7 +286,12 @@ ul.lineSide {
 		}
 	}
 }
-
+a.clearing-close {
+	&:link{
+		color:white;
+		font-size:4em;
+	}
+}
 ////////// Contact Page
 //styles for modal thank you messages
 #modal-content {

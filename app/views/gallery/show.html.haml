@@ -1,8 +1,15 @@
 #galleryPage.staticPage
 	.staticContent	
 		%ul.wpGallery.block-grid.four-up(data-clearing=true)
-			=render partial: 'shared/gallery_image', collection: @gallery_images 
-
+			=render partial: 'shared/gallery_image', collection: @gallery_images
+			%li
+				=image_tag('http://placehold.it/200x100') 
+			%li
+				=image_tag('http://placehold.it/200x100') 
+			%li
+				=image_tag('http://placehold.it/200x100') 
+			%li
+				=image_tag('http://placehold.it/200x100') 
 
 =content_for :scripts do 
 	:javascript
