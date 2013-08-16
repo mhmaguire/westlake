@@ -7,7 +7,7 @@ class Event < ActiveRecord::Base
   belongs_to :content
   has_many :event_contacts
 
-  scope :upcoming, where('start_date >?', Time.now)
+  scope :upcoming, where('start_date >=?', (Time.now - 1.days).to_date)
 
   DAYNAMES = %w(Sunday Monday Tuesday Wednesday Thursday Friday Saturday)
 
