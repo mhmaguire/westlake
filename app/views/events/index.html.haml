@@ -1,7 +1,9 @@
 -provide :title, "| #{get_event_title}"
 #eventsPage.staticPage
-	#eventSlider
-		=render @events
+	.staticContent
+		#eventSlider
+			=render @events
+
 
 
 =content_for :scripts do
