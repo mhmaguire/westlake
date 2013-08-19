@@ -414,6 +414,7 @@ a.clearing-close {
 }
 #avidSlider{
 	@include contentShadow;
+	max-height:inherit;
 }
 #avidLinks{
 	margin:2em 0;
