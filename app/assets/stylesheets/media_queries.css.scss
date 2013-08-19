@@ -326,6 +326,7 @@ and (orientation : portrait) {
 			width:46%;
 			margin:0 2% 2em;
 			padding:15px 10px 60px;
+			&:nth-child(2n+3){clear:left;}
 		}
 	}
 	//Events
