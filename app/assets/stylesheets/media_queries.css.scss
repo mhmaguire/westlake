@@ -298,7 +298,6 @@ and (orientation : portrait) {
 		padding: 0px 0 10px;
 		position:relative;
 		min-height:320px;
-		overflow-y:visible;
 	}
 	.staticContent{
 		overflow-y:visible;
@@ -324,8 +323,8 @@ and (orientation : portrait) {
 	//Gallery
 	.wpGallery.block-grid.four-up{
 		li{
-			width:90%;
-			margin:0 5% 2em;
+			width:46%;
+			margin:0 2% 2em;
 			padding:15px 10px 60px;
 		}
 	}
