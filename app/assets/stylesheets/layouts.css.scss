@@ -1,13 +1,15 @@
 ///////
 /////////Link & Text Styles
-a:link{
-	color:$textColor2;
-}
-a:visited{
-	color:$textColor2;
-}
-a:hover{
-	color:darken($textColor2,20%) !important;
+a{
+	&:link{
+		color:$textColor2;
+	}
+	&:visited{
+		color:$textColor2;
+	}
+	&:hover{
+		color:darken($textColor2,20%) !important;
+	}
 }
 .button {
 	border-radius: 5px;
@@ -188,7 +190,7 @@ body{
 //////
 ////// Stacks Template
 .stackPage{
-	@extend #homePage;
+	@include defaultLayout;
 	@include defaultBackground;
 	> ul{
 		width:100%;
@@ -288,7 +290,7 @@ ul.featured.orbit{
 	@include defaultBackground;
 }
 .defaultSlide{
-	.slideContent>img, #about1Gallery{
+	.slideContent>img{
 		float:left;
 		width:30%;
 		height:auto;
@@ -314,15 +316,10 @@ ul.featured.orbit{
 }
 /////////// Static Page Template
 .staticPage{
+	@include defaultLayout;
 	@include defaultBackground;
-	position:absolute;
-	top:0;
-	bottom:0;
-	left:0;
-	right:0;
 	padding-top:60px;
 	padding-bottom:40px;
-	overflow-y:hidden;
 }
 .staticContent{
 	max-width:$contentMax;

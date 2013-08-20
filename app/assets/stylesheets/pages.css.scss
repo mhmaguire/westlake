@@ -5,14 +5,7 @@
 ///////////Pages
 /////Home Page
 #homePage{
-	position:absolute;
-	top:0px;
-	right:0px;
-	bottom:0px;
-	left:0px;
-	z-index:5;
-	overflow-y:hidden;
-	height:100%;
+	@include defaultLayout;
 }
 #homeSlider{
 	width:100%;
@@ -98,12 +91,6 @@
 		font-size:1.7em;
 		margin:0 0 10px;
 	}
-}
-#slide1{
-	background-image:url(asset-path('background1.jpg', image));
-}
-#slide2{
-	background-image:url(asset-path('background2.jpg', image));
 }
 .homeSlide{
 	@include defaultBackground;

@@ -54,7 +54,18 @@ $bodyFont: 'Myriad Pro', arial, sans-serif;
 }
 
 //end gradients
-// Background Image Default
+
+@mixin defaultLayout{
+   position:absolute;
+   top:0px;
+   right:0px;
+   bottom:0px;
+   left:0px;
+   z-index:5;
+   overflow-y:hidden;
+   height:100%;
+}
+
 @mixin defaultBackground{
    background-image:url(asset-path('wlp-new-bg.png',image));
    background-attachment:fixed;
