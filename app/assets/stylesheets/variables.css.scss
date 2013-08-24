@@ -54,7 +54,11 @@ $bodyFont: 'Myriad Pro', arial, sans-serif;
 }
 
 //end gradients
-
+@mixin fontSet($fsFam,$fsCol,$fsWeight: normal){
+   font-family:$fsFam;
+   color:$fsCol;
+   font-weight:$fsWeight;
+}
 @mixin defaultLayout{
    position:absolute;
    top:0px;

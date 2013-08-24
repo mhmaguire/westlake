@@ -51,21 +51,17 @@ form, input, textarea {
 }
 ///
 h1, h2, h3, h4, h5, h6 {
-	color:$textColor1;
-	font-family:$bodyFont;
-	font-weight:400 !important;
+	@include fontSet($bodyFont,$textColor1,400 !important);
 }
 
 a, li, span{
 	margin-bottom:0px;
-	color:$textColor2;
-	font-family:$bodyFont;
+	@include fontSet($bodyFont,$textColor2);
 }
 
 p, {
 	margin-bottom:0px;
-	color:$textColor1;
-	font-family:$bodyFont;
+	@include fontSet($bodyFont,$textColor1);
 }
 
 //
