@@ -96,3 +96,17 @@
     else {
       console.log('too small for slider');
     }
+    
+  :javascript
+    $(window).ready(function()
+      {
+        $('.slideContent').jScrollPane({
+          showArrows: true
+        });
+      });
+    $(window).resize(function()
+      {
+        $('.slideContent').jScrollPane({
+          showArrows: true
+        });
+      });

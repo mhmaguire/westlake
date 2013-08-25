@@ -13,9 +13,11 @@
 //= require jquery
 //= require jquery_ujs
 //= require jquery.remotipart
+//= require jquery.mousewheel
 //= require foundation
 //= require cocoon
 //= require retina
 //= require jPanelMenu
 //= require pages 
 //= require stackNav
+//= require jScrollPane

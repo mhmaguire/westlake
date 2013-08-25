@@ -84,3 +84,16 @@
       $('#about3Bios').css('top', teamDiff);
     });
 
+  :javascript
+    $(window).ready(function()
+      {
+        $('.slideContent').jScrollPane({
+          showArrows: true
+        });
+      });
+    $(window).resize(function()
+      {
+        $('.slideContent').jScrollPane({
+          showArrows: true
+        });
+      });

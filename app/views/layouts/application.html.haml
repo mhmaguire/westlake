@@ -46,6 +46,35 @@
       });
       jPM.on();
     }
+  :javascript
+    if ($('.slideContent').length > 0) { 
+      $(window).ready(function()
+        {
+          $('.slideContent').jScrollPane({
+            showArrows: true
+          });
+      });
+      $(window).resize(function()
+        {
+          $('.slideContent').jScrollPane({
+            showArrows: true
+          });
+      });
+    }
+    if($('.staticContent').length > 0) {
+      $(window).ready(function()
+        {
+          $('.staticContent').jScrollPane({
+            showArrows: true
+          });
+      });
+      $(window).resize(function()
+        {
+          $('.staticContent').jScrollPane({
+            showArrows: true
+          });
+      });
+    }
 
   = if content_for?(:scripts) then yield :scripts end
 

@@ -6,11 +6,12 @@
 				-@features.each do |f|
 					=link_to announcement_path(f) do
 						=image_tag f.image.url(:large), retina:true
-		%ul.lineSide.four.column
-			%h2 Categories
-			-@categories.each do |cat|
-				%li
-					%a{href: "##{cat.title}"}= cat.title
+		.four.column
+			%ul.lineSide
+				%h2 Categories
+				-@categories.each do |cat|
+					%li
+						%a{href: "##{cat.title}"}= cat.title
 		.lineCard.eight.column
 			%nav#alphaNav
 				%p 
@@ -37,28 +38,24 @@
 			
 			$('#line_card .staticContent').scroll(function () {
 				var threshold = $('#featuredSlider').height();
-				var scrollPos = $('#line_card .staticContent').scrollTop();
-				var sidePos = $('.lineSide').offset();
-				var aNavPos = $('#alphaNav').offset();
-				console.log(aNavWidth);
-				if (scrollPos > threshold) {
-					$('.lineSide').css({
-						'position':'fixed',
-						'top': sidePos.top + 'px',
+				var scrollPos = parseInt($('.jspPane').css('top'));
+				var absScrollPos = Math.abs(scrollPos);
+				var diff = threshold - absScrollPos;
+
+				var alphaWidth = $('#alphaNav').width();
+
+				if(diff < 0){
+					$('.lineSide, #alphaNav').css({
+						'position': 'absolute',
+						'top': Math.abs(diff)
 					});
-					$('#alphaNav').css({
-						'position':'fixed',
-						'top': aNavPos.top + 'px',
-						'width': aNavWidth,
-					});
+					$('#alphaNav').width(alphaWidth);
 				}
-				else {
-					$('.lineSide').css({
-						'position':'static',
-					})
-					$('#alphaNav').css({
-						'position':'static',
-					})
+				else{
+					$('.lineSide, #alphaNav').css({
+						'position': 'static',
+					});
+					$('#alphaNav').width(alphaWidth);
 				}
 			});
 		}
