@@ -76,3 +76,5 @@ gem 'retina_rails'
 gem 'rich'
 
 gem 'google-analytics-rails' 
+
+gem 'sitemap_generator'
