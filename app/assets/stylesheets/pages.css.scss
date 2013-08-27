@@ -375,14 +375,14 @@ a.clearing-close {
 	clear:both;
 }
 //////////////Events
-#eventsPage{
-	.staticContent{}
-}
 #eventSlider{
 	height:inherit;
 	min-height:500px;
 }
 .eventSlide{
+	.slideContent{
+		top:80px;
+	}
 	img{
 		display:block;
 		margin:0 auto;
