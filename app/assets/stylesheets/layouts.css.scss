@@ -286,17 +286,13 @@ ul.featured.orbit{
 	@include defaultBackground;
 }
 .defaultSlide{
-	.slideContent>img{
-		float:left;
-		width:30%;
-		height:auto;
-		margin-right:3%;
-	}
 	h2{
 		margin-top:0px;
 	}
 	p{
 		font-size:1.35em;
+		width:80%;
+		margin: 0 auto;
 	}
 }
 .defaultSlide2{
