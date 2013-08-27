@@ -1,5 +1,6 @@
 ActiveAdmin.register Vendor do
 	belongs_to :category
+	config.filters = false
 
 	form html: {enctype: "multipart/form-data"} do |f|
 		f.inputs do 
@@ -9,6 +10,15 @@ ActiveAdmin.register Vendor do
 			f.input :href
 		end
 		f.actions 
+	end
+
+	index do 
+		column :name
+		column :image do |v|
+			image_tag v.image.url(:medium)
+		end
+		column :href
+		default_actions
 	end
 
 	show do |v|
