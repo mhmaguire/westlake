@@ -16,7 +16,7 @@ ActiveAdmin.register Category do
 				link_to 'Add a Vendor', new_admin_category_vendor_path(c)
 			end
 			row :vendors do |c|
-				link_to "View Vendors", admin_category_vendor_path
+				link_to "View Vendors", admin_category_vendors_path(c)
 			end
 
 		end
