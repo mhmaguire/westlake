@@ -257,6 +257,7 @@ ul.lineSide {
 }
 ////////// Gallery
 .wpGallery.block-grid.four-up{
+	margin:0;
 	li{
 		position:relative;
 		width:23%;
@@ -379,7 +380,7 @@ a.clearing-close {
 }
 #eventSlider{
 	height:inherit;
-	overflow-y:auto;
+	min-height:500px;
 }
 .eventSlide{
 	img{
