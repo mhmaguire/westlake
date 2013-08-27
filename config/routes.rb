@@ -22,7 +22,6 @@ WestlakePro::Application.routes.draw do
   get '/careers' => 'pages#careers'
   get '/home' => 'pages#home'
   
-  get '/site_map' => 'pages#sitemap'
   get '/privacy_policy' => 'pages#privacy'
   get '/pricing_policy' => 'pages#pricing'
   get '/avid' => 'pages#avid'

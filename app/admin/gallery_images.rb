@@ -25,6 +25,7 @@ ActiveAdmin.register GalleryImage do
 			row :gallery_type
 			row :created_at 
 			row :updated_at
+			row :caption
 			row 'Image' do
 				image_tag(g.image.url(:small))
 			end
