@@ -8,5 +8,5 @@
 		%p= employee.cell_phone unless(employee.cell_phone == nil || employee.cell_phone == '')
 		%p
 			%a{href: "mailto:#{employee.email}"}= employee.email
-	%p=employee.body 
+	%p=raw employee.body 
 
