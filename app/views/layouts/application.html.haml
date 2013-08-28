@@ -72,11 +72,11 @@
       })
     }
     if($('.staticContent').length > 0) {
-      $(customScroll('.staticContent'));
+      $(window).ready(customScroll('.staticContent'));
     }
     if($('.slideContent').length > 0) {
-      $(customScroll('.slideContent'));
-    }   
+      $(window).ready(customScroll('.slideContent'));
+    } 
 
   = if content_for?(:scripts) then yield :scripts end
 
