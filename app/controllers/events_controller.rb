@@ -1,16 +1,16 @@
 class EventsController < ApplicationController
 	def index 
-		@events = Event.upcoming
+		@events = Event.upcoming + Event.weekly
 	end
 
 
 	def past
-		@events = Event.where('start_date <?', (Time.now.midnight - 1.day ))
+		@events = Event.past
 		render 'index'
 	end
 
 	def weekly
-		@events = Event.where(weekly: true)
+		@events = Event.weekly
 		render 'index'
 	end
 end
