@@ -21,3 +21,15 @@
 //= require pages 
 //= require stackNav
 //= require jScrollPane
+
+function customScroll(pageContent){
+	$(pageContent).each(function(){
+		$(this).jScrollPane({
+			showArrows: $(this).is('.arrow'),
+			mouseWheelSpeed: 100,
+			autoReinitialise: true,
+			autoReinitialiseDelay: 500, 
+			hideFocus: true
+		});
+	});
+}
