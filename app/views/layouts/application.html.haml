@@ -49,6 +49,7 @@
   
 
   :javascript
+<<<<<<< HEAD
     function customScroll(pageContent){
       $(pageContent).each(function(){
         $(this).jScrollPane({
@@ -81,6 +82,17 @@
     if($('.slideContent').length > 0) {
       $(window).ready(customScroll('.slideContent'));
     } 
+=======
+    $(function(){
+      if($('.staticContent').length > 0) {
+        customScroll('.staticContent');
+      }
+      if($('.slideContent').length > 0) {
+        customScroll('.slideContent');
+      }   
+    })
+    
+>>>>>>> 2b1859c99d5d09ad5e962adeac032627b51eb005
 
   = if content_for?(:scripts) then yield :scripts end
 
