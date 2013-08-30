@@ -7,11 +7,11 @@
 					=link_to announcement_path(f) do
 						=image_tag f.image.url(:large), retina:true
 		.four.column
-			%ul.lineSide
+			%ul.lineSide.categories
 				%h2 Categories
 				-@categories.each do |cat|
 					%li
-						%a{href: "##{cat.title}"}= cat.title
+						%a{href: "##{cat.param_title}"}= cat.title
 		.lineCard.eight.column
 			%nav#alphaNav
 				%p 
@@ -28,6 +28,14 @@
 			advanceSpeed: 5000,
 			animationSpeed: 1500,
 			directionalNav: true,
+		});
+
+		$(".categories a").click(function(e){
+			var api = $(".staticContent").data('jsp');
+			href = $(this).attr('href');
+			api.scrollToElement($('a[name="'+href+'"]')); 
+			e.preventDefault();
+			return false; 
 		});
 		
 

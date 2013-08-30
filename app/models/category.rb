@@ -11,6 +11,10 @@ class Category < ActiveRecord::Base
   	title.gsub('_', ' ')
   end
 
+  def param_title
+    title.gsub(' ', '_')
+  end
+
   def set_content_association
   	self.content = Content.instance
   end

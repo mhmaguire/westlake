@@ -52,7 +52,9 @@
     function customScroll(pageContent){
       $(pageContent).each(function(){
         $(this).jScrollPane({
-          showArrows: $(this).is('.arrow')
+          showArrows: $(this).is('.arrow'),
+          mouseWheelSpeed: 100,
+          hijackInternalLinkgs: true
           });
         var api = $(this).data('jsp');
         var throttleTimeout;
