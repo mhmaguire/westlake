@@ -1,6 +1,5 @@
 .eventSlide	
 	.slideContent	
-		=debug event
 		=image_tag event.image.url(:large, retina: true)
 		%ul.eventLinks
 			-if event.is_weekly? || !event.is_past?
