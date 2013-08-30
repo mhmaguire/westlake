@@ -1,0 +1,23 @@
+.announcementShow{
+	position:relative;
+	height:inherit;
+}
+
+div[class^="announcement-"]{
+	position:absolute;
+	width:33%;
+}
+div[class^="announcement-top"]{
+	top:0;
+}
+div[class^="announcement-bottom"]{
+	bottom:0;
+}
+.announcementShow{
+	div[class$="-right"]{
+		right:0;
+	}
+	div[class$="-left"]{
+		left:0;
+	}
+}\

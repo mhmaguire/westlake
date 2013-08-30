@@ -74,7 +74,9 @@
       })
     }
     if($('.staticContent').length > 0) {
-      $(window).ready(customScroll('.staticContent'));
+      $(window).ready(function(){
+        customScroll('.staticContent');
+        });
     }
     if($('.slideContent').length > 0) {
       $(window).ready(customScroll('.slideContent'));
