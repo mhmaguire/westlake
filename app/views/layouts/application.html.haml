@@ -50,11 +50,14 @@
 
   :javascript
     function customScroll(pageContent){
+      console.log("custom scroll");
+      console.log($(pageContent)); 
       $(pageContent).each(function(){
         $(this).jScrollPane({
           showArrows: $(this).is('.arrow'),
           mouseWheelSpeed: 100,
-          hijackInternalLinkgs: true
+          hijackInternalLinkgs: true,
+          autoReinitialize: true
           });
         var api = $(this).data('jsp');
         var throttleTimeout;
@@ -73,12 +76,16 @@
         });
       })
     }
-    if($('.staticContent').length > 0) {
-      $(window).ready(customScroll('.staticContent'));
-    }
-    if($('.slideContent').length > 0) {
-      $(window).ready(customScroll('.slideContent'));
-    } 
+
+    $(function(){
+      if($('.staticContent').length > 0) {
+        customScroll('.staticContent');
+      }
+      if($('.slideContent').length > 0) {
+        customScroll('.slideContent');
+      }   
+    })
+    
 
   = if content_for?(:scripts) then yield :scripts end
 
