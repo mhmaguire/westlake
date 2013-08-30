@@ -49,18 +49,6 @@
   
 
   :javascript
-    function customScroll(pageContent){
-      console.log("custom scroll");
-      console.log($(pageContent)); 
-      $(pageContent).each(function(){
-        $(this).jScrollPane({
-          showArrows: $(this).is('.arrow'),
-          mouseWheelSpeed: 100,
-          autoReinitialise: true
-        });
-      });
-    }
-
     $(function(){
       if($('.staticContent').length > 0) {
         customScroll('.staticContent');
