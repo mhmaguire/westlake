@@ -97,3 +97,9 @@ namespace :deploy do
 
  set :keep_releases, 5 
  after "deploy:restart", "deploy:cleanup"
+
+
+task :refresh_sitemaps do
+	run "cd #{latest_release} && RAILS_ENV=#{rails_env} rake sitemap:refresh"
+end
+after "deploy", "refresh_sitemaps"
