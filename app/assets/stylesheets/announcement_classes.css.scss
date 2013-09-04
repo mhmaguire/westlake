@@ -1,6 +1,6 @@
-.announcementShow{
+.announcementContent{
 	position:relative;
-	height:inherit;
+	min-height:200px;
 }
 
 div[class^="announcement-"]{
@@ -11,11 +11,15 @@ div[class^="announcement-top"]{
 	top:0;
 }
 div[class^="announcement-bottom"]{
-	bottom:0;
+	top:300px;
 }
-.announcementShow{
+.announcementContent{
 	div[class$="-right"]{
 		right:0;
+	}
+	div[class$="-center"]{
+		left:50%;
+		margin-left:-16.5%;
 	}
 	div[class$="-left"]{
 		left:0;

@@ -49,40 +49,6 @@
   
 
   :javascript
-<<<<<<< HEAD
-    function customScroll(pageContent){
-      $(pageContent).each(function(){
-        $(this).jScrollPane({
-          showArrows: $(this).is('.arrow'),
-          mouseWheelSpeed: 100,
-          hijackInternalLinkgs: true
-          });
-        var api = $(this).data('jsp');
-        var throttleTimeout;
-        $(window).bind('resize', function() {
-          // IE fires multiple resize events while you are dragging the browser window which
-          // causes it to crash if you try to update the scrollpane on every one. So we need
-          // to throttle it to fire a maximum of once every 50 milliseconds...
-          if (!throttleTimeout) {
-            throttleTimeout = setTimeout(
-              function() {
-                api.reinitialise();
-                throttleTimeout = null;
-              }, 
-            50);
-          }
-        });
-      })
-    }
-    if($('.staticContent').length > 0) {
-      $(window).ready(function(){
-        customScroll('.staticContent');
-        });
-    }
-    if($('.slideContent').length > 0) {
-      $(window).ready(customScroll('.slideContent'));
-    } 
-=======
     $(function(){
       if($('.staticContent').length > 0) {
         customScroll('.staticContent');
@@ -92,7 +58,6 @@
       }   
     })
     
->>>>>>> 2b1859c99d5d09ad5e962adeac032627b51eb005
 
   = if content_for?(:scripts) then yield :scripts end
 

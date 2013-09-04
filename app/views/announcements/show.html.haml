@@ -1,5 +1,10 @@
 .staticPage
-	.staticContent
-		.announcementShow
-			%h2= @announcement.title
+	.staticContent.announcementShow
+		%h2= @announcement.title
+		.announcementContent
 			=raw @announcement.body
+
+%style
+	div[class^="announcement-bottom"]{
+	top:300px;
+	}
