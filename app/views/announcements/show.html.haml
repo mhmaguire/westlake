@@ -3,8 +3,7 @@
 		%h2= @announcement.title
 		.announcementContent
 			=raw @announcement.body
+=debug @announcement.pixel_height
 
 %style
-	div[class^="announcement-bottom"]{
-	top:300px;
-	}
+	div[class^="announcement-bottom"]{ top:#{@announcement.pixel_height}px; }
