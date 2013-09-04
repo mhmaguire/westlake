@@ -21,7 +21,6 @@ WestlakePro::Application.routes.draw do
   get '/mobile_contact' => 'pages#mobile_contact'
   get '/careers' => 'pages#careers'
   get '/home' => 'pages#home'
-  
   get '/privacy_policy' => 'pages#privacy'
   get '/pricing_policy' => 'pages#pricing'
   get '/avid' => 'pages#avid'
