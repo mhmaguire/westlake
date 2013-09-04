@@ -7,6 +7,7 @@ ActiveAdmin.register Announcement do
 		column 'Featured Slide' do |a|
 			image_tag a.image.url(:small)
 		end
+		column :pixel_height
 		column :created_at
 		column :updated_at
 		default_actions
@@ -16,6 +17,7 @@ ActiveAdmin.register Announcement do
 		attributes_table do 
 			row :title
 			row :body
+			row :pixel_height
 			row 'Featured Slide' do
 				image_tag a.image.url(:small)
 			end
