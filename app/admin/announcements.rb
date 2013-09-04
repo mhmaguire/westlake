@@ -30,6 +30,7 @@ ActiveAdmin.register Announcement do
 		f.inputs do 
 			f.input :title
 			f.input :body
+			f.input :pixel_height
 			f.input :image, hint: f.template.image_tag(f.object.image.url(:small))
 		end
 		f.actions
