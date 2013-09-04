@@ -26,7 +26,7 @@ function customScroll(pageContent){
 	$(pageContent).each(function(){
 		$(this).jScrollPane({
 			showArrows: $(this).is('.arrow'),
-			mouseWheelSpeed: 100,
+			mouseWheelSpeed: 60,
 			autoReinitialise: true,
 			autoReinitialiseDelay: 500, 
 			hideFocus: true
