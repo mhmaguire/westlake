@@ -14,8 +14,9 @@
 						%a{href: "##{cat.param_title}"}= cat.title
 		.lineCard.eight.column
 			%nav#alphaNav
-				-%w(A B C D E F G H I J K L M N O P Q R S T U V W X Y Z).each do |letter|
-					=link_to "#{letter}", alpha_products_path(anchor: "#{letter}")
+				%p 
+					-%w(A B C D E F G H I J K L M N O P Q R S T U V W X Y Z).each do |letter|
+						=link_to "#{letter}", alpha_products_path(anchor: "#{letter}")
 			%ul.lineCategories
 				=render partial: 'shared/category', collection: @categories
 
