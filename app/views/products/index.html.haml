@@ -32,8 +32,8 @@
 		$(".categories a").click(function(e){
 			var api = $(".staticContent").data('jsp');
 			href = $(this).attr('href');
-			console.log($('a[name="'+href+'"]'));
-			api.scrollToElement($('a[name="'+href+'"]'), true); 
+			api.scrollToElement($('a[name="'+href+'"]'), true);
+			api.scrollByY(-60); 
 			e.preventDefault();
 			return false; 
 		});
