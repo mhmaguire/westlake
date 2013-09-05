@@ -110,3 +110,4 @@ after "deploy", "refresh_sitemaps"
 task :symlink_static do 
 	run "ln -s #{shared_path}/static #{release_path}/public"
 end
+after "deploy", "symlink_static"
