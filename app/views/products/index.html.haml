@@ -14,9 +14,8 @@
 						%a{href: "##{cat.param_title}"}= cat.title
 		.lineCard.eight.column
 			%nav#alphaNav
-				%p 
-					-%w(A B C D E F G H I J K L M N O P Q R S T U V W X Y Z).each do |letter|
-						=link_to "#{letter}", alpha_products_path(anchor: "#{letter}")
+				-%w(A B C D E F G H I J K L M N O P Q R S T U V W X Y Z).each do |letter|
+					=link_to "#{letter}", alpha_products_path(anchor: "#{letter}")
 			%ul.lineCategories
 				=render partial: 'shared/category', collection: @categories
 
@@ -27,13 +26,14 @@
 			animation: "fade",
 			advanceSpeed: 5000,
 			animationSpeed: 1500,
-			directionalNav: true,
+			directionalNav: true
 		});
 
 		$(".categories a").click(function(e){
 			var api = $(".staticContent").data('jsp');
 			href = $(this).attr('href');
-			api.scrollToElement($('a[name="'+href+'"]')); 
+			console.log($('a[name="'+href+'"]'));
+			api.scrollToElement($('a[name="'+href+'"]'), true); 
 			e.preventDefault();
 			return false; 
 		});
