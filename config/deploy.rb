@@ -74,6 +74,7 @@ after "deploy:symlink_database_yml", "deploy:symlink_logos"
    end
  end
 
+ #symlink store into public
  namespace :deploy do 
  	task :symlink_store do 
  		run "ln -s /home/westlake/store/public /home/westlake/public_html/public/store"
@@ -81,6 +82,7 @@ after "deploy:symlink_database_yml", "deploy:symlink_logos"
  end
  after "deploy:restart", "deploy:symlink_store"
 
+#symlink images into public
 namespace :deploy do 
  	task :symlink_images do 
  		run "ln -s #{shared_path}/images #{release_path}/public"
@@ -88,6 +90,7 @@ namespace :deploy do
  end
  after "deploy:restart", "deploy:symlink_images"
 
+ 
  namespace :deploy do 
  	task :symlink_troy do 
  		run "ln -s #{shared_path}/troymorrismemorial.html #{release_path}/public/troymorrismemorial.html"
@@ -103,3 +106,7 @@ task :refresh_sitemaps do
 	run "cd #{latest_release} && RAILS_ENV=#{rails_env} rake sitemap:refresh"
 end
 after "deploy", "refresh_sitemaps"
+
+task :symlink_static do 
+	run "ln -s #{shared_path}/static #{release_path}/public"
+end

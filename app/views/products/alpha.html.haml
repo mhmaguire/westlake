@@ -30,3 +30,13 @@
 			directionalNav: true,
 		});
 		
+
+		$("#alphaNav p a").click(function(e){
+			var api = $(".staticContent").data('jsp');
+			href = $(this).attr('href');
+			api.scrollToElement($('a[name="'+href+'"]'), true);
+			e.preventDefault();
+			return false; 
+		});
+
+		
