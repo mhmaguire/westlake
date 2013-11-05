@@ -1,5 +1,9 @@
 #galleryPage.staticPage
-	.staticContent	
+	.staticContent
+		.featImage
+			%h2 Gallery Featured Image
+			-unless @feat_img.nil?
+				=image_tag @feat_img.image.url(:large)
 		%ul.wpGallery.block-grid.four-up(data-clearing=true)
 			=render partial: 'shared/gallery_image', collection: @gallery_images
 			

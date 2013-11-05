@@ -33,7 +33,9 @@ WestlakePro::Application.routes.draw do
   match "careers/contact" => 'career_contacts#create_resume', via: :post 
   match 'events/:event_id/rsvp' => 'event_contacts#new', via: :get, as: :new_rsvp
   match 'events/:event_id/rsvp' => 'event_contacts#create', via: :post 
-  match 'gallery/:gallery_type' => 'gallery#show', via: :get, as: :gallery
+  
+  match 'galleries' => 'pages#galleries'
+  resources :gallery, only: [:show, :index]
   
   get '/line_card' => 'products#index'
   resources :products, only: :index do 

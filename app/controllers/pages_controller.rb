@@ -20,5 +20,7 @@ class PagesController < ApplicationController
   end
   def avid 
   end
+  def galleries
+  end
   define_top_action :about, :what_we_do, :careers
 end

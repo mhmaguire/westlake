@@ -1,0 +1,5 @@
+%h1= "This is the gallery sub index page for #{params[:g_type]}"
+-@galleries.each do |g|
+	=g.title
+	=g.body
+	=link_to 'View This Gallery', gallery_path(g)
